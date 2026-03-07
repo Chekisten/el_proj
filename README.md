@@ -1,3 +1,1 @@
-# el_proj
-
-Прототип коммерческого проекта
+Prototype of site

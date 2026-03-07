@@ -1,0 +1,13 @@
+* {/*  Это отвечает за удаление краёв в навбаре*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
+.navbar{
+    background: green;
+    padding: 15px;
+    
+}
+
