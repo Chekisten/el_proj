@@ -1,9 +1,10 @@
+import MainContainer from "../components/mainContainer"
 
 const Feedback = () =>{
     return (
-        <div>
+        <MainContainer>
             <h1>feedback page</h1>
-        </div>
+        </MainContainer>
     )
 }
 export default Feedback

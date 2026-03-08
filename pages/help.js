@@ -1,9 +1,10 @@
+import MainContainer from "../components/mainContainer"
 
 const Help = () =>{
     return (
-        <div>
+        <MainContainer>
             <h1>help page</h1>
-        </div>
+        </MainContainer>
     )
 }
 

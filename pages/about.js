@@ -1,9 +1,9 @@
-
+import MainContainer from "../components/mainContainer"
 const About = () => {
     return (
-        <div>
+        <MainContainer>
             <h1>About page</h1>
-        </div>
+        </MainContainer>
     )
 }
 

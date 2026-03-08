@@ -1,10 +1,10 @@
-
+import MainContainer from "../components/mainContainer"
 
 const Sigth = () =>{
     return (
-        <div>
+        <MainContainer>
             <h1>sigth page</h1>
-        </div>
+        </MainContainer>
     )
 }
 

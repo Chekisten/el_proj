@@ -1,9 +1,13 @@
-export default function () {
+import { useRouter } from "next/router"
+import MainContainer from "../../components/mainContainer";
 
+export default function () {
+    const router = useRouter();
+    console.log(router)
     return (
-        <div>
+        <MainContainer>
             Tours
-        </div>
+        </MainContainer>
     )
 
 }
