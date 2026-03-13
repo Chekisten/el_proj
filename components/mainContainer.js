@@ -1,5 +1,6 @@
 import A from "../components/A"
 import Head from "next/head"
+import styles from "../styles/mainContainer.module.css"
 
 const MainContainer = ({children, keywords}) =>{
     return (
@@ -9,18 +10,18 @@ const MainContainer = ({children, keywords}) =>{
             <meta keywords={"Prototype, tours" + keywords}></meta>
             <title>Prototype of tour's site</title>
         </Head>
-        <div className="headContacts">
+        <div className={styles.headContacts}>
             <p>+7 888 454 1714</p>
             <p>example@gmail.com</p>
         </div>
-            <div className="navbar">
+            <div className={styles.navbar}>
 
-                <input type="checkbox" id="menu-check"></input>
-                <div className="MobilView">
-                    <h2 className="comName">Company name</h2>
-                    <label for="menu-check" class="hamburger">☰</label>
+                <input type="checkbox" id={styles.menuCheck}></input>
+                <div className={styles.MobilView}>
+                    <h2 className={styles.comName}>Company name</h2>
+                    <label for={styles.menuCheck} class={styles.hamburger}>☰</label>
                 </div>
-                <div className="menu">
+                <div className={styles.menu}>
                     <A href={'/'} text={"Main"}/>
                     <A href={'/about'} text={"About"}/>
                     <A href={'/tourTypes'} text={"Tour Types"}/>
@@ -33,7 +34,7 @@ const MainContainer = ({children, keywords}) =>{
 
 
 
-            <div className="footer">
+            <div className={styles.footer}>
                 <p>Contact information</p>
 
                 <p>X com</p>
