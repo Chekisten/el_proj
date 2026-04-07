@@ -1,6 +1,6 @@
 .navbar{
-    text-align: end;
-    background: green;
+    text-align: center;
+   
     padding: 15px;
     padding-right: 10%;
 
@@ -19,7 +19,7 @@
 .comName{
     display: none;
 }
-
+/*
 @media (max-width: 768px) {
     .MobilView{
         display: flex;
@@ -30,7 +30,7 @@
     .navbar{
     text-align: right;
     
-    background: green;
+    background: #EAD9C7;
     padding: 15px;
     }
     .hamburger {
@@ -48,7 +48,7 @@
     }
 
 
-    #menuCheck:checked ~ .menu {
+    #menuC  heck:checked ~ .menu {
     display: flex;
     }
 
@@ -66,23 +66,13 @@
 
 }
 
-
+*/
 
 
 .footer{
-    background: lightblue;
+    background: #5B3F2B;
     padding: 10px;
 }
 
 
 
-.headContacts{
-    background: lightblue;
-    display: flex;
-    justify-content: center
-}
-.headContacts p{
-    color: white;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}

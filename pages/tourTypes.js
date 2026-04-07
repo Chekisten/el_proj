@@ -1,40 +1,20 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import MainContainer from '../components/mainContainer';
+import data1 from '../database/db.json';
 const TourTypes = () =>{
     // Нижный конст потмо удалить как будет сделан серверный рендеринг а в аргументы добавить tours
-    const [tours, setTours] = useState([
-        {   id: 1,
-            name:"Albania",
-            countryName: "Albania",
-            description: "Tour to Enver's Albania",
-            img: "/images/albania.jpg",
-            imgWidth: 300,
-            imgHeight: 300
+    const [tours, setTours] = useState(data1.tours)
+    
+    tours.map(tour => console.log(tour.id))
+    
 
-        },
-        {
-            id:2,
-            name: "Discover Prussia: Journey Through a Legendary Realm",
-            countryName: "Prussia",
-            description: "Step back in time and explore the lands of Prussia — where medieval castles stand guard over ancient forests, cobblestone streets whisper tales of knights and kings, and the Baltic coastline stretches into the horizon like a dream.",
-            img: "/images/prussia.jpg",
-            imgWidth: 300,
-            imgHeight: 300
-        },
-        {
-            id:2,
-            name: "Discover Prussia: Journey Through a Legendary Realm",
-            countryName: "Prussia",
-            description: "Step back in time and explore the lands of Prussia — where medieval castles stand guard over ancient forests, cobblestone streets whisper tales of knights and kings, and the Baltic coastline stretches into the horizon like a dream.",
-            img: "/images/prussia.jpg",
-            imgWidth: 300,
-            imgHeight: 300
-        }
-    ])
+
+
+    
     return (
 
-
+      
 
         <MainContainer>
             <h1>Tour types page</h1>

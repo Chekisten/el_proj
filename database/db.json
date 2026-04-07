@@ -1,0 +1,40 @@
+{
+    "tours":[
+        {
+            "id": 1,
+            "name": "Tour to Uzbekistan",
+            "countryName": "Uzbekistan",
+            "description":"Welcome to Uzmekistan and Karakalpakistan",
+            "img": "/images/albania.jpg",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "isHide": 0,
+            "isBest": 0
+
+        },
+
+        {
+            "id": 2,
+            "name": "Tour to Prussia",
+            "countryName": "Prussia",
+            "description":"Welcome to Prussia and Germany",
+            "img": "/images/prussia.jpg",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "isHide": 0,
+            "isBest": 0
+        },
+
+        {
+            "id": 3,
+            "name": "Tour to German",
+            "countryName": "German",
+            "description":"Step back in time and explore the lands of Prussia — where medieval castles stand guard over ancient forests, cobblestone streets whisper tales of knights and kings, and the Baltic coastline stretches into the horizon like a dream.",
+            "img": "/images/prussia.jpg",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "isHide": 0,
+            "isBest": 0
+        }
+    ]
+}

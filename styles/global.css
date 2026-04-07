@@ -1,5 +1,8 @@
 
+body {
+    background-color: #EAD9C7;
 
+}
 * {/*  Это отвечает за удаление краёв в навбаре*/
     margin: 0;
     padding: 0;
@@ -34,31 +37,136 @@ h1{
     box-shadow:  1 6px 8px -1px rgba(0, 0, 0, 0.5);
 }
 
+
+/* Блок главной страницы начало  */
 .MainMotto{
     
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:   rgb(251, 253, 232);
+    flex-direction: column;
+    background-image:   url(../public/images/mainBackground.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 20%;
+   
     /* background-image: url('../public/images/centAsia.jpg');  */
 
-    color: rgb(236, 236, 152);
+    color: #ffffff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-.MainMotto h1{
-    margin: 10%;
+.MainMotto b {
+   font-size: 64px;
+   font-weight: 400;
+   font-family: 'Playfair Display';   
 }
+.MainMotto p{
+    font-size: 30px;
+    font-family: Montserrat;
+}
+.MainMotto button{
+    background-color:#F0D8BC;
+    border-radius: 30px;
+    padding: 10px;
+    color: #504020;
+    font-family: Montserrat;
+}
+
+
 .mainInfo{
     display: flex;
     padding: 5%;
     justify-content: space-between;
 }
 
-.mainInfo main{
-    flex: 7
+.base{
+    margin: 5%;
+    text-align: center;
+    color: #504020;
+    font-family: Montserrat;
+    font-weight: 600;
 
 }
-.mainInfo aside{
-    flex: 1
+
+
+/* Туры по странам*/
+.tourByStates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
 
+
+.tourByStatesRow1{
+    flex: 0 0 50%;
+    position: relative;
+   
+}
+.tourByStatesRow1 img{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    margin: 5%;
+    box-shadow: 3px 2px 15px #483f3159;
+    
+}
+
+.tourByStatesRow1 h3 {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    color:#ffffff;
+     background-color: rgba(0, 0, 0, 0.1);
+     font-family: "Open Sans";
+
+    
+}
+.tourByStatesRow1 button {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    background-color: #F0D8BC;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    
+}
+
+
+
+
+.tourByStatesRow2{
+    flex: 0 0 33.33%;
+    position: relative;
+    
+}
+.tourByStatesRow2 img{
+    max-width: 90%;
+    max-height: 90%;
+     border-radius: 20px;
+     box-shadow: 3px 2px 15px #483f3159;
+}
+.tourByStatesRow2 h3 {
+    position: absolute;
+    bottom: 20%;
+    left: 12%;
+    color:#ffffff;
+     background-color: rgba(0, 0, 0, 0.1);
+     font-family: "Open Sans";
+
+    
+}
+.tourByStatesRow2 button {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+     background-color: #F0D8BC;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    
+}
+
+
+/*Конец блока главной страницы */
