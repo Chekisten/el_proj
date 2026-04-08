@@ -26,7 +26,12 @@ const Index = () => {
 
         
         <div className="base">
-            <h2>Изучите туры по странам</h2>
+            <div className="gradient">
+                <div class="gradient-line-left"></div>
+                <h2>Изучите туры по странам</h2>
+                <div class="gradient-line-right"></div>
+             </div>
+
             <div className="tourByStates">
                 <div className="tourByStatesRow1">
                     <img src="/images/interTours.png" alt="international travel"></img>
@@ -63,7 +68,12 @@ const Index = () => {
 
         <div className="base">
             <div className="bestTours">
-                <h2>Выбери свой отдых</h2>
+                <div className="gradient">
+                    <div class="gradient-line-left"></div>
+                    <h2>Выбери свой отдых</h2>
+                    <div class="gradient-line-right"></div>
+                </div>
+
                 <TourTypes>
 
                 </TourTypes>
@@ -75,24 +85,33 @@ const Index = () => {
 
         <div className="base">
             <div className="reviews">
-                <h2>Отзывы</h2>
+                <div className="gradient">
+                    <div class="gradient-line-left"></div>
+                    <h2>Отзывы</h2>
+                    <div class="gradient-line-right"></div>
+                </div>
+               
                 <Reviews>
-                    
                 </Reviews>
-                <p>Тут возможно тоже useState из базы с отзывами</p>
-                <p>тут нужен возможно слайдер</p>
             </div>
         </div>
 
         <div className="base">
             <div className="About">
-                <h2>Почему выбирают нас</h2>
+
+            <div className="gradient">
+                <div class="gradient-line-left"></div>
+                <h2>Почему выбирают нас?</h2>
+                <div class="gradient-line-right"></div>
+             </div>
+
 
                 <div className="aboutBlocks">
 
                     <div className="aboutBlock">
                         <img src="/images/firstAbout.png" alt="social tourism"></img>
                         <div className="aboutText">
+                            
                             <h3>Общественный туризм</h3>
                             <p>Мы привержены развитию общинного туризма и устойчивого туризма, который приносит пользу местным сообществам и сохраняет природную красоту и культурное наследие Центральной Азии. Проживая в местных гостевых домах, нанимая региональных гидов и минимизируя наше воздействие на окружающую среду, вы, оформив тур у нас, поддерживаете людей и места, которые посещаете.</p>
                         </div>
@@ -132,7 +151,13 @@ const Index = () => {
 
         <div className="base"> 
         <div className="feedback">
-            <h2>Готовы к вашему новому приключению?</h2>
+            
+            <div className="gradient">
+                <div class="gradient-line-left"></div>
+                <h2>Готовы к вашему новому приключению?</h2>
+                <div class="gradient-line-right"></div>
+             </div>
+           
         </div>
         </div>
 

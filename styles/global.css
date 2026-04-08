@@ -86,6 +86,7 @@ h1{
     color: #504020;
     font-family: Montserrat;
     font-weight: 600;
+    
 
 }
 
@@ -206,6 +207,7 @@ h1{
 .aboutBlock img {
     width: 50%;
     height: auto;
+    box-shadow: 3px 5px 15px #483f3159;
     
 }
 
@@ -214,7 +216,28 @@ h1{
     align-items: flex-end;
 }
 /* Блок About конец*/
+/*Блок граидиента*/
+.gradient{
+    display: flex;
+    align-items: center;
+}
+.gradient h2 {
+    width: 100%;
+}
+.gradient-line-left {
+  height: 2px;
+  background: linear-gradient(to right, #504020, #EAD9C7);
+  
+  width: 100%; /* Ensures it stretches across the container */
+}
+.gradient-line-right{
+  height: 2px;
+  background: linear-gradient(to right, #EAD9C7, #504020);
+  width: 100%; /* Ensures it stretches across the container */
+  
+}
 
+/*Блок граидиента конец*/
 
 /*мобильная версия---------------------------------------------------------------------- */
 @media (max-width: 768px){
@@ -373,6 +396,7 @@ h1{
     background-color: #FFF3E4;
     border-radius: 30px;
     overflow: hidden;
+    box-shadow: 3px 5px 15px #483f3159;
   
     
 }
@@ -384,9 +408,30 @@ h1{
 }
 /* Блок About конец*/
 
-
+/*Блок граидиента*/
+.gradient{
+    display: flex;
+    align-items: center;
+}
+.gradient h2 {
+    width: 100%;
+}
+.gradient-line-left {
+  height: 2px;
+  background: linear-gradient(to right, #504020, #EAD9C7);
+  
+  width: 0%; /* Ensures it stretches across the container */
+}
+.gradient-line-right{
+  height: 2px;
+  background: linear-gradient(to right, #EAD9C7, #504020);
+  width: 0%; /* Ensures it stretches across the container */
+  
 }
 
+/*Блок граидиента конец*/
 
 
+
+}
 /*Конец блока мобильной версии----------------*/
