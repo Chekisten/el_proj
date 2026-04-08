@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import MainContainer from '../components/mainContainer';
-import data1 from '../database/db.json';
+import data from '../database/db.json';
 const TourTypes = () =>{
     // Нижный конст потмо удалить как будет сделан серверный рендеринг а в аргументы добавить tours
-    const [tours, setTours] = useState(data1.tours)
+    const [tours, setTours] = useState(data.tours)
     
     tours.map(tour => console.log(tour.id))
     

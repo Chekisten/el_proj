@@ -1,6 +1,8 @@
 
 import MainContainer from "../components/mainContainer";
 
+import TourTypes from "../components/toursSlider";
+import Reviews from "../components/review";
 
 
 const Index = () => {
@@ -29,54 +31,110 @@ const Index = () => {
                 <div className="tourByStatesRow1">
                     <img src="/images/interTours.png" alt="international travel"></img>
                     <h3>Многонациональный тур</h3>
-                    <button>Стрелка</button>
+                    <button>→</button>
                 </div>
 
                 <div className="tourByStatesRow1">
                     <img src="/images/kyrgyzTours.png" alt="Kyrgyzstan travel"></img>
                     <h3>Туры по Кыргызстану</h3>
-                    <button>Стрелка</button>
+                    <button>→</button>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/kazahTours.png" alt="Kazakhstan travel"></img>
                     <h3>Туры по Казахстану</h3>
-                    <button>Стрелка</button>
+                    <button>→</button>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/tajikTours.png" alt="Tadjikistan travel"></img>
                     <h3>Туры по Таджикистану</h3>
-                    <button>Стрелка</button>
+                    <button>→</button>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/uzbekTours.png" alt="Uzbekistan travel"></img>
                     <h3>Туры по Узбекистану</h3>
-                    <button>Стрелка</button>
+                    <button>→</button>
                 </div>
             </div>
         </div>
 
 
+        <div className="base">
+            <div className="bestTours">
+                <h2>Выбери свой отдых</h2>
+                <TourTypes>
 
-        <div className="bestTours">
-            <h2>Выбери свой отдых</h2>
+                </TourTypes>
 
+
+
+            </div>
         </div>
 
-        <div className="reviews">
-            <h2>Отзывы</h2>
+        <div className="base">
+            <div className="reviews">
+                <h2>Отзывы</h2>
+                <Reviews>
+                    
+                </Reviews>
+                <p>Тут возможно тоже useState из базы с отзывами</p>
+                <p>тут нужен возможно слайдер</p>
+            </div>
         </div>
 
-        <div className="About">
-            <h2>Почему выбирают нас</h2>
+        <div className="base">
+            <div className="About">
+                <h2>Почему выбирают нас</h2>
+
+                <div className="aboutBlocks">
+
+                    <div className="aboutBlock">
+                        <img src="/images/firstAbout.png" alt="social tourism"></img>
+                        <div className="aboutText">
+                            <h3>Общественный туризм</h3>
+                            <p>Мы привержены развитию общинного туризма и устойчивого туризма, который приносит пользу местным сообществам и сохраняет природную красоту и культурное наследие Центральной Азии. Проживая в местных гостевых домах, нанимая региональных гидов и минимизируя наше воздействие на окружающую среду, вы, оформив тур у нас, поддерживаете людей и места, которые посещаете.</p>
+                        </div>
+                    </div>
+
+                    <div className="aboutBlock"> 
+                        <div className="aboutText">
+                            <h3>Экспертиза на местном уровне</h3>
+                            <p>Мы — местная компания с более чем 15-летним опытом работы и глубокими знаниями местного рынка. 
+                            Имея офисы и команды как в столице Бишкеке, так и в южном киргизском центре Оше, мы обеспечиваем сильную региональную сеть и можем поддержать ваше путешествие по всему Кыргызстану и Центральной Азии.</p>
+                        </div>
+                        <img src="/images/secondAbout.png" alt="social tourism"></img>
+                    </div>
+
+                    <div className="aboutBlock"> 
+                        <img src="/images/thirdAbout.png" alt="social tourism"></img>                
+                        <div className="aboutText">
+                            <h3>Групповые туры</h3>
+                            <p>Мы помогаем самостоятельным путешественникам найти единомышленников для совместных поездок в рамках наших туров в небольших группах. Это не только помогает разделить расходы, но и дает возможность завести новые знакомства по всему миру и создать множество новых воспоминаний.</p>
+                        </div>
+                    </div>
+
+                    <div className="aboutBlock">
+                        <div className="aboutText">
+                            <h3>100% кастомизации</h3>
+                            <p>Расскажите нам о ваших интересах, потребностях и расписании, и мы вместе разработаем индивидуальный маршрут для вас или вашей частной группы. Вы можете комбинировать мероприятия из разных туров, добавлять что-то новое или изменять расписание. Мы учтем все ваши пожелания и создадим маршрут, персонализированный именно для вас.</p>
+                        </div>
+                        <img src="/images/fourthAbout.png" alt="social tourism"></img>
+                    </div>
+
+
+                </div>
+
+
+            </div>
         </div>
 
+        <div className="base"> 
         <div className="feedback">
             <h2>Готовы к вашему новому приключению?</h2>
         </div>
-
+        </div>
 
         </MainContainer>
 

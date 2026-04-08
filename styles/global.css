@@ -67,6 +67,7 @@ h1{
 .MainMotto button{
     background-color:#F0D8BC;
     border-radius: 30px;
+    margin-top: 5%;
     padding: 10px;
     color: #504020;
     font-family: Montserrat;
@@ -130,6 +131,10 @@ h1{
     width: 50px;
     height: 50px;
     border-radius: 12px;
+    font-weight: 800;
+    font-size: 32px;
+    color:#504020;
+    
     
 }
 
@@ -165,8 +170,223 @@ h1{
     width: 50px;
     height: 50px;
     border-radius: 12px;
+    font-weight: 800;
+    font-size: 32px;
+    color:#504020;
+    
     
 }
 
 
 /*Конец блока главной страницы */
+
+
+/* Блок ABOUT начало*/
+.aboutBlocks{
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    
+}
+.aboutBlock{
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 0 50%;
+    position: relative;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #FFF3E4;
+    border-radius: 30px;
+    overflow: hidden;
+  
+    
+}
+
+.aboutBlock img {
+    width: 50%;
+    height: auto;
+    
+}
+
+.aboutText{
+    text-align: center;
+    align-items: flex-end;
+}
+/* Блок About конец*/
+
+
+/*мобильная версия---------------------------------------------------------------------- */
+@media (max-width: 768px){
+    
+/* Блок главной страницы начало  */
+.MainMotto{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:   url(../public/images/mainBackground.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 10%;
+   
+    /* background-image: url('../public/images/centAsia.jpg');  */
+
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.MainMotto b {
+   font-size: 32px;
+   font-weight: 400;
+   font-family: 'Playfair Display';   
+}
+.MainMotto p{
+    font-size: 15px;
+    font-family: Montserrat;
+}
+.MainMotto button{
+    background-color:#F0D8BC;
+    border-radius: 30px;
+    margin: 5%;
+    padding: 10px;
+    color: #504020;
+    font-family: Montserrat;
+}
+
+
+.mainInfo{
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+}
+
+.base{
+    margin: 5%;
+    text-align: center;
+    color: #504020;
+    font-family: Montserrat;
+    font-weight: 600;
+
+}
+
+
+/* Туры по странам*/
+.tourByStates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+.tourByStatesRow1{
+    flex: 0 0 100%;
+    position: relative;
+   
+}
+.tourByStatesRow1 img{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    margin: 5%;
+    box-shadow: 3px 2px 15px #483f3159;
+    
+}
+
+.tourByStatesRow1 h3 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    color:#ffffff;
+     background-color: rgba(255, 255, 255, 0);
+     font-family: "Open Sans";
+
+    
+}
+.tourByStatesRow1 button {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    background-color: #F0D8BC;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    
+}
+
+
+
+
+.tourByStatesRow2{
+    flex: 0 0 100%;
+    position: relative;
+    
+}
+.tourByStatesRow2 img{
+    max-width: 90%;
+    max-height: 90%;
+     border-radius: 20px;
+     margin: 5%;
+     box-shadow: 3px 2px 15px #483f3159;
+}
+.tourByStatesRow2 h3 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    color:#ffffff;
+     background-color: rgba(255, 255, 255, 0);
+     font-family: "Open Sans";
+
+    
+}
+.tourByStatesRow2 button {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+     background-color: #F0D8BC;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    
+}
+
+
+/*Конец блока главной страницы */
+
+
+/* Блок About начало*/
+.aboutBlocks{
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    
+}
+.aboutBlock{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 50%;
+    position: relative;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #FFF3E4;
+    border-radius: 30px;
+    overflow: hidden;
+  
+    
+}
+
+.aboutBlock img {
+    width: 100%;
+    height: auto;
+    
+}
+/* Блок About конец*/
+
+
+}
+
+
+
+/*Конец блока мобильной версии----------------*/

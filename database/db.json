@@ -8,6 +8,10 @@
             "img": "/images/albania.jpg",
             "imgWidth": 300,
             "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
             "isHide": 0,
             "isBest": 0
 
@@ -21,6 +25,10 @@
             "img": "/images/prussia.jpg",
             "imgWidth": 300,
             "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
             "isHide": 0,
             "isBest": 0
         },
@@ -33,8 +41,121 @@
             "img": "/images/prussia.jpg",
             "imgWidth": 300,
             "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
             "isHide": 0,
             "isBest": 0
+        },
+
+        {
+            "id": 4,
+            "name": "Tour to Kazakhstan",
+            "countryName": "Kazakhstan",
+            "description":"Welcome to Kazakhstan",
+            "img": "/images/albania.jpg",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
+            "isHide": 0,
+            "isBest": 1
+
+        },
+
+        {
+            "id": 5,
+            "name": "Кочевая культура Кыргызстана",
+            "countryName": "Kyrgyzstan",
+            "description":"Welcome to Kyrgyzstan",
+            "img": "/images/KyrgysHorde.png",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
+            "isHide": 0,
+            "isBest": 1
+
+        },
+
+        {
+            "id": 6,
+            "name": "Основные достопримечательности тура по Таджикистану",
+            "countryName": "Tadjikistan",
+            "description":"Welcome to Tadjikistan",
+            "img": "/images/tajikLake.png",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
+            "isHide": 0,
+            "isBest": 1
+
+        },
+
+        {
+            "id": 7,
+            "name": "Основные достопримечательности тура по Узбекистану",
+            "countryName": "Uzbekistan",
+            "description":"Welcome to Uzmekistan and Karakalpakistan",
+            "img": "/images/Bukhara.png",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
+            "isHide": 0,
+            "isBest": 1
+
+        },
+
+        {
+            "id": 8,
+            "name": "Тур по Памирскому шоссе",
+            "countryName": "International",
+            "description":"Welcome to Uzmekistan and Karakalpakistan",
+            "img": "/images/PamirHighway.png",
+            "imgWidth": 300,
+            "imgHeight": 300,
+            "price": 3000,
+            "currency": "$",
+            "duration": 7,
+            "time": "days",
+            "isHide": 0,
+            "isBest": 1
+
+        }
+    ],
+
+    "reviews":[
+        {
+            "id": 1,
+            "name": "Maggy",
+            "head": "Прекрасная прогулка на природе с возможностью познакомиться с местной культурой!",
+            "shortDescription": "Это один из лучших многодневных походов в мире. Отличная коммуникация при организации поездки, вкусная и обильная еда, команда во время похода была отзывчивой и весёлой. Тимур, наш гид, дал прекрасное представление о местной культуре, был замечательным человеком и действительно сплотил нашу группу." ,
+            "description": "Это один из лучших многодневных походов в мире. Отличная коммуникация при организации поездки, вкусная и обильная еда, команда во время похода была отзывчивой и весёлой. Тимур, наш гид, дал прекрасное представление о местной культуре, был замечательным человеком и действительно сплотил нашу группу.",
+            "source": "TripAdvisor",
+            "img":"/images/magReview.png",
+            "isTop": 1
+
+        },
+        {   
+            "id": 2,
+            "name": "Anton",
+            "head": "Lorem ipsum",
+            "shortDescription": "LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOORRRRRRRRRRRRRRRRRREEEEEEEEEEEEEEEEM" ,
+            "description": "Это один из лучших многодневных походов в мире. Отличная коммуникация при организации поездки, вкусная и обильная еда, команда во время похода была отзывчивой и весёлой. Тимур, наш гид, дал прекрасное представление о местной культуре, был замечательным человеком и действительно сплотил нашу группу.",
+            "source": "TripAdvisor",
+            "img":"/images/albania.jpg",
+            "isTop": 1
         }
     ]
 }

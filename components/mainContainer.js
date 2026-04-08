@@ -32,11 +32,23 @@ const MainContainer = ({children, keywords}) =>{
 
 
             <div className={styles.footer}>
-                <p>Contact information</p>
+                <div>
+                    <p>Contact information</p>
+                    <br></br>
+                    <p>Улица Фрунзе, 571, Бишкек, Кыргызстан</p>
+                </div>
+                
+                <div>
+                    <p>Social networks</p>
+                    <br></br>
+                    <p>X com</p>
+                    <br></br>
+                    <p>+7 888 454 1714</p>  
+                    <br></br>
+                    <p>example@gmail.com</p>
+                    <br></br>
+                </div>
 
-                <p>X com</p>
-                <p>+7 888 454 1714</p>
-                <p>example@gmail.com</p>
 
 
             </div>

@@ -72,6 +72,14 @@
 .footer{
     background: #5B3F2B;
     padding: 10px;
+    color: #F6E6D3;
+    display: flex;
+    justify-content: start;
+    padding-left: 10%;
+    
+}
+.footer div{
+    padding-right: 10%;
 }
 
 
