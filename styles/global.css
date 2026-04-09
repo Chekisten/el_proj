@@ -207,6 +207,7 @@ h1{
 .aboutBlock img {
     width: 50%;
     height: auto;
+    border-radius: 30px;
     box-shadow: 3px 5px 15px #483f3159;
     
 }
@@ -238,6 +239,7 @@ h1{
 }
 
 /*Блок граидиента конец*/
+
 
 /*мобильная версия---------------------------------------------------------------------- */
 @media (max-width: 768px){
@@ -404,6 +406,7 @@ h1{
 .aboutBlock img {
     width: 100%;
     height: auto;
+    border-radius: 30px;
     
 }
 /* Блок About конец*/

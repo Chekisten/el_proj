@@ -1,6 +1,7 @@
 import A from "../components/A"
 import Head from "next/head"
 import styles from "../styles/mainContainer.module.css"
+import Feedback from "./feedback"
 
 const MainContainer = ({children, keywords}) =>{
     return (
@@ -31,6 +32,7 @@ const MainContainer = ({children, keywords}) =>{
 
 
 
+            <Feedback></Feedback>
             <div className={styles.footer}>
                 <div>
                     <p>Contact information</p>

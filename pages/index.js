@@ -3,6 +3,7 @@ import MainContainer from "../components/mainContainer";
 
 import TourTypes from "../components/toursSlider";
 import Reviews from "../components/review";
+import Feedback from "../components/feedback";
 
 
 const Index = () => {
@@ -149,17 +150,9 @@ const Index = () => {
             </div>
         </div>
 
-        <div className="base"> 
-        <div className="feedback">
-            
-            <div className="gradient">
-                <div class="gradient-line-left"></div>
-                <h2>Готовы к вашему новому приключению?</h2>
-                <div class="gradient-line-right"></div>
-             </div>
-           
-        </div>
-        </div>
+  
+
+        
 
         </MainContainer>
 
