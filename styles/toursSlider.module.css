@@ -48,9 +48,14 @@
     box-shadow: 3px 2px 15px #483f3159;
     width: 110%;
     height: 110%;
+   
 
     
 
+}
+
+.tour img{
+    object-fit: cover;
 }
 .tour h3 {
     position: absolute;
@@ -104,5 +109,42 @@
     border: 0;
     text-decoration: underline;
     font-weight: 600;
+    
 }
+
+    .topTours{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tour {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 3px 5px 15px #483f3159;
+        margin-top: 5%;
+        padding-bottom: -2%;
+       
+        
+    }
+
+    .tourImages{
+     border: 0;
+    }
+
+    .tour h3 {
+    position: absolute;
+    left: 5%;
+    bottom:25%;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
 }

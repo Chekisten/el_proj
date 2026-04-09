@@ -38,7 +38,7 @@ const TourTypes = () =>{
                                 <button>From {tour.currency}{tour.price}</button>
                                 <button> {tour.duration} {tour.time}</button>
                             </div>
-                            <Images src={tour.img} width={400} height={400}className={styles.tourImages}></Images>
+                            <Images src={tour.img} width={400} height={350}className={styles.tourImages}></Images>
                             </div>)       
                         }
 

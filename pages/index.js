@@ -37,31 +37,31 @@ const Index = () => {
                 <div className="tourByStatesRow1">
                     <img src="/images/interTours.png" alt="international travel"></img>
                     <h3>Многонациональный тур</h3>
-                    <button>→</button>
+                    <button>❯</button>
                 </div>
 
                 <div className="tourByStatesRow1">
                     <img src="/images/kyrgyzTours.png" alt="Kyrgyzstan travel"></img>
                     <h3>Туры по Кыргызстану</h3>
-                    <button>→</button>
+                    <button>❯</button>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/kazahTours.png" alt="Kazakhstan travel"></img>
                     <h3>Туры по Казахстану</h3>
-                    <button>→</button>
+                    <button>❯</button>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/tajikTours.png" alt="Tadjikistan travel"></img>
                     <h3>Туры по Таджикистану</h3>
-                    <button>→</button>
+                    <button>❯</button>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/uzbekTours.png" alt="Uzbekistan travel"></img>
                     <h3>Туры по Узбекистану</h3>
-                    <button>→</button>
+                    <button>❯</button>
                 </div>
             </div>
         </div>
@@ -114,13 +114,15 @@ const Index = () => {
                         <div className="aboutText">
                             
                             <h3>Общественный туризм</h3>
+                            <br></br>
                             <p>Мы привержены развитию общинного туризма и устойчивого туризма, который приносит пользу местным сообществам и сохраняет природную красоту и культурное наследие Центральной Азии. Проживая в местных гостевых домах, нанимая региональных гидов и минимизируя наше воздействие на окружающую среду, вы, оформив тур у нас, поддерживаете людей и места, которые посещаете.</p>
                         </div>
                     </div>
 
                     <div className="aboutBlock"> 
-                        <div className="aboutText">
+                        <div className="aboutTextLeft" >
                             <h3>Экспертиза на местном уровне</h3>
+                            <br></br>
                             <p>Мы — местная компания с более чем 15-летним опытом работы и глубокими знаниями местного рынка. 
                             Имея офисы и команды как в столице Бишкеке, так и в южном киргизском центре Оше, мы обеспечиваем сильную региональную сеть и можем поддержать ваше путешествие по всему Кыргызстану и Центральной Азии.</p>
                         </div>
@@ -131,13 +133,16 @@ const Index = () => {
                         <img src="/images/thirdAbout.png" alt="social tourism"></img>                
                         <div className="aboutText">
                             <h3>Групповые туры</h3>
+                            <br></br>
                             <p>Мы помогаем самостоятельным путешественникам найти единомышленников для совместных поездок в рамках наших туров в небольших группах. Это не только помогает разделить расходы, но и дает возможность завести новые знакомства по всему миру и создать множество новых воспоминаний.</p>
                         </div>
                     </div>
 
                     <div className="aboutBlock">
-                        <div className="aboutText">
+                        <div className="aboutTextLeft" >
+                            
                             <h3>100% кастомизации</h3>
+                            <br></br>
                             <p>Расскажите нам о ваших интересах, потребностях и расписании, и мы вместе разработаем индивидуальный маршрут для вас или вашей частной группы. Вы можете комбинировать мероприятия из разных туров, добавлять что-то новое или изменять расписание. Мы учтем все ваши пожелания и создадим маршрут, персонализированный именно для вас.</p>
                         </div>
                         <img src="/images/fourthAbout.png" alt="social tourism"></img>
