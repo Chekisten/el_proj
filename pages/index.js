@@ -4,6 +4,7 @@ import MainContainer from "../components/mainContainer";
 import TourTypes from "../components/toursSlider";
 import Reviews from "../components/review";
 import Feedback from "../components/feedback";
+import Link from "next/link";
 
 
 const Index = () => {
@@ -37,31 +38,31 @@ const Index = () => {
                 <div className="tourByStatesRow1">
                     <img src="/images/interTours.png" alt="international travel"></img>
                     <h3>Многонациональный тур</h3>
-                    <button>❯</button>
+                    <Link href={"/states/internationalTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow1">
                     <img src="/images/kyrgyzTours.png" alt="Kyrgyzstan travel"></img>
                     <h3>Туры по Кыргызстану</h3>
-                    <button>❯</button>
+                    <Link href={"/states/kyrgyzstanTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/kazahTours.png" alt="Kazakhstan travel"></img>
                     <h3>Туры по Казахстану</h3>
-                    <button>❯</button>
+                    <Link href={"/states/kazakhstanTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/tajikTours.png" alt="Tadjikistan travel"></img>
                     <h3>Туры по Таджикистану</h3>
-                    <button>❯</button>
+                    <Link href={"/states/tajikistanTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/uzbekTours.png" alt="Uzbekistan travel"></img>
                     <h3>Туры по Узбекистану</h3>
-                    <button>❯</button>
+                    <Link href={"/states/uzbekistanTours"}><button>❯</button></Link>
                 </div>
             </div>
         </div>
