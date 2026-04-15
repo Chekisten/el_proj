@@ -3,6 +3,7 @@ import Images from "next/image";
 import TourTypes from "../../components/toursSlider";
 import Reviews from "../../components/review";
 import BlogSlider from "../../components/blogSlider";
+import AboutUs from "../../components/aboutUs";
 
 
 const InternationalTours = () =>{
@@ -51,11 +52,21 @@ const InternationalTours = () =>{
             </div>
         </div>
         <div className="base">
+                <div className="gradient">
+                    <div class="gradient-line-left"></div>
+                    <h2>Откройте новые горизонты глубже</h2>
+                    <div class="gradient-line-right"></div>
+                </div>
             <BlogSlider blogState={currentState}></BlogSlider>
         </div>
 
         <div className="base">
-            <h2>Особый вид почему выбирают нас</h2> 
+                <div className="gradient">
+                    <div class="gradient-line-left"></div>
+                    <h2>Почему выбирают нас</h2>
+                    <div class="gradient-line-right"></div>
+                </div>
+                <AboutUs></AboutUs>
         </div>
             
 
@@ -76,12 +87,20 @@ const InternationalTours = () =>{
 
 
         <div className="base">
-            <h2>Список фотографий в одну строку и перелистывание</h2>
+                <div className="gradient">
+                    <div class="gradient-line-left"></div>
+                    <h2>Атмосфера путешествий</h2>
+                    <div class="gradient-line-right"></div>
+                </div>
         </div>
 
 
         <div className="base">
-            <h2>Факью</h2>
+                  <div className="gradient">
+                    <div class="gradient-line-left"></div>
+                    <h2>Часто задаваемые вопросы</h2>
+                    <div class="gradient-line-right"></div>
+                </div>
         </div>
 
         </MainContainer>

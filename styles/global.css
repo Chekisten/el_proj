@@ -49,6 +49,7 @@ h1{
     background-size: auto;
     background-repeat: no-repeat;
     padding: 20%;
+    background-size: cover;
    
     /* background-image: url('../public/images/centAsia.jpg');  */
 
@@ -277,7 +278,12 @@ h1{
     align-items: center;
 }
 .gradient h2 {
+    white-space: nowrap;
     width: 100%;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+   
 }
 .gradient-line-left {
   height: 2px;
@@ -513,6 +519,8 @@ h1{
 }
 .gradient h2 {
     width: 100%;
+    white-space: wrap;
+    margin-top: 2%;
 }
 .gradient-line-left {
   height: 2px;
