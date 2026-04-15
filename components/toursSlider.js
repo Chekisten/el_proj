@@ -11,7 +11,7 @@ const TourTypes = ({state}) =>{
     const [tours, setTours] = useState(data.tours)
    // const [country, setCountry] = useState('International')
     let typeOfTours = state
-    console.log(typeOfTours)
+    
     if (state == "main"){
         typeOfTours = "International"
     }

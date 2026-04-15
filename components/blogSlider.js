@@ -31,7 +31,7 @@ const BlogSlider = ({blogState}) =>{
 
     return (
         <>
-            <div className={styles.reviewSlider}>
+            <div className={styles.blogSlider}>
                 <div className={styles.slider} ref={scrollRef}>
 
 

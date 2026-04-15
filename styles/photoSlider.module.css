@@ -1,0 +1,119 @@
+.photoBlock{  
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    
+    
+
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x-mandatory;
+    scroll-behavior: smooth;
+    border-radius: 12px;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slide {
+    flex: 0 0 33.33%;
+    scroll-snap-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #504020;
+    
+    overflow: hidden;
+    padding: 2%;
+    
+}
+
+
+.imgBlock{
+    flex: 0 0 100%;
+    display:flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 2px 15px #483f3159;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.btn{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, 0.7);;
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+
+
+/* Мобильная версия*/
+
+@media (max-width: 768px) {
+    .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #504020;
+    
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 2%;
+    
+    
+}
+
+
+.imgBlock{
+    flex: 0 0 100%;  
+    display:flex;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0px 0px 0px hsla(0, 0%, 100%, 0);
+    
+
+}
+
+
+
+    
+}
