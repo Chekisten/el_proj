@@ -8,9 +8,10 @@ import Link from "next/link";
 
 
 const Index = () => {
+    const currentCountry = "main"
     return (
         <MainContainer>
-        <div className="MainMotto">
+        <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainBackground.png)"}}>
             <b>Почувствуйте мир</b>
             <p>А не просто посмотрите его</p>
             <button>Подобрать путешествие</button>
@@ -76,7 +77,7 @@ const Index = () => {
                     <div class="gradient-line-right"></div>
                 </div>
 
-                <TourTypes>
+                <TourTypes state={currentCountry}>
 
                 </TourTypes>
 

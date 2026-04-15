@@ -14,11 +14,7 @@ const MainContainer = ({children, keywords}) =>{
 
             <div className={styles.navbar}>
 
-                <input type="checkbox" id={styles.menuCheck}></input>
-                <div className={styles.MobilView}>
-                    <h2 className={styles.comName}>Company name</h2>
-                    <label for={styles.menuCheck} class={styles.hamburger}>☰</label>
-                </div>
+                
                 <div className={styles.menu}>
                     <A href={'/'} text={"Main"}/>
                     <A href={'/about'} text={"About"}/>

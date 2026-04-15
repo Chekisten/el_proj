@@ -1,72 +1,20 @@
 .navbar{
     text-align: center;
-   
+    width: 100%;
+
     padding: 15px;
-    padding-right: 10%;
-
-}
-
-
-
-#menuCheck {
-  display: none;
-}
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-.comName{
-    display: none;
-}
-/*
-@media (max-width: 768px) {
-    .MobilView{
-        display: flex;
-        justify-content: space-around;
-        color: white;
-        
-    }
-    .navbar{
-    text-align: right;
+    z-index: 1000;
     
-    background: #EAD9C7;
-    padding: 15px;
-    }
-    .hamburger {
-    display: block; 
-    }
-    .comName{
-        display: block;
-    }
-
-    .menu {
-    display: none; 
-    flex-direction: column;
-
-    padding: 20px;
-    }
-
-
-    #menuC  heck:checked ~ .menu {
-    display: flex;
-    }
-
-    .mainInfo{
-        flex-direction: column;
-    }
-    .mainInfo aside{
-        order: 2;
-    }
-
-    .tours{
-        display: flex;
-        flex-direction: column;
-    }
+    position: absolute;
+    
 
 }
 
-*/
+
+
+
+
+
 
 
 .footer{
@@ -84,3 +32,18 @@
 
 
 
+@media (max-width: 768px) {
+ .navbar{
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    
+    position: absolute;
+    
+
+}
+
+.menu A{
+    margin: 5%;
+}
+}
