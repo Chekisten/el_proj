@@ -38,7 +38,7 @@ const Reviews = () =>{
 
                     {reviews.map(review =>{
 
-                        if (review.isTop == 1){
+                        if (review.isTop == "true"){
                             return (
                                 
                                 <div className={styles.slide}>

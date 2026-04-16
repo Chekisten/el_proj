@@ -35,3 +35,24 @@ Kazakhstan
 Kyrgyzstan
 Tadjikistan
 International
+
+      "id": 3,
+      "head": "Посещение Аральского моря",
+      "shortDescription":
+      "description":
+      "img": 
+      "isTop": 1,
+      "isHide": 0,
+      "countryName": "International",
+      "link": 
+
+
+      "id": 1,
+      "name": "",
+      "head": ",
+      "shortDescription": ",
+      "description": ,
+      "source": "TripAdvisor",
+      "link": "https://www.tripadvisor.com/",
+      "img": "/images/magReview.png",
+      "isTop": "true"
