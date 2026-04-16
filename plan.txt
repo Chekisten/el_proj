@@ -2,3 +2,36 @@
 создать приложение next js
 создать первую страницу
 создать универсальный навбар и футер
+
+
+      "id": 1,
+      "name": "Tour to Uzbekistan",
+      "countryName": "Uzbekistan",
+      "description": "Welcome to Uzmekistan and Karakalpakistan",
+"fullDetails": "fullDetails",
+      "img": "/images/albania.jpg",
+      "price": 3000,
+      "currency": "$",
+      "duration": 7,
+      "time": "days",
+      "isHide": 0,
+      "isBest": 0
+
+
+        name: name, 
+        countryName: countryName,
+        description: description,
+        fullDetails: fullDetails,
+        img: imageUrl,
+        price: price,
+        currency: currency,
+        duration: duration,
+        time: time,
+        isHide: isHide,
+        isBest: isBest
+
+Uzbekistan
+Kazakhstan
+Kyrgyzstan
+Tadjikistan
+International

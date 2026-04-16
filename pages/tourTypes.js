@@ -2,47 +2,24 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import MainContainer from '../components/mainContainer';
 import data from '../database/db.json';
-const TourTypes = () =>{
-    // Нижный конст потмо удалить как будет сделан серверный рендеринг а в аргументы добавить tours
-    const [tours, setTours] = useState(data.tours)
-    
-    tours.map(tour => console.log(tour.id))
-    
+import AddingForms from '../components/addingForms';
 
+const Tours = () =>{
 
 
     
     return (
-
-      
-
         <MainContainer>
-            <h1>Tour types page</h1>
-            <div className="tours">
-            
-                {tours.map(tour => 
-                    <div className="tour">
-                        <h2>{tour.name}</h2>
-                        <br></br>
-                        {tour.id}
-                        <br></br>
-                        <Image src = {tour.img} width={tour.imgWidth} height={tour.imgHeight} className='tourImg'/>
-                        <br></br>
-                        {tour.description}
-                        <br></br>
-                        <button>Let go to {tour.countryName}</button>
-                    </div>
-                )}
-            
-
-            
-
+            <h1>Добавлятель туров</h1>
+            <div className='base'>            
+                <AddingForms></AddingForms>
             </div>
+
         </MainContainer>
     )
 }
 
-export default TourTypes
+export default Tours
 
 
 // export async function getStaticProps(context){

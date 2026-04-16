@@ -16,16 +16,16 @@ const Feedback = () => {
 
             
                 <form action="" method="post" className={styles.feedbackForm}>
-                    <label for="name">Ваше имя</label>
+                    <label htmlFor="name">Ваше имя</label>
                     <input id="name" type="text" name="name"></input>
                     
-                    <label for="email">Ваша почта</label>
+                    <label htmlFor="email">Ваша почта</label>
                     <input id="email" type="email" name="email"></input>
 
-                    <label for="tourName">Наименование тура</label>
+                    <label htmlFor="tourName">Наименование тура</label>
                     <input id="tourName" type="text" name="tourName"></input>
 
-                    <label for="message">Ваше сообщение</label>
+                    <label htmlFor="message">Ваше сообщение</label>
                     <textarea id="message" type="text" name="message"></textarea>
 
                     <input type="submit" value="Оставить заявку"></input>
