@@ -30,8 +30,11 @@ const AddingForms = () => {
   return (
     <>
     <div className={styles.forms}>
-      <h1>Формы добавления контента</h1>
-      <h2>Добавить тур (заполнять все ячейки)</h2>
+        <h1>Формы добавления контента</h1>
+
+               <h2>Добавить тур (заполнять все ячейки)</h2>
+
+      
       <form onSubmit={(e) => handleSubmit(e, 'tours')} className={styles.baseForm}>
         <label htmlFor="name">Имя тура:</label>
         <input 
@@ -41,7 +44,7 @@ const AddingForms = () => {
           placeholder="Введите имя" 
           required 
         />
-        <legend>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</legend>
+        <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
         <label>
             <input type="radio" name="countryName" value="International" defaultChecked />
             International

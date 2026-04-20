@@ -2,6 +2,7 @@
 
 import style from "../styles/aboutUs.module.css"
 import Image from "next/image"
+import {UserExpert} from 'grommet-icons'
 
 const AboutUs = () => {
     return (

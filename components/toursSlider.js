@@ -67,7 +67,7 @@ const TourTypes = ({state}) =>{
 
                 {tours.map( tour => {
                            
-                    if (tour.countryName == country  && tour.isHide == 0){
+                    if (tour.countryName == country  && tour.isHide == "false"){
                         return (
                             <Link href={`/tours/${tour.id}`}>
                             <div className={styles.tour}>
