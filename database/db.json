@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Tour to Uzbekistan",
-      "countryName": "Uzbekistan",
+      "countryName": "uzbekistan",
       "description": "Welcome to Uzmekistan and Karakalpakistan",
       "img": "/images/albania.jpg",
       "imgWidth": 300,
@@ -48,7 +48,7 @@
     {
       "id": 4,
       "name": "Tour to Kazakhstan",
-      "countryName": "Kazakhstan",
+      "countryName": "kazakhstan",
       "description": "Welcome to Kazakhstan",
       "img": "/images/albania.jpg",
       "imgWidth": 300,
@@ -63,7 +63,7 @@
     {
       "id": 6,
       "name": "Основные достопримечательности тура по Таджикистану",
-      "countryName": "Tadjikistan",
+      "countryName": "tadjikistan",
       "description": "Welcome to Tadjikistan",
       "img": "/images/tajikLake.png",
       "imgWidth": 300,
@@ -78,7 +78,7 @@
     {
       "id": 7,
       "name": "Основные достопримечательности тура по Узбекистану",
-      "countryName": "Uzbekistan",
+      "countryName": "uzbekistan",
       "description": "Welcome to Uzmekistan and Karakalpakistan",
       "img": "/images/Bukhara.png",
       "imgWidth": 300,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Тур по Шёлковому пути",
-      "countryName": "International",
+      "countryName": "international",
       "description": "Путь древних торговцев",
       "fullDetails": "Путь древних торговцев",
       "price": "1000",
@@ -107,7 +107,7 @@
     },
     {
       "name": "Конные походы",
-      "countryName": "International",
+      "countryName": "international",
       "description": "Походы на конях",
       "fullDetails": "Походы на конях",
       "price": "1200",
@@ -122,7 +122,7 @@
     },
     {
       "name": "Тур по Памирскому шоссе",
-      "countryName": "International",
+      "countryName": "international",
       "description": "Памирское шоссе",
       "fullDetails": "Памирское шоссе",
       "price": "998",
@@ -137,7 +137,7 @@
     },
     {
       "name": "Пешие и треккинговые туры по Кыргызстану",
-      "countryName": "Kyrgyzstan",
+      "countryName": "kyrgyzstan",
       "description": "Пешие и треккинговые туры по Кыргызстану",
       "fullDetails": "Пешие и треккинговые туры по Кыргызстану",
       "price": "1200",
@@ -152,7 +152,7 @@
     },
     {
       "name": "Кочевая культура Кыргызстана",
-      "countryName": "Kyrgyzstan",
+      "countryName": "kyrgyzstan",
       "description": "Кочевая культура Кыргызстана",
       "fullDetails": "Кочевая культура Кыргызстана",
       "price": "1000",
@@ -167,7 +167,7 @@
     },
     {
       "name": "Конные походы по Кыргызстану",
-      "countryName": "Kyrgyzstan",
+      "countryName": "kyrgyzstan",
       "description": "Конные походы по Кыргызстану",
       "fullDetails": "Конные походы по Кыргызстану",
       "price": "500",
@@ -214,7 +214,7 @@
       "img": "/images/interBlog1.png",
       "isTop": "true",
       "isHide": "false",
-      "countryName": "International",
+      "countryName": "international",
       "link": "exmaple.com"
     },
     {
@@ -225,7 +225,7 @@
       "img": "/images/interBlog2.png",
       "isTop": "true",
       "isHide": "false",
-      "countryName": "International",
+      "countryName": "international",
       "link": "exmaple.com"
     }
   ],
@@ -236,7 +236,7 @@
       "img": "/images/interBlog1.png",
       "isTop": "true",
       "isHide": "false",
-      "countryName": "International"
+      "countryName": "international"
     },
     {
       "id": 2,
@@ -244,7 +244,7 @@
       "img": "/images/interBlog2.png",
       "isTop": "true",
       "isHide": "false",
-      "countryName": "International"
+      "countryName": "international"
     },
     {
       "id": 3,
@@ -252,7 +252,7 @@
       "img": "/images/interBlog1.png",
       "isTop": "true",
       "isHide": "false",
-      "countryName": "International"
+      "countryName": "international"
     },
     {
       "id": 4,
@@ -260,11 +260,11 @@
       "img": "/images/interBlog2.png",
       "isTop": "true",
       "isHide": "false",
-      "countryName": "International"
+      "countryName": "international"
     },
     {
       "alt": "camp",
-      "countryName": "International",
+      "countryName": "international",
       "isHide": "false",
       "isBest": "true",
       "id": 1776338743446,

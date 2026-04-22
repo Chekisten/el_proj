@@ -7,13 +7,13 @@ import data from "../database/db.json"
 
 
 
-const TourTypes = ({state}) =>{
+const TourSlider = ({state}) =>{
     const [tours, setTours] = useState(data.tours)
    // const [country, setCountry] = useState('International')
     let typeOfTours = state
     
     if (state == "main"){
-        typeOfTours = "International"
+        typeOfTours = "international"
     }
 
     const [country, setCountry] = useState(typeOfTours)
@@ -25,11 +25,11 @@ const TourTypes = ({state}) =>{
         {state == "main" && (
             <div className={styles.choseState}>
                     <div className={styles.list}>
-                        <button onClick={() => setCountry('International')}>Многонациональный</button>
-                        <button onClick={() => setCountry('Kyrgyzstan')}>Кыргызстан</button>
-                        <button onClick={() => setCountry('Tadjikistan')}>Таджикистан</button>
-                        <button onClick={() => setCountry('Uzbekistan')}>Узбекистан</button>
-                        <button onClick={() => setCountry('Kazakhstan')}>Казахстан</button>
+                        <button onClick={() => setCountry('international')}>Многонациональный</button>
+                        <button onClick={() => setCountry('kyrgyzstan')}>Кыргызстан</button>
+                        <button onClick={() => setCountry('tadjikistan')}>Таджикистан</button>
+                        <button onClick={() => setCountry('uzbekistan')}>Узбекистан</button>
+                        <button onClick={() => setCountry('kazakhstan')}>Казахстан</button>
                     </div>
                     
 
@@ -97,4 +97,4 @@ const TourTypes = ({state}) =>{
     )
 }
 
-export default TourTypes
+export default TourSlider

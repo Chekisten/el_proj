@@ -32,42 +32,53 @@ const Reviews = () =>{
 
     return (
         <>
-            <div className={styles.reviewSlider}>
-                <div className={styles.slider} ref={scrollRef}>
+
+            <div className="base">
+            
+                    <div className="gradient">
+                        <div class="gradient-line-left"></div>
+                        <h2>Отзывы</h2>
+                        <div class="gradient-line-right"></div>
+                    </div>
+
+            
+                <div className={styles.reviewSlider}>
+                    <div className={styles.slider} ref={scrollRef}>
 
 
-                    {reviews.map(review =>{
+                        {reviews.map(review =>{
 
-                        if (review.isTop == "true"){
-                            return (
-                                
-                                <div className={styles.slide}>
-                                    <div className={styles.textBlock}>
-                                        <h3>{review.head}</h3>
-                                        <p>{review.shortDescription}</p>
-                                        <div className={styles.links}>
-                                            <p>{review.name}</p>
-                                            <a href={review.link}>{review.source}</a>
+                            if (review.isTop == "true"){
+                                return (
+                                    
+                                    <div className={styles.slide}>
+                                        <div className={styles.textBlock}>
+                                            <h3>{review.head}</h3>
+                                            <p>{review.shortDescription}</p>
+                                            <div className={styles.links}>
+                                                <p>{review.name}</p>
+                                                <a href={review.link}>{review.source}</a>
+                                            </div>
+                                        </div>
+                                        <div className={styles.imgBlock}>
+                                            <Images src={review.img} width={500} height={300}></Images>
                                         </div>
                                     </div>
-                                    <div className={styles.imgBlock}>
-                                        <Images src={review.img} width={500} height={300}></Images>
-                                    </div>
-                                </div>
-        
-                                
-                            )
-                        }
-                        
-                    })}
+            
+                                    
+                                )
+                            }
+                            
+                        })}
 
 
-                <button className={`${styles.btn} ${styles.prev}`} onClick={() => scroll('left')}>❮</button>
-                <button className={`${styles.btn} ${styles.next}`} onClick={() => scroll('right')}>❯</button>
+                    <button className={`${styles.btn} ${styles.prev}`} onClick={() => scroll('left')}>❮</button>
+                    <button className={`${styles.btn} ${styles.next}`} onClick={() => scroll('right')}>❯</button>
+
+                    </div>
+
 
                 </div>
-
-
             </div>
         </>
     )

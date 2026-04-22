@@ -11,18 +11,19 @@ export default function () {
     const [country, setCountry] = useState('International');
     const {query} = useRouter();
     const currentTour = tours.find(tour => tour.id == query.id)
-   
+   console.log(query)
     const currentPhoto = currentTour ? currentTour.img : ""
 
    
     
     return (
-        // <MainContainer></MainContainer> Потом добавить всё  в мейн контенйре
+        //  Потом добавить всё  в мейн контенйре
         <>
+        <MainContainer>
         <h1>Tours {query.id}</h1>
         
         <MainPhoto photo={currentPhoto}></MainPhoto>
-        
+        </MainContainer>
         </>
             
         

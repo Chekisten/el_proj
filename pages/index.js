@@ -1,7 +1,7 @@
 
 import MainContainer from "../components/mainContainer";
 
-import TourTypes from "../components/toursSlider";
+import TourSlider from "../components/toursSlider";
 import Reviews from "../components/review";
 import Feedback from "../components/feedback";
 import Link from "next/link";
@@ -68,27 +68,18 @@ const Index = () => {
                     <div class="gradient-line-right"></div>
                 </div>
 
-                <TourTypes state={currentCountry}>
+                <TourSlider state={currentCountry}>
 
-                </TourTypes>
+                </TourSlider>
 
 
 
             </div>
         </div>
 
-        <div className="base">
-            <div className="reviews">
-                <div className="gradient">
-                    <div class="gradient-line-left"></div>
-                    <h2>Отзывы</h2>
-                    <div class="gradient-line-right"></div>
-                </div>
-               
-                <Reviews>
-                </Reviews>
-            </div>
-        </div>
+
+                <Reviews></Reviews>
+
 
         <div className="base">
             <div className="About">

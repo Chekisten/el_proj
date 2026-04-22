@@ -46,27 +46,52 @@ const AddingForms = () => {
         />
         <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
         <label>
-            <input type="radio" name="countryName" value="International" defaultChecked />
+            <input type="radio" name="countryName" value="international" defaultChecked />
             International
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kyrgyzstan" />
+            <input type="radio" name="countryName" value="kyrgyzstan" />
             Kyrgyzstan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Uzbekistan" />
+            <input type="radio" name="countryName" value="uzbekistan" />
             Uzbekistan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kazakhstan" />
+            <input type="radio" name="countryName" value="kazakhstan" />
             Kazakhstan
         </label>
         <label>
-            <input type="radio" name="countryName" value="Tadjikistan" />
+            <input type="radio" name="countryName" value="tadjikistan" />
             Tadjikistan
+        </label>
+
+        <label>Enter type of tours (Citites tours, culture tours, Trekking tours, Horsing or auto tours )</label>
+        <label>
+            <input type="radio" name="tourType" value="cities" defaultChecked />
+            by Cities
+        </label>
+
+        <label>
+            <input type="radio" name="tourType" value="culture" />
+            Culture
+        </label>
+
+        <label>
+            <input type="radio" name="tourType" value="trekking" />
+            Trekking
+        </label>
+
+        <label>
+            <input type="radio" name="tourType" value="horsing" />
+            Horsing
+        </label>
+        <label>
+            <input type="radio" name="tourType" value="auto" />
+            Auto
         </label>
 
 
@@ -197,26 +222,26 @@ const AddingForms = () => {
         />
         <legend>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</legend>
         <label>
-            <input type="radio" name="countryName" value="International" defaultChecked />
+            <input type="radio" name="countryName" value="international" defaultChecked />
             International
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kyrgyzstan" />
+            <input type="radio" name="countryName" value="kyrgyzstan" />
             Kyrgyzstan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Uzbekistan" />
+            <input type="radio" name="countryName" value="uzbekistan" />
             Uzbekistan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kazakhstan" />
+            <input type="radio" name="countryName" value="kazakhstan" />
             Kazakhstan
         </label>
         <label>
-            <input type="radio" name="countryName" value="Tadjikistan" />
+            <input type="radio" name="countryName" value="tadjikistan" />
             Tadjikistan
         </label>
 
@@ -315,26 +340,26 @@ const AddingForms = () => {
         />
         <legend>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</legend>
         <label>
-            <input type="radio" name="countryName" value="International" defaultChecked />
+            <input type="radio" name="countryName" value="international" defaultChecked />
             International
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kyrgyzstan" />
+            <input type="radio" name="countryName" value="kyrgyzstan" />
             Kyrgyzstan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Uzbekistan" />
+            <input type="radio" name="countryName" value="uzbekistan" />
             Uzbekistan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kazakhstan" />
+            <input type="radio" name="countryName" value="kazakhstan" />
             Kazakhstan
         </label>
         <label>
-            <input type="radio" name="countryName" value="Tadjikistan" />
+            <input type="radio" name="countryName" value="tadjikistan" />
             Tadjikistan
         </label>
 
@@ -394,26 +419,26 @@ const AddingForms = () => {
 
         <legend>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</legend>
         <label>
-            <input type="radio" name="countryName" value="International" defaultChecked />
+            <input type="radio" name="countryName" value="international" defaultChecked />
             International
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kyrgyzstan" />
+            <input type="radio" name="countryName" value="kyrgyzstan" />
             Kyrgyzstan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Uzbekistan" />
+            <input type="radio" name="countryName" value="uzbekistan" />
             Uzbekistan
         </label>
 
         <label>
-            <input type="radio" name="countryName" value="Kazakhstan" />
+            <input type="radio" name="countryName" value="kazakhstan" />
             Kazakhstan
         </label>
         <label>
-            <input type="radio" name="countryName" value="Tadjikistan" />
+            <input type="radio" name="countryName" value="tadjikistan" />
             Tadjikistan
         </label>
 

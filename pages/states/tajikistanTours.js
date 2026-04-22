@@ -1,13 +1,13 @@
 import MainContainer from "../../components/mainContainer"
 import Images from "next/image";
-import TourTypes from "../../components/toursSlider";
+import TourSlider from "../../components/toursSlider";
 import Reviews from "../../components/review";
 import BlogSlider from "../../components/blogSlider";
 import AboutUs from "../../components/aboutUs";
 import PhotoSlider from "../../components/photoSlider";
 
 const TajikistanTours = () =>{
-    const currentState = "Tadjikistan"
+    const currentState = "tadjikistan"
     return (
         <MainContainer>
             
@@ -42,9 +42,9 @@ const TajikistanTours = () =>{
                     <h2>Выбери свой отдых</h2>
                     <div class="gradient-line-right"></div>
                 </div>
-            <TourTypes state={currentState}>
+            <TourSlider state={currentState}>
 
-            </TourTypes>
+            </TourSlider>
 
 
 
