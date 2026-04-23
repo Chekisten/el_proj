@@ -245,6 +245,33 @@ const AddingForms = () => {
             Tadjikistan
         </label>
 
+        <label>Enter type of tours (Citites tours, culture tours, Trekking tours, Horsing or auto tours )</label>
+        <label>
+            <input type="radio" name="tourType" value="cities" defaultChecked />
+            by Cities
+        </label>
+
+        <label>
+            <input type="radio" name="tourType" value="culture" />
+            Culture
+        </label>
+
+        <label>
+            <input type="radio" name="tourType" value="trekking" />
+            Trekking
+        </label>
+
+        <label>
+            <input type="radio" name="tourType" value="horsing" />
+            Horsing
+        </label>
+        <label>
+            <input type="radio" name="tourType" value="auto" />
+            Auto
+        </label>
+
+        
+
         <label htmlFor="isHide">  Скрыть блог или нет </label>
         <label>
             <input type="radio" name="isHide" value= "false" defaultChecked/>

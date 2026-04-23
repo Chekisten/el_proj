@@ -12,6 +12,7 @@ import Reviews from '../../components/review'
 
 const CultureTours = () => {
     const pathname = usePathname()
+    const tourType = "culture"
     const countrySegment = pathname.split('/')[1]
 
     //<MainContainer></MainContainer> обернуть всё в контейнре
@@ -39,7 +40,7 @@ const CultureTours = () => {
             </div>
         </div>
 
-        <NewHorizons countryType={countrySegment}></NewHorizons>
+        <NewHorizons countryType={countrySegment} tourType={tourType}></NewHorizons>
 
         <div className="base">
                <div className="gradient">
