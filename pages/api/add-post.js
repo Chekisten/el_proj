@@ -47,6 +47,33 @@ export default async function handler(req, res) {
         contentData.img = null;
       }
 
+// для добавления информации на страницы типов туров--------------------------------------------------
+      const uploadedFileMain = files.imageMain ? files.imageMain[0] : null;
+
+      if (uploadedFileMain && uploadedFileMain.newFilename) {
+        contentData.imageMain = `/photos/${uploadedFileMain.newFilename}`;
+      } else {
+        contentData.imageMain = null;
+      }
+
+
+      const uploadedFileFirstImg = files.firstImg ? files.firstImg[0] : null;
+
+      if (uploadedFileFirstImg && uploadedFileFirstImg.newFilename) {
+        contentData.firstImg = `/photos/${uploadedFileFirstImg.newFilename}`;
+      } else {
+        contentData.firstImg = null;
+      }
+
+
+      const uploadedFileSecondImg = files.secondImg ? files.secondImg[0] : null;
+
+      if (uploadedFileSecondImg && uploadedFileSecondImg.newFilename) {
+        contentData.secondImg = `/photos/${uploadedFileSecondImg.newFilename}`;
+      } else {
+        contentData.secondImg = null;
+      }
+// для добавления информации на страницы типов туров--------------------------------------------------
       // 3. Записываем в db.json
       const dbPath = path.join(process.cwd(), 'database', 'db.json');
       const fileData = await fs.readFile(dbPath, 'utf8');

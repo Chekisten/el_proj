@@ -9,36 +9,57 @@ import NewHorizons from '../../components/newHorizons'
 import AboutUs from '../../components/aboutUs'
 import TourSlider from '../../components/toursSlider'
 import Reviews from '../../components/review'
+import AboutUsTours from '../../components/aboutUsTours'
+import data from '../../database/db.json'
+import { useState } from 'react'
 
 const CultureTours = () => {
     const pathname = usePathname()
     const tourType = "culture"
     const countrySegment = pathname.split('/')[1]
+    let i  = 1;
+    const [infos, setInfos] = useState(data.infos)
 
-    //<MainContainer></MainContainer> обернуть всё в контейнре
+    
     return (
         <>
-        <h1><div>Раздел: {countrySegment}</div></h1>
-        <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainInterTours.png)"}}>
-            <h1>Многонациональный тур</h1>
-            <p>От степей Кыргызстана до древних городов Узбекистана — вся Центральная Азия в одном туре</p>
-            <button>Подобрать путешествие</button>
+        <MainContainer>
 
-        </div>
+            {infos.map(info =>{
+                if (i == 1){
 
-        <div className="base">
-            <div className="mainInfo">
-                <div className="mainInfoText">
-                    <p>Центральная Азия — это не одна страна и не один пейзаж. Это целый мир, где за каждым перевалом открывается новая культура, а за каждым поворотом — новая история, уходящая корнями в глубь веков. Это регион, где величественные горы, древние цивилизации и кочевая свобода существуют в удивительной гармонии.</p>
-                    <br></br>
-                    <p>Памирское шоссе с его головокружительными перевалами, легендарные города Шёлкового пути и конные походы по бескрайним горным просторам Кыргызстана — всё это ждёт вас в одном незабываемом путешествии. Вы можете выбрать один из наших готовых многонациональных маршрутов, охватывающих лучшее сразу нескольких стран, или составить своё собственное путешествие — выбрав именно те направления и впечатления, которые близки вам. В любом случае, мы возьмём на себя всё остальное, а Центральная Азия встретит вас с искренним теплом и гостеприимством, которые невозможно забыть.</p>
-                </div>
-                <div className="mainInfoImg">
-                    <Images src={"/images/interTourInfoPhoto.png"} width={450} height={550}></Images>
-                </div>
+                    i++
+                    if (info.countryName == countrySegment && info.tourType == tourType){
+                        return (
+                            <>
+                                <div className="MainMotto" style={ {backgroundImage:   `url(${info.imageMain})`}}>
+                                    <h1>{info.head}</h1>
+                                    <p>{info.motto}</p>
+                                    <button>Подобрать путешествие</button>
 
-            </div>
-        </div>
+                                </div>
+
+                                <div className="base">
+                                    <div className="mainInfo">
+                                        <div className="mainInfoText">
+                                            <p>{info.firstText1stPart}</p>
+                                            <br></br>
+                                            <p>{info.firstText2ndPart}</p>
+                                        </div>
+                                        <div className="mainInfoImg">
+                                            <Images src={info.firstImg} width={450} height={550}></Images>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </>
+                        )
+                    }
+                }
+
+            })}
+        
+
 
         <NewHorizons countryType={countrySegment} tourType={tourType}></NewHorizons>
 
@@ -48,18 +69,34 @@ const CultureTours = () => {
                     <h2>Туры с заботой и сопровождением</h2>
                     <div class="gradient-line-right"></div>
                 </div>
-            <div className="mainInfo">
-                <div className="mainInfoImg">
-                    <Images src={"/images/interTourInfoPhoto.png"} width={450} height={550}></Images>
-                </div>
-                <div className="mainInfoText">
-                    <p>Центральная Азия — это не одна страна и не один пейзаж. Это целый мир, где за каждым перевалом открывается новая культура, а за каждым поворотом — новая история, уходящая корнями в глубь веков. Это регион, где величественные горы, древние цивилизации и кочевая свобода существуют в удивительной гармонии.</p>
-                    <br></br>
-                    <p>Памирское шоссе с его головокружительными перевалами, легендарные города Шёлкового пути и конные походы по бескрайним горным просторам Кыргызстана — всё это ждёт вас в одном незабываемом путешествии. Вы можете выбрать один из наших готовых многонациональных маршрутов, охватывающих лучшее сразу нескольких стран, или составить своё собственное путешествие — выбрав именно те направления и впечатления, которые близки вам. В любом случае, мы возьмём на себя всё остальное, а Центральная Азия встретит вас с искренним теплом и гостеприимством, которые невозможно забыть.</p>
-                </div>
-            </div>
+
+            {infos.map(info =>{
+                if ( i == 2){
+                    i++
+                    if (info.countryName == countrySegment && info.tourType == tourType){
+                        return(
+                            <>
+                                    <div className="mainInfo">
+                                        <div className="mainInfoImg">
+                                            <Images src={info.secondImg} width={450} height={550}></Images>
+                                        </div>
+
+                                        <div className="mainInfoText">
+                                            <p>{info.secondText1stPart}</p>
+                                            <br></br>
+                                            <p>{info.secondText2ndPart}</p>
+                                        </div>
+                                    
+                                    </div>
+                                
+                            </>
+                        )
+                    }
+                }
+            })}
         </div>
 
+        <AboutUsTours></AboutUsTours>
 
 
         <div className="base">
@@ -131,17 +168,8 @@ const CultureTours = () => {
                 <div className="FaqLine"></div>
             </div>
         </div>
+        </MainContainer>
         
-        
-
-        <div style={{textDecoration:"line-through"}}>Фотография с мотто</div>
-        <div style={{textDecoration:"line-through"}}>описание</div>
-        <div style={{textDecoration:"underline"}} >новые горизонты блоги скорее всего новый модуль</div>
-        <div style={{textDecoration:"underline"}} >туры с заботой и сопровжданием. новый модуль со своей базой данных (массив данных)</div>
-        <div>абэоут уже есть модуль тут нужен новый модуль, по типу абоуэта, просто изменен ненмного</div>
-        <div style={{textDecoration:"line-through"}}>поплуряные туры есть модуль</div>
-        <div style={{textDecoration:"line-through"}}>отзывы есть модуль просто вставить</div>
-        <div style={{textDecoration:"line-through"}}> вопрос ответ без модуля</div>
 
         
         </>

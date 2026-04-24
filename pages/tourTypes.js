@@ -10,10 +10,10 @@ const Tours = () =>{
     
     return (
         <MainContainer>
-            <h1>Добавлятель туров</h1>
-            <div className='base'>            
+            
+                      
                 <AddingForms></AddingForms>
-            </div>
+           
 
         </MainContainer>
     )

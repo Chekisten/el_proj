@@ -29,479 +29,805 @@ const AddingForms = () => {
 
   return (
     <>
-    <div className={styles.forms}>
-        <h1>Формы добавления контента</h1>
+    <br/>
+    <br/>
+    <br/>
+    <h1>Формы добавления контента</h1>
 
-               <h2>Добавить тур (заполнять все ячейки)</h2>
+    <div className='base'>
+      <div className="gradient">
+          <div class="gradient-line-left"></div>
+          <h2>Добавить тур (заполнять все ячейки)</h2>
+          <div class="gradient-line-right"></div>
+      </div>
+      <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'tours')} className={styles.baseForm}>
+          
+          <div className={styles.formEl}>
+            <label htmlFor="name">Имя тура:</label>
+            <input 
+              id="name" 
+              name="name" // Соответствует fields.name на сервере
+              type="text" 
+              placeholder="Введите имя" 
+              required 
+            />
+          </div>
+          <div className={styles.formEl}>
+            <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
+            <div className={styles.radioForm}>
+              
+              <label>
+                  <input type="radio" name="countryName" value="international" defaultChecked />
+                  International
+              </label>
 
-      
-      <form onSubmit={(e) => handleSubmit(e, 'tours')} className={styles.baseForm}>
-        <label htmlFor="name">Имя тура:</label>
-        <input 
-          id="name" 
-          name="name" // Соответствует fields.name на сервере
-          type="text" 
-          placeholder="Введите имя" 
-          required 
-        />
-        <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
-        <label>
-            <input type="radio" name="countryName" value="international" defaultChecked />
-            International
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="kyrgyzstan" />
+                  Kyrgyzstan
+              </label>
 
-        <label>
-            <input type="radio" name="countryName" value="kyrgyzstan" />
-            Kyrgyzstan
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="uzbekistan" />
+                  Uzbekistan
+              </label>
 
-        <label>
-            <input type="radio" name="countryName" value="uzbekistan" />
-            Uzbekistan
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="kazakhstan" />
+                  Kazakhstan
+              </label>
+              <label>
+                  <input type="radio" name="countryName" value="tadjikistan" />
+                  Tadjikistan
+              </label>
+            </div>
+          </div>
 
-        <label>
-            <input type="radio" name="countryName" value="kazakhstan" />
-            Kazakhstan
-        </label>
-        <label>
-            <input type="radio" name="countryName" value="tadjikistan" />
-            Tadjikistan
-        </label>
+          <div className={styles.formEl}>
+            <label>Enter type of tours (Citites tours, culture tours, Trekking tours, Horsing or auto tours )</label>
+            <div className={styles.radioForm}>
+              
+              <label>
+                  <input type="radio" name="tourType" value="cities" defaultChecked />
+                  by Cities
+              </label>
 
-        <label>Enter type of tours (Citites tours, culture tours, Trekking tours, Horsing or auto tours )</label>
-        <label>
-            <input type="radio" name="tourType" value="cities" defaultChecked />
-            by Cities
-        </label>
+              <label>
+                  <input type="radio" name="tourType" value="culture" />
+                  Culture
+              </label>
 
-        <label>
-            <input type="radio" name="tourType" value="culture" />
-            Culture
-        </label>
+              <label>
+                  <input type="radio" name="tourType" value="trekking" />
+                  Trekking
+              </label>
 
-        <label>
-            <input type="radio" name="tourType" value="trekking" />
-            Trekking
-        </label>
+              <label>
+                  <input type="radio" name="tourType" value="horsing" />
+                  Horsing
+              </label>
+              <label>
+                  <input type="radio" name="tourType" value="auto" />
+                  Auto
+              </label>
+            </div>
+          </div>
 
-        <label>
-            <input type="radio" name="tourType" value="horsing" />
-            Horsing
-        </label>
-        <label>
-            <input type="radio" name="tourType" value="auto" />
-            Auto
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="description">short description</label>
+            <textarea 
+              id="description" 
+              name="description" 
+              type="text" 
+              placeholder="description" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="fullDetails">full Details</label>
+            <textarea 
+              id="fullDetails" 
+              name="fullDetails" 
+              type="text" 
+              placeholder="fullDetails" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="price">price (digit: 4000)</label>
+            <input 
+              id="price" 
+              name="price" 
+              type="number" 
+              placeholder="1000" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="currency">currency $</label>
+            <input 
+              id="currency" 
+              name="currency" 
+              type="text" 
+              placeholder="$" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="duration">duration (писать количество дней)</label>
+            <input 
+              id="duration" 
+              name="duration" 
+              type="text" 
+              placeholder="5 or 5-7" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="time">Тип времени дни, часы, месяцы</label>
+            <input 
+              id="time" 
+              name="time" 
+              type="text" 
+              placeholder="day or days" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="isHide">  Скрыть тур или нет </label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isHide" value= "false" defaultChecked/>
+                  показывать
+              </label>        
+              <label>
+                  <input type="radio" name="isHide" value= "true" />
+                  скрыть  
+              </label>
+            </div>
+          </div>
+          
+          <div className={styles.formEl}>
+            <label htmlFor="isBest"> поменить как топ тур или нет</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isBest" value= "true" />
+                  топ тур
+              </label>        
+              <label>
+                  <input type="radio" name="isBest" value= "false" defaultChecked />
+                  не топ тур
+              </label>
+            </div>
+          </div>
+          
+
+          <div className={styles.formEl}>
+            <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
+            <input 
+              id="alt" 
+              name="alt" 
+              type="text" 
+              placeholder="описание картинки" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="image">Фото:</label>
+            <input 
+              id="image"
+              name="image" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
+    </div>  
+
+    <div className='base'>
+      <div className="gradient">
+          <div class="gradient-line-left"></div>
+          <h2>Добавить Блоги (заполнять все ячейки)</h2>
+          <div class="gradient-line-right"></div>
+      </div>
+      <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'blogs')} className={styles.baseForm}>
+
+          <div className={styles.formEl}>
+            <label htmlFor="head">Заголовок</label>
+            <input 
+              id="head" 
+              name="head" 
+              type="text" 
+              placeholder="Заголовок блога" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="shortDescription">Короткое описание</label>
+            <input 
+              id="shortDescription" 
+              name="shortDescription" 
+              type="text" 
+              placeholder="короткое описание" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="Description">Основной текст</label>
+            <input 
+              id="Description" 
+              name="Description" 
+              type="text" 
+              placeholder="Основной текст" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="countryName" value="international" defaultChecked />
+                  International
+              </label>
+
+              <label>
+                  <input type="radio" name="countryName" value="kyrgyzstan" />
+                  Kyrgyzstan
+              </label>
+
+              <label>
+                  <input type="radio" name="countryName" value="uzbekistan" />
+                  Uzbekistan
+              </label>
+
+              <label>
+                  <input type="radio" name="countryName" value="kazakhstan" />
+                  Kazakhstan
+              </label>
+              <label>
+                  <input type="radio" name="countryName" value="tadjikistan" />
+                  Tadjikistan
+              </label>
+            </div>
+          </div>
+
+          <div className={styles.formEl}>
+            <label>Enter type of tours (Citites tours, culture tours, Trekking tours, Horsing or auto tours )</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="tourType" value="cities" defaultChecked />
+                  by Cities
+              </label>
+
+              <label>
+                  <input type="radio" name="tourType" value="culture" />
+                  Culture
+              </label>
+
+              <label>
+                  <input type="radio" name="tourType" value="trekking" />
+                  Trekking
+              </label>
+
+              <label>
+                  <input type="radio" name="tourType" value="horsing" />
+                  Horsing
+              </label>
+              <label>
+                  <input type="radio" name="tourType" value="auto" />
+                  Auto
+              </label>
+            </div>
+          </div>
+          
+          <div className={styles.formEl}>
+            <label htmlFor="isHide">  Скрыть блог или нет </label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isHide" value= "false" defaultChecked/>
+                  показывать
+              </label>        
+              <label>
+                  <input type="radio" name="isHide" value= "true" />
+                  скрыть
+              </label>
+            </div>
+          </div>
+          
+          <div className={styles.formEl}>
+            <label htmlFor="isBest"> поменить как топ блог или нет</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isBest" value= "true" />
+                  топ блог
+              </label>        
+              <label>
+                  <input type="radio" name="isBest" value= "false" defaultChecked />
+                  не топ блог
+              </label>
+            </div>
+          </div>
 
 
-        <label htmlFor="description">short description</label>
-        <textarea 
-          id="description" 
-          name="description" 
-          type="text" 
-          placeholder="description" 
-          required 
-        />
-        
-        <label htmlFor="fullDetails">full Details</label>
-        <textarea 
-          id="fullDetails" 
-          name="fullDetails" 
-          type="text" 
-          placeholder="fullDetails" 
-          required 
-        />
-        
-        <label htmlFor="price">price (digit: 4000)</label>
-        <input 
-          id="price" 
-          name="price" 
-          type="number" 
-          placeholder="1000" 
-          required 
-        />
-        
-        <label htmlFor="currency">currency $</label>
-        <input 
-          id="currency" 
-          name="currency" 
-          type="text" 
-          placeholder="$" 
-          required 
-        />
-        
-        <label htmlFor="duration">duration (писать количество дней)</label>
-        <input 
-          id="duration" 
-          name="duration" 
-          type="text" 
-          placeholder="5 or 5-7" 
-          required 
-        />
-        
-        <label htmlFor="time">Тип времени дни, часы, месяцы</label>
-        <input 
-          id="time" 
-          name="time" 
-          type="text" 
-          placeholder="day or days" 
-          required 
-        />
-        
-        <label htmlFor="isHide">  Скрыть тур или нет </label>
-        <label>
-            <input type="radio" name="isHide" value= "false" defaultChecked/>
-            показывать
-        </label>        
-        <label>
-            <input type="radio" name="isHide" value= "true" />
-            скрыть
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
+            <input 
+              id="alt" 
+              name="alt" 
+              type="text" 
+              placeholder="описание картинки" 
+              required 
+            />
+          </div>
 
-        
-        <label htmlFor="isBest"> поменить как топ тур или нет(</label>
-        <label>
-            <input type="radio" name="isBest" value= "true" />
-            топ тур
-        </label>        
-        <label>
-            <input type="radio" name="isBest" value= "false" defaultChecked />
-            не топ тур
-        </label>
-        <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
-        <input 
-          id="alt" 
-          name="alt" 
-          type="text" 
-          placeholder="описание картинки" 
-          required 
-        />
-
-        
-        <label htmlFor="image">Фото:</label>
-        <input 
-          id="image"
-          name="image" // Соответствует files.image на сервере
-          type="file" 
-          accept="image/*" 
-          required 
-        />
-        
-        <input type="submit" value="Опубликовать"></input>
-      </form>
+          <div className={styles.formEl}>
+            <label htmlFor="image">Фото:</label>
+            <input 
+              id="image"
+              name="image" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
     </div>
 
-    <div className={styles.forms}>
-      <h1>Формы добавления контента</h1>
-      <h2>Добавить Блоги (заполнять все ячейки)</h2>
-      <form onSubmit={(e) => handleSubmit(e, 'blogs')} className={styles.baseForm}>
-        <label htmlFor="head">Заголовок</label>
-        <input 
-          id="head" 
-          name="head" 
-          type="text" 
-          placeholder="Заголовок блога" 
-          required 
-        />
-        <label htmlFor="shortDescription">Короткое описание</label>
-        <input 
-          id="shortDescription" 
-          name="shortDescription" 
-          type="text" 
-          placeholder="короткое описание" 
-          required 
-        />
-        <label htmlFor="Description">Основной текст</label>
-        <input 
-          id="Description" 
-          name="Description" 
-          type="text" 
-          placeholder="Основной текст" 
-          required 
-        />
-        <legend>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</legend>
-        <label>
-            <input type="radio" name="countryName" value="international" defaultChecked />
-            International
-        </label>
+    <div className='base'>
+      <div className="gradient">
+          <div class="gradient-line-left"></div>
+          <h2>Добавить отзывы(заполнять все ячейки)</h2>
+          <div class="gradient-line-right"></div>
+      </div>
+      <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'reviews')} className={styles.baseForm}>
 
-        <label>
-            <input type="radio" name="countryName" value="kyrgyzstan" />
-            Kyrgyzstan
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="name">Имя того, кто сделал отзыв</label>
+            <input 
+              id="name" 
+              name="name" 
+              type="text" 
+              placeholder="Имя туриста" 
+              required 
+            />
+          </div>
 
-        <label>
-            <input type="radio" name="countryName" value="uzbekistan" />
-            Uzbekistan
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="head">Заголовок отзыва</label>
+            <input 
+              id="head" 
+              name="head" 
+              type="text" 
+              placeholder="заголовок отзыва" 
+              required 
+            />
+          </div>
 
-        <label>
-            <input type="radio" name="countryName" value="kazakhstan" />
-            Kazakhstan
-        </label>
-        <label>
-            <input type="radio" name="countryName" value="tadjikistan" />
-            Tadjikistan
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="shortDescription">Короткое описание</label>
+            <input 
+              id="shortDescription" 
+              name="shortDescription" 
+              type="text" 
+              placeholder="короткое описание" 
+              required 
+            />
+          </div>
 
-        <label>Enter type of tours (Citites tours, culture tours, Trekking tours, Horsing or auto tours )</label>
-        <label>
-            <input type="radio" name="tourType" value="cities" defaultChecked />
-            by Cities
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="Description">Основной текст</label>
+            <input 
+              id="Description" 
+              name="Description" 
+              type="text" 
+              placeholder="Основной текст" 
+              required 
+            />
+          </div>
 
-        <label>
-            <input type="radio" name="tourType" value="culture" />
-            Culture
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="link">ссылка на источник</label>
+            <input 
+              id="link" 
+              name="link" 
+              type="text" 
+              placeholder="exampe.com" 
+              required 
+            />
+          </div>
 
-        <label>
-            <input type="radio" name="tourType" value="trekking" />
-            Trekking
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="source">Название источника</label>
+            <input 
+              id="source" 
+              name="source" 
+              type="text" 
+              placeholder="TripAdvisor" 
+              required 
+            />
+          </div>
 
-        <label>
-            <input type="radio" name="tourType" value="horsing" />
-            Horsing
-        </label>
-        <label>
-            <input type="radio" name="tourType" value="auto" />
-            Auto
-        </label>
+          <div className={styles.formEl}>
+            <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="countryName" value="international" defaultChecked />
+                  International
+              </label>
 
-        
+              <label>
+                  <input type="radio" name="countryName" value="kyrgyzstan" />
+                  Kyrgyzstan
+              </label>
 
-        <label htmlFor="isHide">  Скрыть блог или нет </label>
-        <label>
-            <input type="radio" name="isHide" value= "false" defaultChecked/>
-            показывать
-        </label>        
-        <label>
-            <input type="radio" name="isHide" value= "true" />
-            скрыть
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="uzbekistan" />
+                  Uzbekistan
+              </label>
 
-        
-        <label htmlFor="isBest"> поменить как топ блог или нет(</label>
-        <label>
-            <input type="radio" name="isBest" value= "true" />
-            топ блог
-        </label>        
-        <label>
-            <input type="radio" name="isBest" value= "false" defaultChecked />
-            не топ блог
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="kazakhstan" />
+                  Kazakhstan
+              </label>
+              <label>
+                  <input type="radio" name="countryName" value="tadjikistan" />
+                  Tadjikistan
+              </label>
+            </div>
+          </div>
 
-        <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
-        <input 
-          id="alt" 
-          name="alt" 
-          type="text" 
-          placeholder="описание картинки" 
-          required 
-        />
-        <label htmlFor="image">Фото:</label>
-        <input 
-          id="image"
-          name="image" // Соответствует files.image на сервере
-          type="file" 
-          accept="image/*" 
-          required 
-        />
-        <input type="submit" value="Опубликовать"></input>
-      </form>
+
+          <div className={styles.formEl}>
+            <label htmlFor="isHide">  Скрыть отзыв или нет </label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isHide" value= "false" defaultChecked/>
+                  показывать
+              </label>        
+              <label>
+                  <input type="radio" name="isHide" value= "true" />
+                  скрыть
+            </label>
+            </div>
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="isBest"> поменить как топ отзыв или нет</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isBest" value= "true" />
+                  топ 
+              </label>        
+              <label>
+                  <input type="radio" name="isBest" value= "false" defaultChecked />
+                  не топ 
+              </label>
+            </div>
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
+            <input 
+              id="alt" 
+              name="alt" 
+              type="text" 
+              placeholder="описание картинки" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="image">Фото:</label>
+            <input 
+              id="image"
+              name="image" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
     </div>
 
-    <div className={styles.forms}>
-      <h1>Формы добавления Отзывов</h1>
-      <h2>Добавить отзывы(заполнять все ячейки)</h2>
-      <form onSubmit={(e) => handleSubmit(e, 'reviews')} className={styles.baseForm}>
-        <label htmlFor="name">Имя того, кто сделал отзыв</label>
-        <input 
-          id="name" 
-          name="name" 
-          type="text" 
-          placeholder="Имя туриста" 
-          required 
-        />
-        <label htmlFor="head">Заголовок отзыва</label>
-        <input 
-          id="head" 
-          name="head" 
-          type="text" 
-          placeholder="заголовок отзыва" 
-          required 
-        />
-        <label htmlFor="shortDescription">Короткое описание</label>
-        <input 
-          id="shortDescription" 
-          name="shortDescription" 
-          type="text" 
-          placeholder="короткое описание" 
-          required 
-        />
-        <label htmlFor="Description">Основной текст</label>
-        <input 
-          id="Description" 
-          name="Description" 
-          type="text" 
-          placeholder="Основной текст" 
-          required 
-        />
-        <label htmlFor="link">ссылка на источник</label>
-        <input 
-          id="link" 
-          name="link" 
-          type="text" 
-          placeholder="exampe.com" 
-          required 
-        />
-        <label htmlFor="source">Название источника</label>
-        <input 
-          id="source" 
-          name="source" 
-          type="text" 
-          placeholder="TripAdvisor" 
-          required 
-        />
-        <legend>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</legend>
-        <label>
-            <input type="radio" name="countryName" value="international" defaultChecked />
-            International
-        </label>
+    <div className='base'>
+      <div className="gradient">
+          <div class="gradient-line-left"></div>
+          <h2>Добавить фото для галереи(заполнять все ячейки)</h2>
+          <div class="gradient-line-right"></div>
+      </div>
+      <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'photos')} className={styles.baseForm}>
+          <div className={styles.formEl}>
+            <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
+            <input 
+              id="alt" 
+              name="alt" 
+              type="text" 
+              placeholder="описание картинки" 
+              required 
+            />
+          </div>
 
-        <label>
-            <input type="radio" name="countryName" value="kyrgyzstan" />
-            Kyrgyzstan
-        </label>
+          <div className={styles.formEl}>
+            <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="countryName" value="international" defaultChecked />
+                  International
+              </label>
 
-        <label>
-            <input type="radio" name="countryName" value="uzbekistan" />
-            Uzbekistan
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="kyrgyzstan" />
+                  Kyrgyzstan
+              </label>
 
-        <label>
-            <input type="radio" name="countryName" value="kazakhstan" />
-            Kazakhstan
-        </label>
-        <label>
-            <input type="radio" name="countryName" value="tadjikistan" />
-            Tadjikistan
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="uzbekistan" />
+                  Uzbekistan
+              </label>
 
-        <label htmlFor="isHide">  Скрыть отзыв или нет </label>
-        <label>
-            <input type="radio" name="isHide" value= "false" defaultChecked/>
-            показывать
-        </label>        
-        <label>
-            <input type="radio" name="isHide" value= "true" />
-            скрыть
-        </label>
+              <label>
+                  <input type="radio" name="countryName" value="kazakhstan" />
+                  Kazakhstan
+              </label>
+              <label>
+                  <input type="radio" name="countryName" value="tadjikistan" />
+                  Tadjikistan
+              </label>
+            </div>
+          </div>
 
-        
-        <label htmlFor="isBest"> поменить как топ отзыв или нет(</label>
-        <label>
-            <input type="radio" name="isBest" value= "true" />
-            топ 
-        </label>        
-        <label>
-            <input type="radio" name="isBest" value= "false" defaultChecked />
-            не топ 
-        </label>
-        <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
-        <input 
-          id="alt" 
-          name="alt" 
-          type="text" 
-          placeholder="описание картинки" 
-          required 
-        />
-        <label htmlFor="image">Фото:</label>
-        <input 
-          id="image"
-          name="image" // Соответствует files.image на сервере
-          type="file" 
-          accept="image/*" 
-          required 
-        />
-        <input type="submit" value="Опубликовать"></input>
-      </form>
+          <div className={styles.formEl}>
+            <label htmlFor="isHide">  Скрыть фото или нет </label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isHide" value= "false" defaultChecked/>
+                  показывать
+              </label>        
+              <label>
+                  <input type="radio" name="isHide" value= "true" />
+                  скрыть
+              </label>
+            </div>
+          </div>
+          
+          <div className={styles.formEl}>
+            <label htmlFor="isBest"> поменить как топ фото или нет</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isBest" value= "true" />
+                  топ 
+              </label>        
+              <label>
+                  <input type="radio" name="isBest" value= "false" defaultChecked />
+                  не топ 
+              </label>
+            </div>
+          </div>
+
+
+          <div className={styles.formEl}>
+            <label htmlFor="image">Фото:</label>
+            <input 
+              id="image"
+              name="image" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
     </div>
 
-    <div className={styles.forms}>
-      <h1>Формы добавления фотографий</h1>
-      <h2>Добавить отзывы(заполнять все ячейки)</h2>
-      <form onSubmit={(e) => handleSubmit(e, 'photos')} className={styles.baseForm}>
-        <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
-        <input 
-          id="alt" 
-          name="alt" 
-          type="text" 
-          placeholder="описание картинки" 
-          required 
-        />
+    <div className='base'>
+      <div className="gradient">
+          <div class="gradient-line-left"></div>
+          <h2>Добавить Информацию на страницы по типам туров (заполнять все ячейки)</h2>
+          <div class="gradient-line-right"></div>
+      </div>
+      <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'infos')} className={styles.baseForm}>
+
+          <div className={styles.formEl}>
+            <label htmlFor="head">Заголовок страницы</label>
+            <input 
+              id="head" 
+              name="head" 
+              type="text" 
+              placeholder="Заголовок страницы" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="countryName" value="international" defaultChecked />
+                  International
+              </label>
+
+              <label>
+                  <input type="radio" name="countryName" value="kyrgyzstan" />
+                  Kyrgyzstan
+              </label>
+
+              <label>
+                  <input type="radio" name="countryName" value="uzbekistan" />
+                  Uzbekistan
+              </label>
+
+              <label>
+                  <input type="radio" name="countryName" value="kazakhstan" />
+                  Kazakhstan
+              </label>
+              <label>
+                  <input type="radio" name="countryName" value="tadjikistan" />
+                  Tadjikistan
+              </label>
+            </div>
+          </div>
 
 
-        <legend>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</legend>
-        <label>
-            <input type="radio" name="countryName" value="international" defaultChecked />
-            International
-        </label>
+          <div className={styles.formEl}>
+            <label>Enter type of tours (Citites tours, culture tours, Trekking tours, Horsing or auto tours )</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="tourType" value="cities" defaultChecked />
+                  by Cities
+              </label>
 
-        <label>
-            <input type="radio" name="countryName" value="kyrgyzstan" />
-            Kyrgyzstan
-        </label>
+              <label>
+                  <input type="radio" name="tourType" value="culture" />
+                  Culture
+              </label>
 
-        <label>
-            <input type="radio" name="countryName" value="uzbekistan" />
-            Uzbekistan
-        </label>
+              <label>
+                  <input type="radio" name="tourType" value="trekking" />
+                  Trekking
+              </label>
 
-        <label>
-            <input type="radio" name="countryName" value="kazakhstan" />
-            Kazakhstan
-        </label>
-        <label>
-            <input type="radio" name="countryName" value="tadjikistan" />
-            Tadjikistan
-        </label>
+              <label>
+                  <input type="radio" name="tourType" value="horsing" />
+                  Horsing
+              </label>
+              <label>
+                  <input type="radio" name="tourType" value="auto" />
+                  Auto
+              </label>
+            </div>
+          </div>
 
-        <label htmlFor="isHide">  Скрыть фото или нет </label>
-        <label>
-            <input type="radio" name="isHide" value= "false" defaultChecked/>
-            показывать
-        </label>        
-        <label>
-            <input type="radio" name="isHide" value= "true" />
-            скрыть
-        </label>
+          <div className={styles.formEl}>
+            <label htmlFor="isHide">  Скрыть текст или нет </label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isHide" value= "false" defaultChecked/>
+                  показывать
+              </label>        
+              <label>
+                  <input type="radio" name="isHide" value= "true" />
+                  скрыть
+              </label>
+            </div>
+          </div>
 
-        
-        <label htmlFor="isBest"> поменить как топ фото или нет(</label>
-        <label>
-            <input type="radio" name="isBest" value= "true" />
-            топ 
-        </label>        
-        <label>
-            <input type="radio" name="isBest" value= "false" defaultChecked />
-            не топ 
-        </label>
-                <label htmlFor="image">Фото:</label>
-        <input 
-          id="image"
-          name="image" // Соответствует files.image на сервере
-          type="file" 
-          accept="image/*" 
-          required 
-        />
-        <input type="submit" value="Опубликовать"></input>
-      </form>
+          <div className={styles.formEl}>
+            <label htmlFor='motto'>Девиз под главным заголовком</label>
+            <textarea
+              id = "motto"
+              name="motto"
+              type="text"
+              placeholder='Текст девиза'
+              required 
+              />
+          </div>
+          
+          <div className={styles.formEl}>
+            <label htmlFor="imageMain">Фото под заголовокм</label>
+            <input 
+              id="imageMain"
+              name="imageMain" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+          
+          <div className={styles.formEl}>
+            <label htmlFor='firstText1stPart'>первый абзац первого текста описание с картинкой</label>
+            <textarea 
+              id = "firstText1stPart"
+              name="firstText1stPart"
+              type="text"
+              placeholder='первый абзац'
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor='firstText2ndPart'>второй абзац первого текста описание с картинкой</label>
+            <textarea 
+              id = "firstText2ndPart"
+              name="firstText2ndPart"
+              type="text"
+              placeholder='второй абзац'
+              required 
+            />
+          </div>
+
+
+
+          <div className={styles.formEl}>
+            <label htmlFor="firstImg">первое фото</label>
+            <input 
+              id="firstImg"
+              name="firstImg" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+          
+          <div className={styles.formEl}>
+            <label htmlFor='secondText1stPart'>secondText текст описание с картинкой</label>
+            <textarea
+              id = "secondText1stPart"
+              name="secondText1stPart"
+              type="text"
+              placeholder='первый абзац'
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+          <label htmlFor='secondText2ndPart'>secondText текст описание с картинкой</label>
+            <textarea
+              id = "secondText2ndPart"
+              name="secondText2ndPart"
+              type="text"
+              placeholder='второй абзац'
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="secondImg">второе фото</label>
+            <input 
+              id="secondImg"
+              name="secondImg" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
     </div>
-
-
 </>
   );
 }
