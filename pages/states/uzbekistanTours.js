@@ -70,19 +70,12 @@ const UzbekistanTours = () => {
         </div>
             
 
-        <div className="base">
-            <div className="reviews">
-                <div className="gradient">
-                    <div class="gradient-line-left"></div>
-                    <h2>Отзывы</h2>
-                    <div class="gradient-line-right"></div>
-                </div>
+       
                
             <Reviews>
                 
             </Reviews>
-            </div>
-        </div>
+            
             
 
 
