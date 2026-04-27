@@ -33,9 +33,9 @@
 }
 .svgMain {
     fill:#FFF3E4;
-    width: 80%;
-    height: 80%;
-    padding: 10%;
+    width: 100%;
+    height: 100%;
+    padding: 11%;
 }
 
 .st0{fill:none;stroke:#FFF3E4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}

@@ -2,7 +2,7 @@
 
 import style from "../styles/aboutUs.module.css"
 import Image from "next/image"
-import {UserExpert} from 'grommet-icons'
+import {User, UserExpert, Compass} from 'grommet-icons'
 
 const AboutUs = () => {
     return (
@@ -10,9 +10,8 @@ const AboutUs = () => {
             <div className={style.aboutUsMain}>
                 <div className={style.aboutEl}>
                     <div className={style.svgBack}>
-                        <svg className={style.svgMain} viewBox="0 0 25 25">
-                            <path d="M2,19c0-3.9,3.1-7,7-7c2.5,0,4.8,1.3,6.1,3.5l1.7-1c-1-1.7-2.5-3-4.2-3.7C14.1,9.7,15,7.9,15,6c0-3.3-2.7-6-6-6S3,2.7,3,6c0,1.9,0.9,3.7,2.4,4.8C2.2,12.2,0,15.3,0,19v5h12v-2H2V19z M5,6c0-2.2,1.8-4,4-4s4,1.8,4,4s-1.8,4-4,4S5,8.2,5,6z"/>
-                            <path d="M24.1,15.8l-7.6,7.6l-4.7-4.7l1.4-1.4l3.3,3.3l6.2-6.2L24.1,15.8z"/>
+                        <svg className={style.svgMain} viewBox="0 0 100 100">
+                             <UserExpert color="#FFF3E4"></UserExpert>
                         </svg>
                     </div>
                     <h5>Опыт работы с местными специалистами</h5>
@@ -33,9 +32,8 @@ const AboutUs = () => {
                 </div>
                 <div className={style.aboutEl}>
                     <div className={style.svgBack}>
-                        <svg className={style.svgMain} viewBox="0 0 25 25">
-                            <path d="M2,19c0-3.9,3.1-7,7-7c2.5,0,4.8,1.3,6.1,3.5l1.7-1c-1-1.7-2.5-3-4.2-3.7C14.1,9.7,15,7.9,15,6c0-3.3-2.7-6-6-6S3,2.7,3,6c0,1.9,0.9,3.7,2.4,4.8C2.2,12.2,0,15.3,0,19v5h12v-2H2V19z M5,6c0-2.2,1.8-4,4-4s4,1.8,4,4s-1.8,4-4,4S5,8.2,5,6z"/>
-                            <path d="M24.1,15.8l-7.6,7.6l-4.7-4.7l1.4-1.4l3.3,3.3l6.2-6.2L24.1,15.8z"/>
+                        <svg className={style.svgMain} viewBox="0 0 100 100">
+                            <Compass color="#FFF3E4"></Compass>
                         </svg>
                     </div>
                     <h5>Индивидуальные маршруты</h5>
