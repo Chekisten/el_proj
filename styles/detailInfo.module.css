@@ -1,0 +1,160 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+.regButton {
+    color: #F1D9BD; 
+    background-color: #504020;
+    border: 0;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-family: Montserrat;
+}
+.navbar button{
+    color: #504020; 
+    background-color: #F1D9BD;
+    border: 0;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: Montserrat;
+}
+
+.navbar button:focus{
+    color: #EAD9C7; 
+    background-color: #504020;
+    border: 0;
+    font-family: Montserrat;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+
+.mainDetail {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-width: 2px;
+    font-family: Montserrat;
+    
+    
+}
+
+.stepLeft {
+    flex: 0 0 40%;
+}
+.stepLeft img{
+    border-radius: 30px;
+}
+
+
+.stepMidFirst{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    align-items: center;
+    
+}
+
+
+
+.connectUp{
+    width: 50px;
+    height: 20px;
+    margin-bottom: -12px;
+    background-color: #5B3F2B;
+    border-radius: 50% 50% 50% 50% / 85% 85% 15% 15%;
+   
+}
+
+.connectDown{
+    width: 50px;
+    height: 20px;
+    margin-top: -12px;
+    background-color: #5B3F2B;
+    border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+    
+ 
+}
+
+
+.stepMid {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    background-color: #5B3F2B;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    color: #FFEDDA;
+   justify-content: space-around;
+   align-items: center;
+}
+.stringDown{
+    width: 25px;
+    height: 180px;
+    background-color: #5B3F2B;
+    margin-top: -5px; 
+    
+}
+.stringUp{
+    width: 25px;
+    height: 180px;
+    background-color: #5B3F2B;
+    margin-bottom: -5px;
+}
+
+.stringTransparent {
+    width: 25px;
+    height: 180px;
+    margin-bottom: -5px;
+    
+}
+
+.stepMidLast{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    align-items: center;
+}
+
+
+.stepRight {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    text-align: left;
+}
+.stepRight h3 {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Montserrat;
+}
+.stepRight p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Montserrat;
+}

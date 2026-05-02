@@ -1,0 +1,48 @@
+/*Блок Вопрос-ответ*/
+.FAQBlock{
+    text-align: left;
+    font-family: Montserrat;
+}
+
+.FAQBlock summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 500;
+    padding: 1%;
+    margin-left: 5%;
+    cursor: pointer;
+    list-style: none;
+}
+
+.FAQBlock summary::after {
+    content: '▶'; 
+    font-size: 0.8em;
+    color: #5B3F2B;
+    transition: transform 0.3s; 
+    margin-left: 2%; 
+}
+
+
+.FAQBlock details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+
+
+.FAQBlock p{
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    margin-left: 5%;
+}
+
+.FaqLine {
+    height: 2px;
+    background: linear-gradient(to right, #504020, #EAD9C7);
+}
+/*Конец Блок Вопрос-ответ*/
+
+@media (max-width: 768px){}

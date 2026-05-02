@@ -53,6 +53,19 @@ const AddingForms = () => {
               required 
             />
           </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="uniqName">Уникальное имя тура (на английском и без пробелов)</label>
+            <input 
+              id="uniqName" 
+              name="uniqName" // Соответствует fields.name на сервере
+              type="text" 
+              placeholder="uniq-tour-name" 
+              required 
+            />
+          </div>
+
+
           <div className={styles.formEl}>
             <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
             <div className={styles.radioForm}>
@@ -229,6 +242,209 @@ const AddingForms = () => {
               required 
             />
           </div>
+
+
+          <div className={styles.formEl}>
+            <label htmlFor="motto">Какой то лозунг</label>
+            <input 
+              id="motto" 
+              name="motto" 
+              type="text" 
+              placeholder="Feels good" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="introImg">Фотография которая будет находится в самом верху под текстом названия тура</label>
+            <input 
+              id="introImg"
+              name="introImg" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="groupSize">Размер группы</label>
+            <input 
+              id="groupSize" 
+              name="groupSize" 
+              type="text" 
+              placeholder="2-5 men" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="destination">Направление тура</label>
+            <input 
+              id="destination" 
+              name="destination" 
+              type="text" 
+              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="text1stPart">Первый абзац вступительного текста</label>
+            <input 
+              id="text1stPart" 
+              name="text1stPart" 
+              type="text" 
+              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="text2ndPart">Второй абзац вступительного текста</label>
+            <input 
+              id="text2ndPart" 
+              name="text2ndPart" 
+              type="text" 
+              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
+              required 
+            />
+          </div>
+
+
+          <div className={styles.formEl}>
+            <label htmlFor="Moment5thText">Текст четвёртого  текста из блока моменты</label>
+            <input 
+              id="Moment5thText" 
+              name="Moment5thText" 
+              type="text" 
+              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="Moment5thImg">фотография четвёртого текста из блока моменты</label>
+            <input 
+              id="Moment5thImg"
+              name="Moment5thImg" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="hotel">Прописать тип проживания</label>
+            <input 
+              id="hotel" 
+              name="hotel" 
+              type="text" 
+              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="typeOfRoute">Прописать тип тура именно возможно развёрнуто ну или можно одним словом</label>
+            <input 
+              id="typeOfRoute" 
+              name="typeOfRoute" 
+              type="text" 
+              placeholder="Trekking" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="distance">Дистанция тура</label>
+            <input 
+              id="distance" 
+              name="distance" 
+              type="text" 
+              placeholder="120 km" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="tourHeight">Максимальная и минимальная высота маршрута над уровнем моря</label>
+            <input 
+              id="tourHeight" 
+              name="tourHeight" 
+              type="text" 
+              placeholder="max Height 1200m / min Height 700m" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="nights">Количество ночей в туре</label>
+            <input 
+              id="nights" 
+              name="nights" 
+              type="text" 
+              placeholder="8 nights" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="probablyMonths">Месяци в которые возможно проведение тура</label>
+            <input 
+              id="probablyMonths" 
+              name="probablyMonths" 
+              type="text" 
+              placeholder="Май - Октябрь" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="level">Уровень сложности тура</label>
+            <input 
+              id="level" 
+              name="level" 
+              type="text" 
+              placeholder="Medium" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="startPoint">Начальная точка тура</label>
+            <input 
+              id="startPoint" 
+              name="startPoint" 
+              type="text" 
+              placeholder="Bishkek" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="endPoint">Конечная точка тура тура</label>
+            <input 
+              id="endPoint" 
+              name="endPoint" 
+              type="text" 
+              placeholder="Osh" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="transport">Транспортное обеспечение</label>
+            <input 
+              id="transport" 
+              name="transport" 
+              type="text" 
+              placeholder="auto" 
+              required 
+            />
+          </div>
+
+
+
           <input type="submit" value="Опубликовать"></input>
         </form>
       </div>
@@ -556,6 +772,16 @@ const AddingForms = () => {
       </div>
       <div className={styles.forms}>
         <form onSubmit={(e) => handleSubmit(e, 'photos')} className={styles.baseForm}>
+           <div className={styles.formEl}>
+            <label htmlFor="uniqName">Уникальное имя тура к которому нужно будет добавить данное фото</label>
+            <input 
+              id="uniqName" 
+              name="uniqName" 
+              type="text" 
+              placeholder="Pamir-HighWay" 
+              required 
+            />
+          </div>
           <div className={styles.formEl}>
             <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
             <input 

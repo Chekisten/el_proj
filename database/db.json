@@ -1,127 +1,8 @@
 {
   "tours": [
     {
-      "id": 1,
-      "name": "Tour to Uzbekistan",
-      "countryName": "uzbekistan",
-      "description": "Welcome to Uzmekistan and Karakalpakistan",
-      "img": "/images/albania.jpg",
-      "imgWidth": 300,
-      "imgHeight": 300,
-      "price": 3000,
-      "currency": "$",
-      "duration": 7,
-      "time": "days",
-      "isHide": "false",
-      "isBest": "false"
-    },
-    {
-      "id": 2,
-      "name": "Tour to Prussia",
-      "countryName": "Prussia",
-      "description": "Welcome to Prussia and Germany",
-      "img": "/images/prussia.jpg",
-      "imgWidth": 300,
-      "imgHeight": 300,
-      "price": 3000,
-      "currency": "$",
-      "duration": 7,
-      "time": "days",
-      "isHide": "false",
-      "isBest": "false"
-    },
-    {
-      "id": 3,
-      "name": "Tour to German",
-      "countryName": "German",
-      "description": "Step back in time and explore the lands of Prussia — where medieval castles stand guard over ancient forests, cobblestone streets whisper tales of knights and kings, and the Baltic coastline stretches into the horizon like a dream.",
-      "img": "/images/prussia.jpg",
-      "imgWidth": 300,
-      "imgHeight": 300,
-      "price": 3000,
-      "currency": "$",
-      "duration": 7,
-      "time": "days",
-      "isHide": "false",
-      "isBest": "false"
-    },
-    {
-      "id": 4,
-      "name": "Tour to Kazakhstan",
-      "countryName": "kazakhstan",
-      "description": "Welcome to Kazakhstan",
-      "img": "/images/albania.jpg",
-      "imgWidth": 300,
-      "imgHeight": 300,
-      "price": 3000,
-      "currency": "$",
-      "duration": 7,
-      "time": "days",
-      "isHide": "false",
-      "isBest": "true"
-    },
-    {
-      "id": 6,
-      "name": "Основные достопримечательности тура по Таджикистану",
-      "countryName": "tadjikistan",
-      "description": "Welcome to Tadjikistan",
-      "img": "/images/tajikLake.png",
-      "imgWidth": 300,
-      "imgHeight": 300,
-      "price": 3000,
-      "currency": "$",
-      "duration": 7,
-      "time": "days",
-      "isHide": "false",
-      "isBest": "true"
-    },
-    {
-      "id": 7,
-      "name": "Основные достопримечательности тура по Узбекистану",
-      "countryName": "uzbekistan",
-      "description": "Welcome to Uzmekistan and Karakalpakistan",
-      "img": "/images/Bukhara.png",
-      "imgWidth": 300,
-      "imgHeight": 300,
-      "price": 3000,
-      "currency": "$",
-      "duration": 7,
-      "time": "days",
-      "isHide": "false",
-      "isBest": "true"
-    },
-    {
-      "name": "Тур по Шёлковому пути",
-      "countryName": "international",
-      "description": "Путь древних торговцев",
-      "fullDetails": "Путь древних торговцев",
-      "price": "1000",
-      "currency": "$",
-      "duration": "7",
-      "time": "day",
-      "isHide": "false",
-      "isBest": "true",
-      "alt": "Silk Road",
-      "id": 1776336011703,
-      "img": "/photos/sr77vb5gi155duonysqocqszb.png"
-    },
-    {
-      "name": "Конные походы",
-      "countryName": "international",
-      "description": "Походы на конях",
-      "fullDetails": "Походы на конях",
-      "price": "1200",
-      "currency": "$",
-      "duration": "5",
-      "time": "day",
-      "isHide": "false",
-      "isBest": "true",
-      "alt": "horse riding",
-      "id": 1776336092135,
-      "img": "/photos/eargd17fs7iovt8h6um7w60n3.png"
-    },
-    {
       "name": "Тур по Памирскому шоссе",
+      "uniqName": "pamir-highway-tour",
       "countryName": "international",
       "description": "Памирское шоссе",
       "fullDetails": "Памирское шоссе",
@@ -133,52 +14,57 @@
       "isBest": "true",
       "alt": "Pamir Highway",
       "id": 1776336312891,
-      "img": "/photos/c6ev2ad3w4evj4m8db7i7rats.png"
+      "img": "/photos/c6ev2ad3w4evj4m8db7i7rats.png",
+      "motto":"тут вот motto"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Тур по Памирскому шоссе",
+      "uniqName": "pamir-highway-tour",
+      "id": 1,
+      "img":"/images/billaBongReview.png",
+      "header": "Приезд в деревню Сары-Могуль",
+      "day": 2,
+      "icon":"солнышко",
+      "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     },
     {
-      "name": "Пешие и треккинговые туры по Кыргызстану",
-      "countryName": "kyrgyzstan",
-      "description": "Пешие и треккинговые туры по Кыргызстану",
-      "fullDetails": "Пешие и треккинговые туры по Кыргызстану",
-      "price": "1200",
-      "currency": "$",
-      "duration": "2",
-      "time": "day",
-      "isHide": "false",
-      "isBest": "true",
-      "alt": "camp",
-      "id": 1776336580523,
-      "img": "/photos/i2b6wludwn1jm16p8n8az822r.png"
+      "name": "Тур по Памирскому шоссе",
+      "uniqName": "pamir-highway-tour",
+      "id": 1,
+      "img":"/images/billaBongReview.png",
+      "header": "Отъезд из Оша в деревню Сары-Могуль",
+      "day": 1,
+      "icon":"солнышко",
+      "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     },
     {
-      "name": "Кочевая культура Кыргызстана",
-      "countryName": "kyrgyzstan",
-      "description": "Кочевая культура Кыргызстана",
-      "fullDetails": "Кочевая культура Кыргызстана",
-      "price": "1000",
-      "currency": "$",
-      "duration": "3",
-      "time": "days",
-      "isHide": "false",
-      "isBest": "true",
-      "alt": "кочевники",
-      "id": 1776336637633,
-      "img": "/photos/t8ezyklxszvz7vr1d7k6xhm8k.png"
+      "name": "Тур по Памирскому шоссе",
+      "uniqName": "pamir-highway-tour",
+      "id": 1,
+      "img":"/images/billaBongReview.png",
+      "header": "Вылет куда то",
+      "day": 3,
+      "icon":"солнышко",
+      "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
+    }
+    
+  ],
+  "moments": [
+    {
+      "uniqName": "pamir-highway-tour",
+      "id": 1,
+      "img":"/images/billaBongReview.png",
+      "header": "Приезд в деревню Сары-Могуль",
+      "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     },
     {
-      "name": "Конные походы по Кыргызстану",
-      "countryName": "kyrgyzstan",
-      "description": "Конные походы по Кыргызстану",
-      "fullDetails": "Конные походы по Кыргызстану",
-      "price": "500",
-      "currency": "$",
-      "duration": "3",
-      "time": "days",
-      "isHide": "false",
-      "isBest": "true",
-      "alt": "Конные походы по Кыргызстану",
-      "id": 1776336677990,
-      "img": "/photos/qv9p9qyk5bh37wiv1kaf8y27q.png"
+      "uniqName": "pamir-highway-tour",
+      "id": 1,
+      "img":"/images/billaBongReview.png",
+      "header": "Приезд в деревню Сары-Могуль",
+      "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     }
   ],
   "reviews": [
@@ -262,7 +148,8 @@
       "img": "/images/interBlog2.png",
       "isTop": "true",
       "isHide": "false",
-      "countryName": "international"
+      "countryName": "international",
+      "uniqName":"pamir-highway-tour"
     },
     {
       "alt": "camp",

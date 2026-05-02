@@ -1,6 +1,7 @@
 
 body {
-    background-color: #EAD9C7;
+    background-color: #FFEDDA;
+    font-family: Montserrat;
 
 }
 * {/*  Это отвечает за удаление краёв в навбаре*/
@@ -426,12 +427,13 @@ h1{
     text-align: center;
     color: #504020;
     font-family: Montserrat;
-    font-weight: 600;
+    font-weight: 400;
 
 }
 .base h2 {
     font-size: 28px;
     margin-bottom: 3%;
+    font-weight: 600;
 }
 
 
