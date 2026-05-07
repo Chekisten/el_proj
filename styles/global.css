@@ -1,7 +1,8 @@
 
+
 body {
     background-color: #FFEDDA;
-    font-family: Montserrat;
+   
 
 }
 * {/*  Это отвечает за удаление краёв в навбаре*/
@@ -57,21 +58,23 @@ h1{
     color: #ffffff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-.MainMotto b {
-   font-size: 64px;
-   font-weight: 400;
-   font-family: 'Playfair Display';   
-}
-.MainMotto h1{
+
+.mainMotto1st{
     font-size: 64px;
-   font-weight: 400;
-   font-family: 'Playfair Display'; 
+   font-weight: 600;
+   font-family: var(--font-playfair), serif;     
+   letter-spacing: 5%;
 }
-.MainMotto p{
+
+.mainMotto2nd {
     font-size: 30px;
-    font-family: Montserrat;
+     font-family: var(--font-montserrat), sans-serif;
     text-align: center;
+    font-weight: 400;
+    letter-spacing: 5%;
+
 }
+
 .MainMotto button{
     background-color:#F0D8BC;
     border-radius: 30px;
@@ -81,7 +84,7 @@ h1{
     padding-left: 2%;
     padding-right: 2%;
     color: #504020;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
     border: 0;
     font-size: 24px;
     font-weight: 500;
@@ -97,7 +100,7 @@ h1{
 .mainInfoText {
     flex: 0 0 60%;
     font-size: 20px;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
     font-weight: 500;
     padding: 5%;
     color: #504020;
@@ -115,7 +118,7 @@ h1{
     margin: 5%;
     text-align: center;
     color: #504020;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
     font-weight: 600;
     
 
@@ -236,7 +239,7 @@ h1{
     background-color: #FFF3E4;
     border-radius: 30px;
     overflow: hidden;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
 }
 .aboutBlock p{
     font-weight: 500;
@@ -305,7 +308,7 @@ h1{
 /*Блок Вопрос-ответ*/
 .FAQBlock{
     text-align: left;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
 }
 
 .FAQBlock summary{
@@ -382,7 +385,7 @@ h1{
 }
 .MainMotto p{
     font-size: 15px;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
 }
     .MainMotto button{
         background-color:#F0D8BC;
@@ -393,7 +396,7 @@ h1{
         padding-left: 4%;
         padding-right: 4%;
         color: #504020;
-        font-family: Montserrat;
+        font-family: var(--font-montserrat), sans-serif;
         border: 0;
         font-size: 16px;
         font-weight: 400;
@@ -410,7 +413,7 @@ h1{
 .mainInfoText {
     flex: 0 0 60%;
     font-size: 15px;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
     font-weight: 500;
     padding: 5%;
     color: #504020;
@@ -426,7 +429,7 @@ h1{
     margin: 5%;
     text-align: center;
     color: #504020;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat), sans-serif;
     font-weight: 400;
 
 }

@@ -15,54 +15,112 @@
       "alt": "Pamir Highway",
       "id": 1776336312891,
       "img": "/photos/c6ev2ad3w4evj4m8db7i7rats.png",
-      "motto":"тут вот motto"
+      "motto": "тут вот motto",
+      "introImg": "/photos/c6ev2ad3w4evj4m8db7i7rats.png",
+      "tourTypeDescription": " Пеший туризм",
+      "groupSize": "от 1 до 10 человек",
+      "destination": "Памир – Алайские горы, южный Кыргызстан, Ошская область.",
+      "map": "https://www.google.com/maps/d/u/0/embed?mid=19c4_2JofAVzOu_s6_Dj75NcoIlbmbk8&ehbc=2E312F"
+    },
+    {
+      "name": "Лучшие места для похода в горы Алай",
+      "uniqName": "best-alay-place",
+      "countryName": "kyrgyzstan",
+      "tourType": "trekking",
+      "description": "Погрузитесь в 8 дневный поход по Памирско-Алайским горам в Кыргызтсане",
+      "fullDetails": "Погрузитесь в 8 дневный поход по Памирско-Алайским горам в Кыргызтсане",
+      "price": "800",
+      "currency": "$",
+      "duration": "8",
+      "time": "day",
+      "isHide": "false",
+      "isBest": "true",
+      "alt": "123",
+      "motto": "Погрузитесь в 8 дневный поход по Памирско-Алайским горам в Кыргызстане",
+      "groupSize": "1-10 men",
+      "destination": "Памир – Алайские горы, южный Кыргызстан, Ошская область.",
+      "text1stPart": "Откройте для себя Алайские горы (также известные как Алайские горы) на юге Кыргызстана, один из самых потрясающих горных регионов мира. Наш 8-дневный поход «Лучшее из Алайских гор» сочетает в себе лучшие треккинговые маршруты и пешие прогулки по Кыргызстану с захватывающими горными пейзажами, видами на покрытую ледниками вершину Ленина (7134 м), высокогорными приключениями, кыргызской кочевой культурой и многим другим.",
+      "text2ndPart": "Во время вашего захватывающего пешего похода по Кыргызстану вы не останетесь одни. Все наши организованные треккинговые туры включают полное сопровождение: горного гида, проживание (снаряжение для кемпинга, юрты или проживание в семьях), питание, входные билеты, транспорт и другие организационные вопросы, чтобы вы могли сосредоточиться на наслаждении походом и потрясающей природой вокруг. Команда опытных гидов будет с вами на каждом шагу, обеспечивая вашу безопасность и комфорт, необходимое снаряжение и незабываемые впечатления.",
+      "hotel": "Юрты",
+      "typeOfRoute": "Trekking",
+      "distance": "120 km",
+      "tourHeight": "maxHeight 1200m / minHeight 800m",
+      "nights": "8",
+      "probablyMonths": "May-october",
+      "level": "Medium",
+      "startPoint": "Osh",
+      "endPoint": "Bishkek",
+      "transport": "auto",
+      "map": "https://www.google.com/maps/d/u/0/embed?mid=19c4_2JofAVzOu_s6_Dj75NcoIlbmbk8&ehbc=2E312F",
+      "id": 1778068802028,
+      "img": "/photos/kck8zodig5gh4nzy3suhzpse9.png",
+      "imageMain": null,
+      "introImg": "/photos/mjajl6m9mcfrxcp3qg1bbb5ed.png",
+      "firstImg": null,
+      "secondImg": null
     }
   ],
   "steps": [
     {
       "name": "Тур по Памирскому шоссе",
-      "uniqName": "pamir-highway-tour",
+      "uniqName": "best-alay-place",
       "id": 1,
-      "img":"/images/billaBongReview.png",
+      "img": "/images/billaBongReview.png",
       "header": "Приезд в деревню Сары-Могуль",
       "day": 2,
-      "icon":"солнышко",
+      "icon": "/icons/compas.png",
+      "city": "Bishkek",
       "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     },
     {
       "name": "Тур по Памирскому шоссе",
-      "uniqName": "pamir-highway-tour",
+      "uniqName": "best-alay-place",
       "id": 1,
-      "img":"/images/billaBongReview.png",
+      "img": "/images/billaBongReview.png",
       "header": "Отъезд из Оша в деревню Сары-Могуль",
       "day": 1,
-      "icon":"солнышко",
+      "icon": "/icons/compas.png",
+      "city":"Osh",
       "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     },
     {
       "name": "Тур по Памирскому шоссе",
-      "uniqName": "pamir-highway-tour",
+      "uniqName": "best-alay-place",
       "id": 1,
-      "img":"/images/billaBongReview.png",
+      "img": "/images/billaBongReview.png",
       "header": "Вылет куда то",
       "day": 3,
-      "icon":"солнышко",
+      "icon": "/icons/compas.png",
+      "city":"Dushambe",
       "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     }
-    
+  ],
+  "tourDetail":[
+    {
+      "uniqName":"best-alay-place",
+      "smile": "icon",
+      "header": "Guid",
+      "text":"Has a guid"
+    },
+    {
+      "uniqName":"best-alay-place",
+      "smile": "icon",
+      "header": "Guid",
+      "text":"Has a guid"
+    }
   ],
   "moments": [
     {
-      "uniqName": "pamir-highway-tour",
+      "uniqName": "best-alay-place",
       "id": 1,
-      "img":"/images/billaBongReview.png",
+      "img": "/images/billaBongReview.png",
       "header": "Приезд в деревню Сары-Могуль",
       "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     },
     {
-      "uniqName": "pamir-highway-tour",
+      "uniqName": "best-alay-place",
       "id": 1,
-      "img":"/images/billaBongReview.png",
+      "img": "/images/billaBongReview.png",
       "header": "Приезд в деревню Сары-Могуль",
       "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     }
@@ -149,7 +207,7 @@
       "isTop": "true",
       "isHide": "false",
       "countryName": "international",
-      "uniqName":"pamir-highway-tour"
+      "uniqName": "pamir-highway-tour"
     },
     {
       "alt": "camp",

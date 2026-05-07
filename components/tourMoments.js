@@ -18,7 +18,7 @@ const TourMoments = ({tourUniqName}) => {
 
                     <div className={styles.aboutBlocks}>
                         { moments.map(moment => {
-                            console.log(tourUniqName)
+                            
                             if (i % 2 == 1){
                                 i++
                                 if (moment.uniqName == tourUniqName) {

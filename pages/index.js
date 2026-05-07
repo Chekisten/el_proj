@@ -12,8 +12,8 @@ const Index = () => {
     return (
         <MainContainer>
         <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainBackground.png)"}}>
-            <b>Почувствуйте мир</b>
-            <p>А не просто посмотрите его</p>
+            <p className="mainMotto1st">Почувствуйте мир</p>
+            <p className="mainMotto2nd">А не просто посмотрите его</p>
             <button>Подобрать путешествие</button>
 
         </div>

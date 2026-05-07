@@ -11,6 +11,7 @@ const DetailInfo = ({uniqName}) => {
     const [detailButton, setDetailButton] = useState(typeButton)
     const [steps, setSteps] = useState(data.steps)
     const [tours, setTours] = useState(data.tours)
+    const [tourDetails, setTourDetails] = useState(data.tourDetail)
     let z = 1;
     let last = steps.length
     function sortByDay() {
@@ -54,6 +55,7 @@ const DetailInfo = ({uniqName}) => {
                         <button onClick={() => setDetailButton("way")}>way</button>
                         <button onClick={() => setDetailButton("info")}>info</button>
                         <button onClick={() => setDetailButton("dates")}>dates</button>
+                        <button onClick={() => setDetailButton("price")}>price</button>
                 </div>
 
 
@@ -72,7 +74,8 @@ const DetailInfo = ({uniqName}) => {
                                             <div className={styles.stepMidFirst}>
                                                 <div className={styles.stringTransparent}></div>
                                                 <div className={styles.circle}>
-                                                    <p>{step.day}</p>
+                                                    
+                                                    <Image src={step.icon} height={50} width={50}></Image>
                                                 </div>
                                                 <div className={styles.connectDown}></div>
                                                 <div className={styles.stringDown}></div>
@@ -101,7 +104,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <div className={styles.stringUp}></div>
                                                 <div className={styles.connectUp}></div>
                                                 <div className={styles.circle}>
-                                                    <p>{step.day}</p>
+                                                    <p>{step.icon}</p>
                                                 </div>
                                                 <div className={styles.stringTransparent}></div>
                                             </div>
@@ -130,7 +133,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <div className={styles.connectUp}></div>
                                                 
                                                 <div className={styles.circle}>
-                                                    <p>{step.day}</p>
+                                                    <p>{step.icon}</p>
                                                 </div>
 
                                                 <div className={styles.connectDown}></div>
@@ -153,7 +156,45 @@ const DetailInfo = ({uniqName}) => {
 
                     {   
                         detailButton == "way" &&
-                        <h2>Тут будет карта гугла</h2>
+                        <div className={styles.wayBlock}>
+                            <div className={styles.wayInfo}>
+                                {
+                                    steps.map(step => {
+                                        if (step.uniqName == uniqName){
+                                            return (
+                                                <>
+                                                    <div className={styles.wayInfoEl}>
+                                                        <p>{step.icon}</p>
+                                                        <p>day {step.day}</p>
+                                                        <p>{step.city}</p>
+                                                    </div>
+                                                </>
+                                            )
+                                        }
+                                    })
+                                }
+                            </div>
+                            <div className={styles.wayMap}>
+                                {
+                                    tours.map(tour => {
+                                        if (tour.uniqName == uniqName){
+                                            return(
+                                                <>
+                                                <h2>Тут будет карта гугла</h2>
+                                                
+                                                <iframe src={tour.map} width="640" height="480"></iframe>
+                                                </>
+                                            )
+                                        }
+                                    })
+                                }
+
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
                     }            
 
                     {
@@ -177,7 +218,32 @@ const DetailInfo = ({uniqName}) => {
                         })
                     } 
 
+                    {
+                        detailButton == "price" &&
+                        <>
+                            <div className={styles.tourDetail}>
+                                {tourDetails.map(tourDetail => {
+                            if (tourDetail.uniqName == uniqName){
+                                return (
+                                    <>
+                                        <div className={styles.tourDetailEl}>
+                                            <div className={styles.tourDetailSmile}>
+                                                <p>{tourDetail.smile}</p>
+                                            </div>
+                                            <div className={styles.tourDetailText}>
+                                                <h3>{tourDetail.header}</h3>
+                                                <p>{tourDetail.text}</p>
 
+                                            </div>
+                                        </div>
+                                    </>
+                                )
+                            }
+                        })}
+                            </div>
+                        </>
+                        
+                    }
                     
 
                 </div>

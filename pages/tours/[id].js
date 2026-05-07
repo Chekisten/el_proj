@@ -29,6 +29,7 @@ export default function () {
     const currentMotto = currentTour ? currentTour.motto : "";
     const currentCountry = currentTour ? currentTour.countryName : "";
     const currentTourType = currentTour ? currentTour.tourType : "";
+    const currentTourTypeDescription = currentTour ? currentTour.tourTypeDescription : "";
     const currentGroupSize = currentTour ? currentTour.groupSize : "";
     const currentDestination = currentTour ? currentTour.destination : "";
     const currentDuration = currentTour ? currentTour.duration : "";
@@ -46,19 +47,27 @@ export default function () {
         <>
         <MainContainer>
         <div className={styles.introInfo}>
-           
+            <div className={styles.baseIntroInfo}>
                 <div className={styles.introLeft}>
-                    <p><b>Тип тура:</b> {currentTourType}</p>
+                    <p><b>Тип тура:</b> {currentTourTypeDescription}</p>
                     <p><b>Размер группы:</b> {currentGroupSize}</p>
                     <p><b>Место назначение</b> {currentDestination}</p>
                 </div>
-                <div className={styles.introRight}>  
-                    <p>{currentDuration} {currentTime}</p>
-                    <p>{currentCurrency} {currentPrice}</p>
+                <div className={styles.introRight}> 
+                    <div className={styles.triangle}>
+                        <div className={styles.upTriangle}></div>
+                        <div className={styles.downTriangle}></div>
+                    </div> 
+                    <div className={styles.introRightBlock}>
+                        <p>{currentDuration} {currentTime}</p>
+                        <p>{currentCurrency} {currentPrice}</p>
+                    </div>
+                    
                 </div>
-                <div className={styles.introButton}>
-                    <button>Изучить подробнее</button>
-                </div>
+            </div>
+            <div className={styles.introButton}>
+                <button>Изучить подробнее</button>
+            </div>
         </div>
          
         <MainPhoto photo={currentIntroImg} header={currentName} motto={currentMotto}></MainPhoto>

@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react';
 import styles from '../styles/addingForms.module.css'
 
 const AddingForms = () => {
@@ -27,14 +28,32 @@ const AddingForms = () => {
     }
   };
 
+  let typeOfAdding = "tours";
+  const [typeOfAdd, setTypeOfAdd] = useState(typeOfAdding)
+
   return (
     <>
     <br/>
     <br/>
     <br/>
-    <h1>Формы добавления контента</h1>
 
-    <div className='base'>
+    <h1>Формы добавления контента</h1>
+    <div className={styles.navBar}>
+        <button onClick={() => setTypeOfAdd('tours')}>Добавление туров</button>
+        <button onClick={() => setTypeOfAdd('moments')}>Добавление moments для туров</button>
+        <button onClick={() => setTypeOfAdd('steps')}>Добавление steps для туров</button>
+        <button onClick={() => setTypeOfAdd('blogs')}>Добавление блогов</button>
+        <button onClick={() => setTypeOfAdd('reviews')}>Добавление отзывов</button>
+        <button onClick={() => setTypeOfAdd('photos')}>Добавление фотографий для слайдеров</button>
+        <button onClick={() => setTypeOfAdd('tourTypes')}>Добавление информации на страницы по типам туров</button>
+
+    </div>
+
+
+    { 
+      typeOfAdd == "tours" &&
+        <> 
+          <div className='base'>
       <div className="gradient">
           <div class="gradient-line-left"></div>
           <h2>Добавить тур (заполнять все ячейки)</h2>
@@ -290,7 +309,7 @@ const AddingForms = () => {
 
           <div className={styles.formEl}>
             <label htmlFor="text1stPart">Первый абзац вступительного текста</label>
-            <input 
+            <textarea  
               id="text1stPart" 
               name="text1stPart" 
               type="text" 
@@ -301,7 +320,7 @@ const AddingForms = () => {
 
           <div className={styles.formEl}>
             <label htmlFor="text2ndPart">Второй абзац вступительного текста</label>
-            <input 
+            <textarea 
               id="text2ndPart" 
               name="text2ndPart" 
               type="text" 
@@ -310,28 +329,6 @@ const AddingForms = () => {
             />
           </div>
 
-
-          <div className={styles.formEl}>
-            <label htmlFor="Moment5thText">Текст четвёртого  текста из блока моменты</label>
-            <input 
-              id="Moment5thText" 
-              name="Moment5thText" 
-              type="text" 
-              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
-              required 
-            />
-          </div>
-
-          <div className={styles.formEl}>
-            <label htmlFor="Moment5thImg">фотография четвёртого текста из блока моменты</label>
-            <input 
-              id="Moment5thImg"
-              name="Moment5thImg" // Соответствует files.image на сервере
-              type="file" 
-              accept="image/*" 
-              required 
-            />
-          </div>
 
           <div className={styles.formEl}>
             <label htmlFor="hotel">Прописать тип проживания</label>
@@ -443,14 +440,303 @@ const AddingForms = () => {
             />
           </div>
 
+          <div className={styles.formEl}>
+            <label htmlFor="map">Ссылка на карту</label>
+            <input 
+              id="map" 
+              name="map" 
+              type="text" 
+              placeholder="google.maps" 
+              required 
+            />
+          </div>
+
 
 
           <input type="submit" value="Опубликовать"></input>
         </form>
       </div>
-    </div>  
+          </div>  
+        </>
+    }
+    { 
+      typeOfAdd == "moments" &&
+        <>
+        <div className='base'>
+          <div className="gradient">
+              <div class="gradient-line-left"></div>
+              <h2>Добавить тур (заполнять все ячейки)</h2>
+              <div class="gradient-line-right"></div>
+          </div>
+          <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'tours')} className={styles.baseForm}>
 
-    <div className='base'>
+          <div className={styles.formEl}>
+            <label htmlFor="uniqName">Уникальное имя тура (на английском и без пробелов) к нему привязывается этот moment и отображается на странице тура</label>
+            <input 
+              id="uniqName" 
+              name="uniqName" // Соответствует fields.name на сервере
+              type="text" 
+              placeholder="uniq-tour-name" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="header">header</label>
+            <input 
+              id="header" 
+              name="header" 
+              type="text" 
+              placeholder="some header" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="text">text для моментов</label>
+            <textarea 
+              id="text" 
+              name="text" 
+              type="text" 
+              placeholder="some text" 
+              required 
+            />
+          </div>
+
+          
+
+          
+          <div className={styles.formEl}>
+            <label htmlFor="isHide">  Скрыть это момент или нет  </label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isHide" value= "false" defaultChecked/>
+                  показывать
+              </label>        
+              <label>
+                  <input type="radio" name="isHide" value= "true" />
+                  скрыть  
+              </label>
+            </div>
+          </div>
+          
+    
+          
+
+          <div className={styles.formEl}>
+            <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
+            <input 
+              id="alt" 
+              name="alt" 
+              type="text" 
+              placeholder="описание картинки" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="image">Фото:</label>
+            <input 
+              id="image"
+              name="image" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+
+
+
+
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
+        </div>
+      </>
+    }
+    {
+      typeOfAdd == "steps" &&
+        <>
+          <div className='base'>
+          <div className="gradient">
+              <div class="gradient-line-left"></div>
+              <h2>Добавить тур (заполнять все ячейки)</h2>
+              <div class="gradient-line-right"></div>
+          </div>
+
+          <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'tours')} className={styles.baseForm}>
+
+          <div className={styles.formEl}>
+            <label htmlFor="uniqName">Уникальное имя тура (на английском и без пробелов) к нему привязывается этот день и отображается на странице тура</label>
+            <input 
+              id="uniqName" 
+              name="uniqName" // Соответствует fields.name на сервере
+              type="text" 
+              placeholder="uniq-tour-name" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="header">header</label>
+            <input 
+              id="header" 
+              name="header" 
+              type="text" 
+              placeholder="some header" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="text">text дня</label>
+            <textarea 
+              id="text" 
+              name="text" 
+              type="text" 
+              placeholder="some text" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="day">номер дня (дни можно добавлять в разном порядке, потом они сортируются)</label>
+            <input 
+              id="day" 
+              name="day" 
+              type="number" 
+              placeholder="1" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="city">Название города или населенного пункта, в котором будет одна из точек маршрута в этот день, либо направление "Ош → деревня Узгуруш"</label>
+            <input 
+              id="city" 
+              name="city" 
+              type="text" 
+              placeholder="Bishkek" 
+              required 
+            />
+          </div>
+
+           <div className={styles.formEl}>
+            <label>Иконка тура, которая будет между картинком и текстом дня</label>
+            <div className={styles.radioForm}>
+              
+              <label>
+                  <input type="radio" name="icon" value="international" defaultChecked />
+                  International
+              </label>
+
+              <label>
+                  <input type="radio" name="icon" value="kyrgyzstan" />
+                  Kyrgyzstan
+              </label>
+
+              <label>
+                  <input type="radio" name="icon" value="uzbekistan" />
+                  Uzbekistan
+              </label>
+
+              <label>
+                  <input type="radio" name="icon" value="kazakhstan" />
+                  Kazakhstan
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="tadjikistan" />
+                  Tadjikistan
+              </label>
+            </div>
+          </div>
+
+          <div className={styles.formEl}>
+            <label>Иконки, которые будут под текстом</label>
+            <div className={styles.radioForm}>
+              
+              <label>
+                  <input type="checkbox" name="smiles" value="international" defaultChecked />
+                  International
+              </label>
+
+              <label>
+                  <input type="checkbox" name="smiles" value="kyrgyzstan" />
+                  Kyrgyzstan
+              </label>
+
+              <label>
+                  <input type="checkbox" name="smiles" value="uzbekistan" />
+                  Uzbekistan
+              </label>
+
+              <label>
+                  <input type="checkbox" name="smiles" value="kazakhstan" />
+                  Kazakhstan
+              </label>
+              <label>
+                  <input type="checkbox" name="smiles" value="tadjikistan" />
+                  Tadjikistan
+              </label>
+            </div>
+          </div>
+          
+
+          
+          <div className={styles.formEl}>
+            <label htmlFor="isHide">  Скрыть этот шаг или нет  </label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isHide" value= "false" defaultChecked/>
+                  показывать
+              </label>        
+              <label>
+                  <input type="radio" name="isHide" value= "true" />
+                  скрыть  
+              </label>
+            </div>
+          </div>
+          
+    
+          
+
+          <div className={styles.formEl}>
+            <label htmlFor="alt">описание картинки необходимо для seo. это описание видно только тогда, когда не грузится картинка</label>
+            <input 
+              id="alt" 
+              name="alt" 
+              type="text" 
+              placeholder="описание картинки" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="image">Фото:</label>
+            <input 
+              id="image"
+              name="image" // Соответствует files.image на сервере
+              type="file" 
+              accept="image/*" 
+              required 
+            />
+          </div>
+
+
+
+
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
+        </div>
+        </>
+    }
+    {
+      typeOfAdd == "blogs" &&
+        <>
+          <div className='base'>
       <div className="gradient">
           <div class="gradient-line-left"></div>
           <h2>Добавить Блоги (заполнять все ячейки)</h2>
@@ -604,8 +890,12 @@ const AddingForms = () => {
         </form>
       </div>
     </div>
-
-    <div className='base'>
+        </>
+    }
+    {
+      typeOfAdd == "reviews" &&
+        <>
+          <div className='base'>
       <div className="gradient">
           <div class="gradient-line-left"></div>
           <h2>Добавить отзывы(заполнять все ячейки)</h2>
@@ -762,9 +1052,13 @@ const AddingForms = () => {
           <input type="submit" value="Опубликовать"></input>
         </form>
       </div>
-    </div>
-
-    <div className='base'>
+          </div>
+        </>
+    }
+    {
+      typeOfAdd == "photos" &&
+        <>
+          <div className='base'>
       <div className="gradient">
           <div class="gradient-line-left"></div>
           <h2>Добавить фото для галереи(заполнять все ячейки)</h2>
@@ -865,9 +1159,13 @@ const AddingForms = () => {
           <input type="submit" value="Опубликовать"></input>
         </form>
       </div>
-    </div>
-
-    <div className='base'>
+          </div>
+        </>
+    }
+    {
+      typeOfAdd == "tourTypes" &&
+        <>
+          <div className='base'>
       <div className="gradient">
           <div class="gradient-line-left"></div>
           <h2>Добавить Информацию на страницы по типам туров (заполнять все ячейки)</h2>
@@ -1053,7 +1351,19 @@ const AddingForms = () => {
           <input type="submit" value="Опубликовать"></input>
         </form>
       </div>
-    </div>
+          </div>
+        </>
+    }
+
+    
+
+    
+
+    
+
+    
+
+    
 </>
   );
 }

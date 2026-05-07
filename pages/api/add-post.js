@@ -56,6 +56,13 @@ export default async function handler(req, res) {
         contentData.imageMain = null;
       }
 
+      const uploadedFileintroImg = files.introImg ? files.introImg[0] : null;
+
+      if (uploadedFileintroImg && uploadedFileintroImg.newFilename) {
+        contentData.introImg = `/photos/${uploadedFileintroImg.newFilename}`;
+      } else {
+        contentData.introImg = null;
+      }
 
       const uploadedFileFirstImg = files.firstImg ? files.firstImg[0] : null;
 

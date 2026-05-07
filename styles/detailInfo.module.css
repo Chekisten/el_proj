@@ -158,3 +158,9 @@
     font-weight: 400;
     font-family: Montserrat;
 }
+
+.tourDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
