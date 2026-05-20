@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "../styles/detailInfo.module.css"
 import data from "../database/db.json"
 import Image from "next/image"
+import FuncIcon from "./funcIcon";
+
 
 
 
@@ -175,19 +177,39 @@ const DetailInfo = ({uniqName}) => {
                                 }
                             </div>
                             <div className={styles.wayMap}>
-                                {
-                                    tours.map(tour => {
-                                        if (tour.uniqName == uniqName){
-                                            return(
-                                                <>
-                                                <h2>Тут будет карта гугла</h2>
-                                                
-                                                <iframe src={tour.map} width="640" height="480"></iframe>
-                                                </>
-                                            )
-                                        }
-                                    })
-                                }
+                                <div className={styles.wayMapMap}>
+                                    {
+                                        tours.map(tour => {
+                                            if (tour.uniqName == uniqName){
+                                                return(
+                                                    <>
+                                                    
+                                                    
+                                                    
+                                                    <iframe src={tour.map} width="640" height="480"></iframe>
+                                                    </>
+                                                )
+                                            }
+                                        })
+                                    }
+                                </div>
+                                <div className={styles.wayMapInfo}>
+                                    {
+                                        steps.map(step => {
+                                            if (step.uniqName == uniqName){
+                                                return (
+                                                    <>
+                                                        
+                                                            <Image src={step.icon} height={50} width={50}></Image>
+                                                            <p>day {step.day}</p>
+                                                            <p>{step.city}</p>
+                                                    
+                                                    </>
+                                                )
+                                            }
+                                        })
+                                    }
+                                </div>
 
                             </div>
                         </div>
@@ -203,15 +225,69 @@ const DetailInfo = ({uniqName}) => {
                             if (tour.uniqName == uniqName){
                                 return (
                                     <div className={styles.detailInfo}>
-                                        <p><b>Место назначение:</b>{tour.destination}</p>
-                                        <p><b>Продолжительность:</b>{tour.duration} {tour.time} / {tour.nights}</p>
-                                        <p><b>Проживание:</b>{tour.hotel}</p>
-                                        <p><b>{tour.typeOfRoute}</b>{tour.distance}</p>
-                                        <p><b>Максимальная/минимальная высота: </b>{tour.tourHeight}</p>
-                                        <p><b>Возможные месяцы для похода: </b>{tour.probablyMonths}</p>
-                                        <p><b>Уровень сложности:</b>{tour.level}</p>
-                                        <p><b>Начальная/конечная точка:</b>{tour.startPoint}, {tour.endPoint}</p>
-                                        <p><b>Транспортные услуги:</b>{tour.transport}</p>
+                                        <div className={styles.detailInfoEl}>
+                                            <div className={styles.detailInfoElIcon}>
+                                                <p>картинк карта</p>
+                                            </div>
+                                            <div className={styles.detailInfoElText}>
+                                                <h4>Место назначение</h4>
+                                                <p>{tour.destination}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className={styles.detailInfoEl}>
+                                            <div className={styles.detailInfoElIcon}>
+                                                <p> картинка проживание</p>
+                                            </div>
+                                            <div className={styles.detailInfoElText}>
+                                                <h4>Проживание</h4>
+                                                <p>{tour.hotel}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className={styles.detailInfoEl}>
+                                            <div className={styles.detailInfoElIcon}>
+                                                <p> картинка проживание</p>
+                                            </div>
+                                            <div className={styles.detailInfoElText}>
+                                                <h4>{tour.typeOfRoute}</h4>
+                                                <p>{tour.distance}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className={styles.detailInfoEl}>
+                                            <div className={styles.detailInfoElIcon}>
+                                                <p> картинка проживание</p>
+                                            </div>
+                                            <div className={styles.detailInfoElText}>
+                                                <h4>Максимальная/минимальная высота</h4>
+                                                <p>{tour.tourHeight}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className={styles.detailInfoEl}>
+                                            <div className={styles.detailInfoElIcon}>
+                                                <p> картинка проживание</p>
+                                            </div>
+                                            <div className={styles.detailInfoElText}>
+                                                <h4>Возможные месяцы для похода</h4>
+                                                <p>{tour.probablyMonths}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className={styles.detailInfoEl}>
+                                            <div className={styles.detailInfoElIcon}>
+                                                <p> картинка проживание</p>
+                                            </div>
+                                            <div className={styles.detailInfoElText}>
+                                                <h4>Начальная/конечная точка</h4>
+                                                <p>{tour.startPoint}, {tour.endPoint}</p>
+                                            </div>
+                                        </div>
+
+                                        
+                                        
+                                        
                                     </div>
                                 )
                             }
@@ -220,15 +296,18 @@ const DetailInfo = ({uniqName}) => {
 
                     {
                         detailButton == "price" &&
-                        <>
-                            <div className={styles.tourDetail}>
+                        <>  
+                        <div className={styles.tourDetailBlock}>
+                            <h3>Что включает в тур</h3>
+                            <div className={styles.tourDetail}>  
                                 {tourDetails.map(tourDetail => {
-                            if (tourDetail.uniqName == uniqName){
+                                if (tourDetail.isInclude == "include"){
                                 return (
                                     <>
                                         <div className={styles.tourDetailEl}>
                                             <div className={styles.tourDetailSmile}>
-                                                <p>{tourDetail.smile}</p>
+                                                <p><FuncIcon iconName = {tourDetail.smile}></FuncIcon></p>
+                                                
                                             </div>
                                             <div className={styles.tourDetailText}>
                                                 <h3>{tourDetail.header}</h3>
@@ -237,9 +316,35 @@ const DetailInfo = ({uniqName}) => {
                                             </div>
                                         </div>
                                     </>
-                                )
-                            }
-                        })}
+                                    )
+                                    }
+                                })      
+                                }
+                            </div>
+                            <h3>Что НЕ включает в тур</h3>
+                            <div className={styles.tourDetail}>
+                                    
+                                    {tourDetails.map(tourDetail => {
+                                    if (tourDetail.isInclude == "exclude"){
+                                    return (
+                                        <>
+                                            <div className={styles.tourDetailEl}>
+                                                <div className={styles.tourDetailSmile}>
+                                                   <p><FuncIcon iconName = {tourDetail.smile}></FuncIcon></p>
+                                                    
+                                                </div>
+                                                <div className={styles.tourDetailText}>
+                                                    <h3>{tourDetail.header}</h3>
+                                                    <p>{tourDetail.text}</p>
+
+                                                </div>
+                                            </div>
+                                        </>
+                                        )
+                                        }
+                                    })      
+                                    }
+                            </div>
                             </div>
                         </>
                         

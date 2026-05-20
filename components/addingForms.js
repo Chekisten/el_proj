@@ -46,6 +46,7 @@ const AddingForms = () => {
         <button onClick={() => setTypeOfAdd('reviews')}>Добавление отзывов</button>
         <button onClick={() => setTypeOfAdd('photos')}>Добавление фотографий для слайдеров</button>
         <button onClick={() => setTypeOfAdd('tourTypes')}>Добавление информации на страницы по типам туров</button>
+         <button onClick={() => setTypeOfAdd('tourDetail')}>Добавление что входит и что не входит в тур</button>
 
     </div>
 
@@ -331,12 +332,12 @@ const AddingForms = () => {
 
 
           <div className={styles.formEl}>
-            <label htmlFor="hotel">Прописать тип проживания</label>
-            <input 
+            <label htmlFor="hotel">Прописать тип проживания </label>
+            <textarea 
               id="hotel" 
               name="hotel" 
               type="text" 
-              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
+              placeholder="2 ночи в палатках / 6 ночей в юртовых лагерях / 5 ночей в гостевых домах" 
               required 
             />
           </div>
@@ -1346,6 +1347,62 @@ const AddingForms = () => {
               accept="image/*" 
               required 
             />
+          </div>
+
+          <input type="submit" value="Опубликовать"></input>
+        </form>
+      </div>
+          </div>
+        </>
+    }
+
+    {
+      typeOfAdd == "tourDetail" &&
+        <>
+          <div className='base'>
+      <div className="gradient">
+          <div class="gradient-line-left"></div>
+          <h2>Добавить фото для галереи(заполнять все ячейки)</h2>
+          <div class="gradient-line-right"></div>
+      </div>
+      <div className={styles.forms}>
+        <form onSubmit={(e) => handleSubmit(e, 'tourDetail')} className={styles.baseForm}>
+          <div className={styles.formEl}>
+            <label htmlFor="header">заголовок</label>
+            <input 
+              id="header" 
+              name="header" 
+              type="text" 
+              placeholder="заголовок" 
+              required 
+            />
+          </div>
+          <div className={styles.formEl}>
+            <label htmlFor="text">тектс</label>
+            <textarea 
+              id="text" 
+              name="text" 
+              type="text" 
+              placeholder="текст" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label>Включает в тур или не включает</label>
+            <div className={styles.radioForm}>
+              <label>
+                  <input type="radio" name="isInclude" value="include" defaultChecked />
+                  include
+              </label>
+
+              <label>
+                  <input type="radio" name="isInclude" value="exclude" />
+                  exclude
+              </label>
+
+              
+            </div>
           </div>
 
           <input type="submit" value="Опубликовать"></input>

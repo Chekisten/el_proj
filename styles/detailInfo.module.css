@@ -159,7 +159,7 @@
     font-family: Montserrat;
 }
 
-
+/*way blocks--------------------------------------------------------------------------------*/
 
 .wayBlock{
     display: flex;
@@ -170,29 +170,105 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    background-color: #FFF3E4;
+    border-radius: 30px;
+    margin: 1%;
 }
 
 .wayInfoEl{
     display: flex;
     flex-direction: row;
     margin: 2%;
+    
 }
 .wayMap{
     flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    
+}
+.wayMapMap{
+    border-radius: 30px;
+    overflow: hidden;
+}
+.wayMapInfo{
+    border-radius: 30px;
+    background-color: #FFF3E4;
+    margin-top: 1%;
+
+}
+
+/*way blocks- end-------------------------------------------------------------------------------*/
+
+.tourDetailBlock{
+    display: flex;
+    flex-direction: column;
+}
+.tourDetailBlock h3 {
+    font-size: 32px;
+    font-family: Montserrat;
+    font-weight: 600;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .tourDetail {
     display: flex;
     flex-direction: row;
     justify-content: center;
+   
 }
 .tourDetailEl {
     margin: 1%;
+    background-color: #FFF3E4;
+    border-radius: 30px;
+    width: 300px;
+    height: 300px;
+    flex: 0 0 33%;
+    
 }
 
 .tourDetailSmile {
     background-color: #504020;
     color: #F1D9BD;
     border-radius: 20px;
+    margin: 2%;
 }
+
+/* Detail info blocks---------------------------------------------------------------------*/
+.detailInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.detailInfoEl{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF3E4;
+    border-radius: 30px;
+    box-shadow: 12px 12px 3px 1px rgb(0, 0, 0 , 0.2);
+    flex: 0 0 46%;
+    width: 500px;
+    height: 150px;
+    margin: 2%;
+    
+    
+}
+.detailInfoElIcon{
+    flex: 20%;
+    background-color: #5B3F2B;
+    color: #FFF3E4;
+    border-radius: 20px;
+    margin:3%;
+    
+}
+.detailInfoElText{
+    display: flex;
+    flex: 80%;
+    flex-direction: column;
+    margin:3%;
+}
+/* Detail info blocks end---------------------------------------------------------------------*/

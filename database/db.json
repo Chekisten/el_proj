@@ -80,7 +80,7 @@
       "header": "Отъезд из Оша в деревню Сары-Могуль",
       "day": 1,
       "icon": "/icons/compas.png",
-      "city":"Osh",
+      "city": "Osh",
       "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     },
     {
@@ -91,22 +91,70 @@
       "header": "Вылет куда то",
       "day": 3,
       "icon": "/icons/compas.png",
-      "city":"Dushambe",
+      "city": "Dushambe",
+      "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
+    },
+    {
+      "name": "Тур по Памирскому шоссе",
+      "uniqName": "best-alay-place",
+      "id": 1,
+      "img": "/images/billaBongReview.png",
+      "header": "Вылет куда то",
+      "day": 5,
+      "icon": "/icons/compas.png",
+      "city": "Dushambe",
+      "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
+    },
+    {
+      "name": "Тур по Памирскому шоссе",
+      "uniqName": "best-alay-place",
+      "id": 1,
+      "img": "/images/billaBongReview.png",
+      "header": "Вылет куда то",
+      "day": 4,
+      "icon": "/icons/compas.png",
+      "city": "Dushambe",
       "text": "Переезд из Оша в высокогорное село Сары-Могуль с остановкой на лёгкий треккинг к Изумрудному озеру и обедом по пути. По прибытии — ужин и отдых в гостевом доме с видами на Памирские горы."
     }
   ],
-  "tourDetail":[
+  "tourDetail": [
     {
-      "uniqName":"best-alay-place",
-      "smile": "icon",
+      "uniqName": "best-alay-place",
+      "smile": "place1",
       "header": "Guid",
-      "text":"Has a guid"
+      "text": "Has a guid",
+      "isInclude": "include"
     },
     {
-      "uniqName":"best-alay-place",
-      "smile": "icon",
+      "uniqName": "best-alay-place",
+      "smile": "place1",
       "header": "Guid",
-      "text":"Has a guid"
+      "text": "Has a guid",
+      "isInclude": "exclude"
+    },
+    {
+      "header": "Юрты и проживание",
+      "text": "Вы будете жить в традиционных условиях вместе с другими участниками (по 4–6 человек), что позволит глубже прочувствовать местный быт.",
+      "isInclude": "include",
+      "smile": "place1",
+      "id": 1779309829098,
+      "img": null,
+      "imageMain": null,
+      "introImg": null,
+      "firstImg": null,
+      "secondImg": null
+    },
+    {
+      "header": "Спальный мешок",
+      "text": "Участникам необходимо привезти собственный спальный мешок, подходящий для горных условий.",
+      "isInclude": "exclude",
+      "smile": "place1",
+      "id": 1779310027501,
+      "img": null,
+      "imageMain": null,
+      "introImg": null,
+      "firstImg": null,
+      "secondImg": null
     }
   ],
   "moments": [
