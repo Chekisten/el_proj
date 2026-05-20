@@ -69,8 +69,8 @@
 .feedbackBase{
     background-image: url(../public/images/formBackground.png);
     padding-left: 5%;
-    
-    
+    background-repeat: no-repeat;
+    background-size: 100%;
     text-align: center;
     color: #504020;
     font-family: Montserrat;

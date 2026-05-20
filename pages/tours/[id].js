@@ -20,7 +20,7 @@ export default function () {
     const [tours, setTours] = useState(data.tours);
     const {query} = useRouter();
     const currentTour = tours.find(tour => tour.id == query.id)
-   console.log(query)
+   console.log(currentTour?.id)
     const currentUniqName = currentTour ? currentTour.uniqName : "";
     const currentTourId = currentTour ? currentTour.id : "";
     const currentIntroImg = currentTour ? currentTour.introImg : "";

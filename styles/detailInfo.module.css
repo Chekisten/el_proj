@@ -159,8 +159,40 @@
     font-family: Montserrat;
 }
 
+
+
+.wayBlock{
+    display: flex;
+    flex-direction: row;
+}
+.wayInfo {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wayInfoEl{
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+}
+.wayMap{
+    flex: 0 0 50%;
+}
+
 .tourDetail {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.tourDetailEl {
+    margin: 1%;
+}
+
+.tourDetailSmile {
+    background-color: #504020;
+    color: #F1D9BD;
+    border-radius: 20px;
 }

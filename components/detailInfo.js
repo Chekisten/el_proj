@@ -164,7 +164,7 @@ const DetailInfo = ({uniqName}) => {
                                             return (
                                                 <>
                                                     <div className={styles.wayInfoEl}>
-                                                        <p>{step.icon}</p>
+                                                        <Image src={step.icon} height={50} width={50}></Image>
                                                         <p>day {step.day}</p>
                                                         <p>{step.city}</p>
                                                     </div>
