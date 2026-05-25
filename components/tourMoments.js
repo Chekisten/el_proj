@@ -36,6 +36,8 @@ const TourMoments = ({tourUniqName}) => {
                                     )
                                 }
                             }
+                            if (i % 2 == 0){
+                                i++
                             if (moment.uniqName == tourUniqName) {
                                     return (
                                         <>
@@ -51,6 +53,7 @@ const TourMoments = ({tourUniqName}) => {
                                         </>
                                     )
                                 }
+                            }
 
                         })}
 

@@ -14,7 +14,7 @@ const ToursSliderByTypes = ({tourCountry, tourType, tourId}) => {
         <div className="base">
             <div className="gradient">
                 <div class="gradient-line-left"></div>
-                <h2>Другие пешие туры</h2>
+                <h2>Another {tourType} tours</h2>
                 
                 <div class="gradient-line-right"></div>
              </div>

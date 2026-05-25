@@ -33,7 +33,7 @@
     height: auto;
     border-radius: 30px;
     object-fit: cover;
-    
+    flex: 0 0 50%;
     
 }
 
@@ -45,6 +45,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     line-height: 200%;
+    flex: 0 0 50%;
 }
 .aboutTextLeft{
     text-align: end;
@@ -54,6 +55,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     line-height: 200%;
+    flex: 0 0 50%;
 }
 /* Блок About конец*/
 

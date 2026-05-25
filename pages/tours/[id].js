@@ -12,6 +12,7 @@ import FaqBlock from "../../components/faqBlock";
 import ToursSliderByType from "../../components/toursSliderByType";
 import DetailInfo from "../../components/detailInfo";
 import TourMoments from "../../components/tourMoments";
+import FuncIcon from "../../components/funcIcon";
 
 
 
@@ -29,7 +30,7 @@ export default function () {
     const currentMotto = currentTour ? currentTour.motto : "";
     const currentCountry = currentTour ? currentTour.countryName : "";
     const currentTourType = currentTour ? currentTour.tourType : "";
-    const currentTourTypeDescription = currentTour ? currentTour.tourTypeDescription : "";
+    const currentTourTypeDescription = currentTour ? currentTour.typeOfRoute : "";
     const currentGroupSize = currentTour ? currentTour.groupSize : "";
     const currentDestination = currentTour ? currentTour.destination : "";
     const currentDuration = currentTour ? currentTour.duration : "";
@@ -49,9 +50,9 @@ export default function () {
         <div className={styles.introInfo}>
             <div className={styles.baseIntroInfo}>
                 <div className={styles.introLeft}>
-                    <p><b>Тип тура:</b> {currentTourTypeDescription}</p>
-                    <p><b>Размер группы:</b> {currentGroupSize}</p>
-                    <p><b>Место назначение</b> {currentDestination}</p>
+                    <p> <FuncIcon iconName={"flag"}></FuncIcon> <b>Тип тура:</b> {currentTourTypeDescription}</p>
+                    <p><FuncIcon iconName={"pair"}></FuncIcon> <b>Размер группы:</b> {currentGroupSize}</p>
+                    <p><FuncIcon iconName={"place1"}></FuncIcon> <b>Место назначение</b> {currentDestination}</p>
                 </div>
                 <div className={styles.introRight}> 
                     <div className={styles.triangle}>

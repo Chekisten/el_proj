@@ -1,13 +1,25 @@
 'use client'
 import { useState } from 'react';
 import styles from '../styles/addingForms.module.css'
+import FuncIcon from './funcIcon';
+import data from "../database/db.json"
 
 const AddingForms = () => {
   const handleSubmit = async (e, type) => {
     e.preventDefault();
     
     const formData = new FormData(e.currentTarget);
-    formData.append('contentType', type)
+    formData.append('contentType', type);
+
+     const smilesArray = formData.getAll('smiles'); 
+    
+    // 2. Удаляем старые конфликтующие записи из formData
+    formData.delete('smiles');
+    
+    // 3. Записываем их заново как одну строку через запятую: "wifi,food"
+    formData.append('smiles', smilesArray.join(',')); 
+
+
     try {
       const response = await fetch('/api/add-post', {
         method: 'POST',
@@ -30,7 +42,7 @@ const AddingForms = () => {
 
   let typeOfAdding = "tours";
   const [typeOfAdd, setTypeOfAdd] = useState(typeOfAdding)
-
+  const [tours, setTours] = useState(data.tours)
   return (
     <>
     <br/>
@@ -49,7 +61,18 @@ const AddingForms = () => {
          <button onClick={() => setTypeOfAdd('tourDetail')}>Добавление что входит и что не входит в тур</button>
 
     </div>
-
+    <div className='base'>
+      <h2>Уникальные имена туров</h2>
+      {
+        tours.map(tour => {
+          return (
+            <>
+              <p> {tour.name} ------ {tour.uniqName}</p>
+            </>
+          )
+        })
+      }
+    </div>
 
     { 
       typeOfAdd == "tours" &&
@@ -81,6 +104,17 @@ const AddingForms = () => {
               name="uniqName" // Соответствует fields.name на сервере
               type="text" 
               placeholder="uniq-tour-name" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="metaTags">Введите мета теги</label>
+            <input 
+              id="metaTags" 
+              name="metaTags" // Соответствует fields.name на сервере
+              type="text" 
+              placeholder="kygystan, Alay" 
               required 
             />
           </div>
@@ -144,6 +178,16 @@ const AddingForms = () => {
                   Auto
               </label>
             </div>
+          </div>
+          <div className={styles.formEl}>
+            <label htmlFor="motto">Какой то лозунг</label>
+            <input 
+              id="motto" 
+              name="motto" 
+              type="text" 
+              placeholder="Feels good" 
+              required 
+            />
           </div>
 
           <div className={styles.formEl}>
@@ -211,6 +255,27 @@ const AddingForms = () => {
               required 
             />
           </div>
+          <div className={styles.formEl}>
+            <label htmlFor="groupSize">Размер группы</label>
+            <input 
+              id="groupSize" 
+              name="groupSize" 
+              type="text" 
+              placeholder="2-5 men" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
+            <label htmlFor="destination">Направление тура</label>
+            <input 
+              id="destination" 
+              name="destination" 
+              type="text" 
+              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
+              required 
+            />
+          </div>
 
           <div className={styles.formEl}>
             <label htmlFor="isHide">  Скрыть тур или нет </label>
@@ -264,16 +329,7 @@ const AddingForms = () => {
           </div>
 
 
-          <div className={styles.formEl}>
-            <label htmlFor="motto">Какой то лозунг</label>
-            <input 
-              id="motto" 
-              name="motto" 
-              type="text" 
-              placeholder="Feels good" 
-              required 
-            />
-          </div>
+          
 
           <div className={styles.formEl}>
             <label htmlFor="introImg">Фотография которая будет находится в самом верху под текстом названия тура</label>
@@ -286,27 +342,7 @@ const AddingForms = () => {
             />
           </div>
 
-          <div className={styles.formEl}>
-            <label htmlFor="groupSize">Размер группы</label>
-            <input 
-              id="groupSize" 
-              name="groupSize" 
-              type="text" 
-              placeholder="2-5 men" 
-              required 
-            />
-          </div>
-
-          <div className={styles.formEl}>
-            <label htmlFor="destination">Направление тура</label>
-            <input 
-              id="destination" 
-              name="destination" 
-              type="text" 
-              placeholder="Памир – Алайские горы, южный Кыргызстан, Ошская область." 
-              required 
-            />
-          </div>
+          
 
           <div className={styles.formEl}>
             <label htmlFor="text1stPart">Первый абзац вступительного текста</label>
@@ -375,16 +411,6 @@ const AddingForms = () => {
             />
           </div>
 
-          <div className={styles.formEl}>
-            <label htmlFor="nights">Количество ночей в туре</label>
-            <input 
-              id="nights" 
-              name="nights" 
-              type="text" 
-              placeholder="8 nights" 
-              required 
-            />
-          </div>
 
           <div className={styles.formEl}>
             <label htmlFor="probablyMonths">Месяци в которые возможно проведение тура</label>
@@ -393,17 +419,6 @@ const AddingForms = () => {
               name="probablyMonths" 
               type="text" 
               placeholder="Май - Октябрь" 
-              required 
-            />
-          </div>
-
-          <div className={styles.formEl}>
-            <label htmlFor="level">Уровень сложности тура</label>
-            <input 
-              id="level" 
-              name="level" 
-              type="text" 
-              placeholder="Medium" 
               required 
             />
           </div>
@@ -430,16 +445,7 @@ const AddingForms = () => {
             />
           </div>
 
-          <div className={styles.formEl}>
-            <label htmlFor="transport">Транспортное обеспечение</label>
-            <input 
-              id="transport" 
-              name="transport" 
-              type="text" 
-              placeholder="auto" 
-              required 
-            />
-          </div>
+         
 
           <div className={styles.formEl}>
             <label htmlFor="map">Ссылка на карту</label>
@@ -466,11 +472,11 @@ const AddingForms = () => {
         <div className='base'>
           <div className="gradient">
               <div class="gradient-line-left"></div>
-              <h2>Добавить тур (заполнять все ячейки)</h2>
+              <h2>Добавить моменты тура (заполнять все ячейки)</h2>
               <div class="gradient-line-right"></div>
           </div>
           <div className={styles.forms}>
-        <form onSubmit={(e) => handleSubmit(e, 'tours')} className={styles.baseForm}>
+        <form onSubmit={(e) => handleSubmit(e, 'moments')} className={styles.baseForm}>
 
           <div className={styles.formEl}>
             <label htmlFor="uniqName">Уникальное имя тура (на английском и без пробелов) к нему привязывается этот moment и отображается на странице тура</label>
@@ -562,12 +568,12 @@ const AddingForms = () => {
           <div className='base'>
           <div className="gradient">
               <div class="gradient-line-left"></div>
-              <h2>Добавить тур (заполнять все ячейки)</h2>
+              <h2>Добавить день тура (заполнять все ячейки)</h2>
               <div class="gradient-line-right"></div>
           </div>
 
           <div className={styles.forms}>
-        <form onSubmit={(e) => handleSubmit(e, 'tours')} className={styles.baseForm}>
+        <form onSubmit={(e) => handleSubmit(e, 'steps')} className={styles.baseForm}>
 
           <div className={styles.formEl}>
             <label htmlFor="uniqName">Уникальное имя тура (на английском и без пробелов) к нему привязывается этот день и отображается на странице тура</label>
@@ -629,27 +635,59 @@ const AddingForms = () => {
             <div className={styles.radioForm}>
               
               <label>
-                  <input type="radio" name="icon" value="international" defaultChecked />
-                  International
+                  <input type="radio" name="icon" value="mountains1" defaultChecked />
+                  <FuncIcon iconName={"mountains1"}></FuncIcon>
               </label>
 
               <label>
-                  <input type="radio" name="icon" value="kyrgyzstan" />
-                  Kyrgyzstan
+                  <input type="radio" name="icon" value="walking" />
+                  <FuncIcon iconName={"walking"}></FuncIcon>
               </label>
 
               <label>
-                  <input type="radio" name="icon" value="uzbekistan" />
-                  Uzbekistan
+                  <input type="radio" name="icon" value="snow" />
+                  <FuncIcon iconName={"snow"}></FuncIcon>
               </label>
 
               <label>
-                  <input type="radio" name="icon" value="kazakhstan" />
-                  Kazakhstan
+                  <input type="radio" name="icon" value="sun" />
+                  <FuncIcon iconName={"sun"}></FuncIcon>
               </label>
               <label>
-                  <input type="radio" name="icon" value="tadjikistan" />
-                  Tadjikistan
+                  <input type="radio" name="icon" value="plant" />
+                  <FuncIcon iconName={"plant"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="compass1" />
+                  <FuncIcon iconName={"compass1"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="yurt" />
+                  <FuncIcon iconName={"yurt"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="eagle" />
+                  <FuncIcon iconName={"eagle"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="roadSin" />
+                  <FuncIcon iconName={"roadSin"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="water" />
+                  <FuncIcon iconName={"water"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="person2" />
+                  <FuncIcon iconName={"person2"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="tower" />
+                  <FuncIcon iconName={"tower"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="radio" name="icon" value="location" />
+                  <FuncIcon iconName={"location"}></FuncIcon>
               </label>
             </div>
           </div>
@@ -659,27 +697,35 @@ const AddingForms = () => {
             <div className={styles.radioForm}>
               
               <label>
-                  <input type="checkbox" name="smiles" value="international" defaultChecked />
-                  International
+                  <input type="checkbox" name="smiles" value="wifi" defaultChecked />
+                  <FuncIcon iconName={"wifi"}></FuncIcon>
               </label>
 
               <label>
-                  <input type="checkbox" name="smiles" value="kyrgyzstan" />
-                  Kyrgyzstan
+                  <input type="checkbox" name="smiles" value="food" />
+                  <FuncIcon iconName={"food"}></FuncIcon>
               </label>
 
               <label>
-                  <input type="checkbox" name="smiles" value="uzbekistan" />
-                  Uzbekistan
+                  <input type="checkbox" name="smiles" value="toilet" />
+                  <FuncIcon iconName={"toilet"}></FuncIcon>
               </label>
 
               <label>
-                  <input type="checkbox" name="smiles" value="kazakhstan" />
-                  Kazakhstan
+                  <input type="checkbox" name="smiles" value="shower" />
+                  <FuncIcon iconName={"shower"}></FuncIcon>
               </label>
               <label>
-                  <input type="checkbox" name="smiles" value="tadjikistan" />
-                  Tadjikistan
+                  <input type="checkbox" name="smiles" value="bed" />
+                  <FuncIcon iconName={"bed"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="checkbox" name="smiles" value="electric" />
+                  <FuncIcon iconName={"electric"}></FuncIcon>
+              </label>
+              <label>
+                  <input type="checkbox" name="smiles" value="swimming-pool" />
+                  <FuncIcon iconName={"swimming-pool"}></FuncIcon>
               </label>
             </div>
           </div>

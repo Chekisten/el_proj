@@ -76,8 +76,8 @@ const DetailInfo = ({uniqName}) => {
                                             <div className={styles.stepMidFirst}>
                                                 <div className={styles.stringTransparent}></div>
                                                 <div className={styles.circle}>
+                                                    <FuncIcon iconName={step.icon}></FuncIcon>
                                                     
-                                                    <Image src={step.icon} height={50} width={50}></Image>
                                                 </div>
                                                 <div className={styles.connectDown}></div>
                                                 <div className={styles.stringDown}></div>
@@ -88,13 +88,13 @@ const DetailInfo = ({uniqName}) => {
                                                 <br></br>
                                                 <h3>{step.header}</h3>
                                                 <p>{step.text}</p>
-                                                <p>смайлы</p>
+                                                <b>добавить разделение массивов смайлов Изменить подсчет переменной last и исправить сортировку на числовую</b>
                                             </div>
                                         </div>
                                         
                                         </>
                                     )
-                                }
+                                }console.log(last)
                                 if ( z == last) {
                                     return (
                                         <>
@@ -106,7 +106,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <div className={styles.stringUp}></div>
                                                 <div className={styles.connectUp}></div>
                                                 <div className={styles.circle}>
-                                                    <p>{step.icon}</p>
+                                                     <FuncIcon iconName={step.icon}></FuncIcon>
                                                 </div>
                                                 <div className={styles.stringTransparent}></div>
                                             </div>
@@ -115,7 +115,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <br></br>
                                                 <h3>{step.header}</h3>
                                                 <p>{step.text}</p>
-                                                <p>смайлы</p>
+                                                <b>добавить разделение массивов смайлов</b>
                                             </div>
                                         </div>
                                         
@@ -135,7 +135,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <div className={styles.connectUp}></div>
                                                 
                                                 <div className={styles.circle}>
-                                                    <p>{step.icon}</p>
+                                                     <FuncIcon iconName={step.icon}></FuncIcon>
                                                 </div>
 
                                                 <div className={styles.connectDown}></div>
@@ -146,7 +146,7 @@ const DetailInfo = ({uniqName}) => {
                                             <br></br>
                                             <h3>{step.header}</h3>
                                             <p>{step.text}</p>
-                                            <p>смайлы</p>
+                                            <b>добавить разделение массивов смайлов</b>
                                         </div>
                                     </div>
                                     
@@ -166,7 +166,7 @@ const DetailInfo = ({uniqName}) => {
                                             return (
                                                 <>
                                                     <div className={styles.wayInfoEl}>
-                                                        <Image src={step.icon} height={50} width={50}></Image>
+                                                        <FuncIcon iconName={step.icon}></FuncIcon>
                                                         <p>day {step.day}</p>
                                                         <p>{step.city}</p>
                                                     </div>
@@ -200,7 +200,7 @@ const DetailInfo = ({uniqName}) => {
                                                 return (
                                                     <>
                                                         
-                                                            <Image src={step.icon} height={50} width={50}></Image>
+                                                             <FuncIcon iconName={step.icon}></FuncIcon>
                                                             <p>day {step.day}</p>
                                                             <p>{step.city}</p>
                                                     
@@ -227,7 +227,7 @@ const DetailInfo = ({uniqName}) => {
                                     <div className={styles.detailInfo}>
                                         <div className={styles.detailInfoEl}>
                                             <div className={styles.detailInfoElIcon}>
-                                                <p>картинк карта</p>
+                                                <p><FuncIcon iconName={"place2"}></FuncIcon></p> 
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>Место назначение</h4>
@@ -237,7 +237,7 @@ const DetailInfo = ({uniqName}) => {
 
                                         <div className={styles.detailInfoEl}>
                                             <div className={styles.detailInfoElIcon}>
-                                                <p> картинка проживание</p>
+                                                <p><FuncIcon iconName={"home"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>Проживание</h4>
@@ -247,7 +247,7 @@ const DetailInfo = ({uniqName}) => {
 
                                         <div className={styles.detailInfoEl}>
                                             <div className={styles.detailInfoElIcon}>
-                                                <p> картинка проживание</p>
+                                                <p><FuncIcon iconName={"walking"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>{tour.typeOfRoute}</h4>
@@ -257,7 +257,7 @@ const DetailInfo = ({uniqName}) => {
 
                                         <div className={styles.detailInfoEl}>
                                             <div className={styles.detailInfoElIcon}>
-                                                <p> картинка проживание</p>
+                                                <p><FuncIcon iconName={"mountains2"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>Максимальная/минимальная высота</h4>
@@ -267,7 +267,7 @@ const DetailInfo = ({uniqName}) => {
 
                                         <div className={styles.detailInfoEl}>
                                             <div className={styles.detailInfoElIcon}>
-                                                <p> картинка проживание</p>
+                                                <p><FuncIcon iconName={"calendar"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>Возможные месяцы для похода</h4>
@@ -277,7 +277,7 @@ const DetailInfo = ({uniqName}) => {
 
                                         <div className={styles.detailInfoEl}>
                                             <div className={styles.detailInfoElIcon}>
-                                                <p> картинка проживание</p>
+                                                <p><FuncIcon iconName={"compass2"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>Начальная/конечная точка</h4>
