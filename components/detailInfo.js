@@ -281,7 +281,7 @@ const DetailInfo = ({uniqName}) => {
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>Начальная/конечная точка</h4>
-                                                <p>{tour.startPoint}, {tour.endPoint}</p>
+                                                <p>{tour.startPoint} {tour.endPoint}</p>
                                             </div>
                                         </div>
 
