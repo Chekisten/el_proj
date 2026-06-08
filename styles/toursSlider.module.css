@@ -2,16 +2,16 @@
     display: flex;
     flex-direction: column;
     
-}
+} 
 
-
+ 
 .list {
     display: flex;
     align-items: start;
     justify-content: space-around;
     margin-top: 4%;
     margin-bottom: 2%;
-    
+    border-bottom: 2px solid #504020;
 }
 .list button{
     color: #504020; 
@@ -58,7 +58,7 @@
 .tour img{
     object-fit: cover;
 }
-.tour h3 {
+.tour p {
     position: absolute;
     left: 5%;
     bottom:15%;
@@ -67,6 +67,25 @@
     font-size: 22px;
     font-weight: 400;
     text-align: left;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+ 
+.tour::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Черный цвет с прозрачностью 50% */
+}
+
+.topTours{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
 }
 .tourButtons {
     
@@ -83,7 +102,13 @@
         margin-right: 18%;
         padding: 2%;
         border-radius: 20px;
+         color: #504020;
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 14px;
+        z-index: 1;
 }
+
 
 /*Мобильная версия*/
 

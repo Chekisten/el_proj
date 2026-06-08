@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import data from "../database/db.json"
 
 
-
+ 
 
 const TourSlider = ({state}) =>{
     const [tours, setTours] = useState(data.tours)
@@ -39,9 +39,9 @@ const TourSlider = ({state}) =>{
                                 
                             if (tour.countryName == country && tour.isBest == "true" && tour.isHide == "false"){
                                 return (
-                                    <Link href={`/tours/${tour.id}`}>
+                                    <Link href={`/tours/${tour.uniqName}`}>
                                     <div className={styles.tour}>
-                                    <h3> {tour.name}</h3>
+                                    <p> {tour.name}</p>
                                     <div className={styles.tourButtons}>
                                         <button>From {tour.currency}{tour.price}</button>
                                         <button> {tour.duration} {tour.time}</button>
@@ -59,7 +59,7 @@ const TourSlider = ({state}) =>{
                     </div>
 
                 </div>
-        ) || (
+        ) || ( 
             
         <div className={styles.choseState}>
 
@@ -69,9 +69,9 @@ const TourSlider = ({state}) =>{
                            
                     if (tour.countryName == country  && tour.isHide == "false"){
                         return (
-                            <Link href={`/tours/${tour.id}`}>
+                            <Link href={`/tours/${tour.uniqName}`}>
                             <div className={styles.tour}>
-                            <h3> {tour.name}</h3>
+                            <p> {tour.name}</p>
                             <div className={styles.tourButtons}>
                                 <button>From {tour.currency}{tour.price}</button>
                                 <button> {tour.duration} {tour.time}</button>

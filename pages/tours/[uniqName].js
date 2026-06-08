@@ -20,8 +20,9 @@ export default function () {
 
     const [tours, setTours] = useState(data.tours);
     const {query} = useRouter();
-    const currentTour = tours.find(tour => tour.id == query.id)
-   console.log(currentTour?.id)
+    const currentTour = tours.find(tour => tour.uniqName == query.uniqName)
+   // const currentTour = tours.find(tour => tour.id == query.id)
+ //  console.log(currentTour?.id)
     const currentUniqName = currentTour ? currentTour.uniqName : "";
     const currentTourId = currentTour ? currentTour.id : "";
     const currentIntroImg = currentTour ? currentTour.introImg : "";
@@ -41,38 +42,42 @@ export default function () {
     const currenttext2ndPart = currentTour ? currentTour.text2ndPart : "";
 
     
-   
+    
     
     return (
         
         <>
         <MainContainer>
-        <div className={styles.introInfo}>
-            <div className={styles.baseIntroInfo}>
-                <div className={styles.introLeft}>
-                    <p> <FuncIcon iconName={"flag"}></FuncIcon> <b>Тип тура:</b> {currentTourTypeDescription}</p>
-                    <p><FuncIcon iconName={"pair"}></FuncIcon> <b>Размер группы:</b> {currentGroupSize}</p>
-                    <p><FuncIcon iconName={"place1"}></FuncIcon> <b>Место назначение</b> {currentDestination}</p>
-                </div>
-                <div className={styles.introRight}> 
-                    <div className={styles.triangle}>
-                        <div className={styles.upTriangle}></div>
-                        <div className={styles.downTriangle}></div>
-                    </div> 
-                    <div className={styles.introRightBlock}>
-                        <p>{currentDuration} {currentTime}</p>
-                        <p>{currentCurrency} {currentPrice}</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div className={styles.introButton}>
-                <button>Изучить подробнее</button>
-            </div>
-        </div>
-         
-        <MainPhoto photo={currentIntroImg} header={currentName} motto={currentMotto}></MainPhoto>
 
+        <div className={styles.intro}>
+            <div className={styles.introInfo}>
+                <div className={styles.baseIntroInfo}>
+                    <div className={styles.introLeft}>
+                        <p> <FuncIcon iconName={"flag"}></FuncIcon> <b>Tour type:</b> {currentTourTypeDescription}</p>
+                        <p><FuncIcon iconName={"pair"}></FuncIcon> <b>Размер группы:</b> {currentGroupSize}</p>
+                        <p><FuncIcon iconName={"place1"}></FuncIcon> <b>Destination</b> {currentDestination}</p>
+                    </div>
+                    <div className={styles.introRight}> 
+                        <div className={styles.triangle}>
+                            <div className={styles.upTriangle}></div>
+                            <div className={styles.downTriangle}></div>
+                        </div> 
+                        <div className={styles.introRightBlock}>
+                            <p>{currentDuration} {currentTime}</p>
+                            <p>{currentCurrency} {currentPrice}</p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+               <div className={styles.introButton}>
+                <button>Изучить подробнее</button>
+            </div> 
+            </div>
+            
+            
+            <MainPhoto photo={currentIntroImg} header={currentName} motto={currentMotto}></MainPhoto>
+        </div>
         <div className="base">
                 <div className={styles.mainInfo}>
                     <div className={styles.mainInfoText}>

@@ -1,17 +1,24 @@
+
+.intro {
+   position: relative;
+}
+
 .introInfo {
     background-color: #FFF3E4;
     border-radius: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    margin-top: 35%;
-    margin-left: 25%;
-    margin-right: 25%;
+    top: 75%;
+    left: 25%;
+    right: 25%;
     width: 50%;
-    padding-top: 4%;
+   
+    padding-top: 2%;
     padding-bottom: 4%;
     flex-direction: column;
-    align-items: center;
+    box-shadow: 2px 15px 20px 5px rgb(0, 0, 0, 0.2);
 }
 .baseIntroInfo{
     display: flex;
@@ -25,21 +32,23 @@
     font-size: 20px;
     font-weight: 500;
     border-radius: 30px;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    white-space: nowrap;
-    margin-top: 10%;
-    margin-bottom: -20%;
+    padding: 1rem;
+    position: absolute;
+    width: 50%;
+    top: 90%;
+    left: 25%;
+   box-shadow: 2px 15px 20px 5px rgb(0, 0, 0, 0.2);
 }
 .introLeft{
     flex: 0 0 60%;
-    padding: 5%;
+    padding: 4%;
     font-size: 20px;
     color: #5B3F2B;
     font-family: Montserrat;
     line-height: 1,5;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .introLeft b{
     font-weight: 700;
@@ -62,15 +71,15 @@
     flex-direction: column;
 }
 .upTriangle{
-    border: 40px solid transparent;
-    border-top: 40px solid #5B3F2B;
-    border-right: 40px solid #5B3F2B;
+    border: 3rem solid transparent;
+    border-top: 3rem solid #5B3F2B;
+    border-right: 3rem solid #5B3F2B;
     
 }
 .downTriangle{
-    border: 40px solid transparent;
-    border-bottom: 40px solid #5B3F2B;
-    border-right: 40px solid #5B3F2B;
+    border: 3rem solid transparent;
+    border-bottom: 3rem solid #5B3F2B;
+    border-right: 3rem solid #5B3F2B;
 
 }
 .introRightBlock {
@@ -81,7 +90,7 @@
     background-color: #5B3F2B;
     color:#FFF3E4;
     width: 100%;
-    font-size: 42px;
+    font-size: 42px; /*42px*/
     font-family: Montserrat;
     font-weight: 600;
 }

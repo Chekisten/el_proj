@@ -3,6 +3,7 @@ import styles from "../styles/detailInfo.module.css"
 import data from "../database/db.json"
 import Image from "next/image"
 import FuncIcon from "./funcIcon";
+import FuncLittleIcon from "./funcLittleIcon";
 
 
 
@@ -15,20 +16,25 @@ const DetailInfo = ({uniqName}) => {
     const [tours, setTours] = useState(data.tours)
     const [tourDetails, setTourDetails] = useState(data.tourDetail)
     let z = 1;
-    let last = steps.length
+    let last = 0;
+    for (let k = 0; k < steps.length - 1; k++){
+        if (steps[k].uniqName == uniqName){
+            last++;
+        }
+    }
     function sortByDay() {
         
         if (steps.length > 1 ){
 
-            for (let i = 0; i < steps.length -1; i++) {
-                if (steps[i].day > steps[i+1].day){
+            for (let i = 0; i < steps.length - 1; i++) {
+                if ( Number(steps[i].day) >  Number(steps[i+1].day)){
                     let temp = steps[i];
                     steps[i] = steps[i+1];
                     steps[i+1] = temp;
                 } 
 
                 for (let j = steps.length - 1; j > 0; j--){
-                    if (steps[j].day < steps[j-1].day){
+                    if (Number(steps[j].day) < Number(steps[j-1].day)){
                         let temp = steps[j];
                         steps[j] = steps[j-1];
                         steps[j-1] = temp;
@@ -84,18 +90,25 @@ const DetailInfo = ({uniqName}) => {
                                                 
                                             </div>
                                             <div className={styles.stepRight}>
-                                                <h3>Day {step.day}</h3>
-                                                <br></br>
-                                                <h3>{step.header}</h3>
-                                                <p>{step.text}</p>
-                                                <b>добавить разделение массивов смайлов Изменить подсчет переменной last и исправить сортировку на числовую</b>
+                                                <div className={styles.stepDay}>
+                                                    <p>Day {step.day}</p>
+                                                </div>
+                                                <div className={styles.stepHeader}>
+                                                    <p>{step.header}</p>
+                                                </div>
+                                                <div className={styles.stepText}>
+                                                    <p>{step.text}</p>
+                                                </div>
+                                                <div className={styles.stepSmiles}>
+                                                    <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                </div>
                                             </div>
                                         </div>
                                         
                                         </>
                                     )
                                 }console.log(last)
-                                if ( z == last) {
+                                if ( z == last ) {
                                     return (
                                         <>
                                         <div className={styles.step}>
@@ -111,11 +124,18 @@ const DetailInfo = ({uniqName}) => {
                                                 <div className={styles.stringTransparent}></div>
                                             </div>
                                             <div className={styles.stepRight}>
-                                                <h3>Day {step.day}</h3>
-                                                <br></br>
-                                                <h3>{step.header}</h3>
-                                                <p>{step.text}</p>
-                                                <b>добавить разделение массивов смайлов</b>
+                                                <div className={styles.stepDay}>
+                                                    <p>Day {step.day}</p>
+                                                </div>
+                                                <div className={styles.stepHeader}>
+                                                    <p>{step.header}</p>
+                                                </div>
+                                                <div className={styles.stepText}>
+                                                    <p>{step.text}</p>
+                                                </div>
+                                                <div className={styles.stepSmiles}>
+                                                    <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                </div>
                                             </div>
                                         </div>
                                         
@@ -142,12 +162,19 @@ const DetailInfo = ({uniqName}) => {
                                                 <div className={styles.stringDown}></div>
                                         </div>
                                         <div className={styles.stepRight}>
-                                            <h3>Day {step.day}</h3>
-                                            <br></br>
-                                            <h3>{step.header}</h3>
-                                            <p>{step.text}</p>
-                                            <b>добавить разделение массивов смайлов</b>
-                                        </div>
+                                                <div className={styles.stepDay}>
+                                                    <p>Day {step.day}</p>
+                                                </div>
+                                                <div className={styles.stepHeader}>
+                                                    <p>{step.header}</p>
+                                                </div>
+                                                <div className={styles.stepText}>
+                                                    <p>{step.text}</p>
+                                                </div>
+                                                <div className={styles.stepSmiles}>
+                                                    <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                </div>
+                                            </div>
                                     </div>
                                     
                                     </>
@@ -166,9 +193,16 @@ const DetailInfo = ({uniqName}) => {
                                             return (
                                                 <>
                                                     <div className={styles.wayInfoEl}>
-                                                        <FuncIcon iconName={step.icon}></FuncIcon>
-                                                        <p>day {step.day}</p>
-                                                        <p>{step.city}</p>
+                                                        <div className={styles.wayIcon}>
+                                                            <FuncIcon iconName={step.icon}></FuncIcon>
+                                                        </div>
+                                                        <div className={styles.wayDay}>
+                                                            <p>Day {step.day}</p>
+                                                        </div>
+                                                        <div className={styles.wayCity}>
+                                                            <p>{step.city}</p>
+                                                        </div>
+                                                        
                                                     </div>
                                                 </>
                                             )
@@ -183,9 +217,6 @@ const DetailInfo = ({uniqName}) => {
                                             if (tour.uniqName == uniqName){
                                                 return(
                                                     <>
-                                                    
-                                                    
-                                                    
                                                     <iframe src={tour.map} width="640" height="480"></iframe>
                                                     </>
                                                 )
@@ -199,10 +230,16 @@ const DetailInfo = ({uniqName}) => {
                                             if (step.uniqName == uniqName){
                                                 return (
                                                     <>
-                                                        
-                                                             <FuncIcon iconName={step.icon}></FuncIcon>
-                                                            <p>day {step.day}</p>
-                                                            <p>{step.city}</p>
+                                                        <div className={styles.wayMapInfoEl}>
+                                                            <div className={styles.wayMapInfoDayBack}>
+                                                                <div className={styles.wayMapInfoDay}>
+                                                                    <p>{step.day}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div className={styles.wayMapInfoCity}>
+                                                                <p>{step.city.split("→")[0]}</p>
+                                                            </div>
+                                                        </div>    
                                                     
                                                     </>
                                                 )

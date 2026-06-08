@@ -3,7 +3,7 @@ import Head from "next/head"
 import styles from "../styles/mainContainer.module.css"
 import Feedback from "./feedback"
 
-const MainContainer = ({children, keywords}) =>{
+const MainContainer = ({children, keywords, pageType}) =>{
     return (
         <>
 
@@ -13,7 +13,7 @@ const MainContainer = ({children, keywords}) =>{
         </Head>
 
             <div className={styles.navbar}>
-
+            
                 
                 <div className={styles.menu}>
                     <A href={'/'} text={"Main"}/>
@@ -28,8 +28,9 @@ const MainContainer = ({children, keywords}) =>{
 
 
 
-            <Feedback></Feedback>
+            <Feedback feedType={pageType}></Feedback>
             <div className={styles.footer}>
+            
                 <div>
                     <p>Contact information</p>
                     <br></br>

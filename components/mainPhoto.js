@@ -4,12 +4,12 @@ const MainPhoto = ({photo,header,motto}) => {
     
     return(
         <>
-            <div className="MainMotto" style={ {backgroundImage:   `url(${photo})`}}>
+            <div className={styles.MainMotto} style={ {backgroundImage:   `url(${photo})`}}>
                 
-                    <p className="mainMotto1st">{header}</p><br></br>
-                    <p className="mainMotto2nd">{motto}</p>
+                    <p className={styles.mainMotto1st}>{header}</p>
+                    <p className={styles.mainMotto2nd}>{motto}</p>
                     
-                
+                 
             </div>
         
         </>
