@@ -1,7 +1,9 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
 
-[build.environment]
-  NEXT_DISABLE_SOURCEMAPS = "1"
-  NETLIFY_NEXT_PLUGIN_SKIP_SET_ENV = "true"
+# Этот блок принудительно запрещает Netlify создавать Next.js функции
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disableRuntime = true
