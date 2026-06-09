@@ -19,8 +19,6 @@ const MainContainer = ({children, keywords, pageType}) =>{
                     <A href={'/'} text={"Main"}/>
                     <A href={'/about'} text={"About"}/>
                     <A href={'/tourTypes'} text={"Tour Types"}/>
-                    <A href={'/feedback'} text={"Feedback"}/>
-                    <A href={'/help'} text={"Help"}/>
                     <A href={'/sight'} text={"Sigth"}/>
                 </div>
             </div>

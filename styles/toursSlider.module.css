@@ -15,17 +15,18 @@
 }
 .list button{
     color: #504020; 
-    background-color: #EAD9C7;
+    background-color: #FFEDDA;
     border: 0;
     font-size: 20px;
    
 }
 .list button:focus{
     color: #504020; 
-    background-color: #EAD9C7;
+    background-color: #FFEDDA;
     border: 0;
     text-decoration: underline;
     font-weight: 600;
+    text-underline-offset: 5px;
 }
 .topTours{
     display: flex;

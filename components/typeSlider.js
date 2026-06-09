@@ -21,7 +21,7 @@ const TypeSlider = () =>{
                             return (
                                 <>
                                     <h3>{type.uniqTypeName}</h3>
-                                    <Link href={type.uniqTypeName}>Пук</Link>
+                                    <Link href={type.uniqTypeName}>тык</Link>
                                     
                                 </>
                                 

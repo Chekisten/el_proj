@@ -11,27 +11,27 @@ const Feedback = ({feedType}) => {
             <div className={styles.feedbackBase}> 
                 <div className={styles.separate}>
                     <div className={styles.mainSep}>
-                        <h2>Хотите стать часть нашей команды?</h2>
-                        <p>Мы на связи 24/7, чтобы ответить на ваши вопросы и предоставить ресурсы, информацию и варианты туров. Вы можете связаться с нами по телефону/WhatsApp по номеру +996 556 007030 или по электронной почте oshtours@gmail.com. Или отправьте нам сообщение ниже.</p>
+                        <h2>Want to become part of our team?</h2>
+                        <p>We're available 24/7 to answer your questions and provide resources, information, and tour options. You can contact us by phone/WhatsApp at +996 556 007030 or by email at oshtours@gmail.com. Or send us a message below.</p>
                         <br></br>
                         
                         <div className={styles.feedback}>
                             
                             
                                 <form action="" method="post" className={styles.feedbackForm}>
-                                    <label htmlFor="name">Ваше имя</label>
+                                    <label htmlFor="name">Your name</label>
                                     <input id="name" type="text" name="name"></input>
                                     
-                                    <label htmlFor="email">Ваша почта</label>
+                                    <label htmlFor="email">Your e-mail</label>
                                     <input id="email" type="email" name="email"></input>
 
-                                    <label htmlFor="tourName">Наименование тура</label>
+                                    <label htmlFor="tourName">Tour Name</label>
                                     <input id="tourName" type="text" name="tourName"></input>
 
-                                    <label htmlFor="message">Ваше сообщение</label>
+                                    <label htmlFor="message">Your message</label>
                                     <textarea id="message" type="text" name="message"></textarea>
 
-                                    <input type="submit" value="Оставить заявку"></input>
+                                    <input type="submit" value="Submit a request"></input>
                                 </form>
                 
                         </div>
@@ -47,24 +47,24 @@ const Feedback = ({feedType}) => {
             <div className={styles.feedbackBase}> 
                 <div className={styles.separate}>
                     <div className={styles.mainSep}>
-                        <h2>Готовы к вашему новому приключению?</h2>
+                        <h2>Ready for your new adventure?</h2>
                         <div className={styles.feedback}>
                             
                             
                                 <form action="" method="post" className={styles.feedbackForm}>
-                                    <label htmlFor="name">Ваше имя</label>
+                                    <label htmlFor="name">Your name</label>
                                     <input id="name" type="text" name="name"></input>
                                     
-                                    <label htmlFor="email">Ваша почта</label>
+                                    <label htmlFor="email">Your e-mail</label>
                                     <input id="email" type="email" name="email"></input>
 
-                                    <label htmlFor="tourName">Наименование тура</label>
+                                    <label htmlFor="tourName">Tour Name</label>
                                     <input id="tourName" type="text" name="tourName"></input>
 
-                                    <label htmlFor="message">Ваше сообщение</label>
+                                    <label htmlFor="message">Your message</label>
                                     <textarea id="message" type="text" name="message"></textarea>
 
-                                    <input type="submit" value="Оставить заявку"></input>
+                                    <input type="submit" value="Submit a request"></input>
                                 </form>
                 
                         </div>

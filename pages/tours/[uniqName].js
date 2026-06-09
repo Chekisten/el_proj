@@ -87,7 +87,7 @@ export default function () {
                     </div>
                     <div className={styles.mainInfoImg}>
 
-                        <Image src={currentPhoto} width={500} height={550}></Image>
+                        <Image src={currentPhoto} width={1280} height={720}></Image>
                     </div>
                 </div>
         </div>

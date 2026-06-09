@@ -12,9 +12,9 @@ const Index = () => {
     return (
         <MainContainer>
         <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainBackground.png)"}}>
-            <p className="mainMotto1st">Почувствуйте мир</p>
-            <p className="mainMotto2nd">А не просто посмотрите его</p>
-            <button>Подобрать путешествие</button>
+            <p className="mainMotto1st">Go beyond sightseeing</p>
+            <p className="mainMotto2nd">Feel the world</p>
+            <button>Explore a tour</button>
 
         </div>
 
@@ -22,38 +22,38 @@ const Index = () => {
         <div className="base">
             <div className="gradient">
                 <div class="gradient-line-left"></div>
-                <h2>Изучите туры по странам</h2>
+                <h2>Explore tours by country</h2>
                 <div class="gradient-line-right"></div>
              </div>
 
             <div className="tourByStates">
                 <div className="tourByStatesRow1">
                     <img src="/images/interTours.png" alt="international travel"></img>
-                    <h3>Многонациональный тур</h3>
+                    <h3>International</h3>
                     <Link href={"/states/internationalTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow1">
                     <img src="/images/kyrgyzTours.png" alt="Kyrgyzstan travel"></img>
-                    <h3>Туры по Кыргызстану</h3>
+                    <h3>Kyrgyzstan</h3>
                     <Link href={"/states/kyrgyzstanTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/kazahTours.png" alt="Kazakhstan travel"></img>
-                    <h3>Туры по Казахстану</h3>
+                    <h3>Kazakhstan</h3>
                     <Link href={"/states/kazakhstanTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/tajikTours.png" alt="Tadjikistan travel"></img>
-                    <h3>Туры по Таджикистану</h3>
+                    <h3>Tajikistan</h3>
                     <Link href={"/states/tajikistanTours"}><button>❯</button></Link>
                 </div>
 
                 <div className="tourByStatesRow2">
                     <img src="/images/uzbekTours.png" alt="Uzbekistan travel"></img>
-                    <h3>Туры по Узбекистану</h3>
+                    <h3>Uzbekistan</h3>
                     <Link href={"/states/uzbekistanTours"}><button>❯</button></Link>
                 </div>
             </div>
@@ -64,7 +64,7 @@ const Index = () => {
             <div className="bestTours">
                 <div className="gradient">
                     <div class="gradient-line-left"></div>
-                    <h2>Выбери свой отдых</h2>
+                    <h2>Choose your escape</h2>
                     <div class="gradient-line-right"></div>
                 </div>
 
@@ -86,7 +86,7 @@ const Index = () => {
 
             <div className="gradient">
                 <div class="gradient-line-left"></div>
-                <h2>Почему выбирают нас?</h2>
+                <h2>Why choose us?</h2>
                 <div class="gradient-line-right"></div>
              </div>
 
@@ -97,18 +97,18 @@ const Index = () => {
                         <img src="/images/firstAbout.png" alt="social tourism"></img>
                         <div className="aboutText">
                             
-                            <h3>Общественный туризм</h3>
+                            <h3>Community tourism</h3>
                             <br></br>
-                            <p>Мы привержены развитию общинного туризма и устойчивого туризма, который приносит пользу местным сообществам и сохраняет природную красоту и культурное наследие Центральной Азии. Проживая в местных гостевых домах, нанимая региональных гидов и минимизируя наше воздействие на окружающую среду, вы, оформив тур у нас, поддерживаете людей и места, которые посещаете.</p>
+                            <p>We are committed to developing community-based and sustainable tourism that benefits local communities and preserves the natural beauty and cultural heritage of Central Asia. By staying in local guesthouses, hiring regional guides, and minimizing our environmental impact, you support the people and places you visit when you book a tour with us.</p>
                         </div>
                     </div>
 
                     <div className="aboutBlock"> 
                         <div className="aboutTextLeft" >
-                            <h3>Экспертиза на местном уровне</h3>
+                            <h3>Local expertise</h3>
                             <br></br>
-                            <p>Мы — местная компания с более чем 15-летним опытом работы и глубокими знаниями местного рынка. 
-                            Имея офисы и команды как в столице Бишкеке, так и в южном киргизском центре Оше, мы обеспечиваем сильную региональную сеть и можем поддержать ваше путешествие по всему Кыргызстану и Центральной Азии.</p>
+                            <p>We are a local company with over 15 years of experience and deep knowledge of the local market.
+                            With offices and teams in both the capital Bishkek and the southern Kyrgyz capital Osh, we provide a strong regional network and can support your travel throughout Kyrgyzstan and Central Asia.</p>
                         </div>
                         <img src="/images/secondAbout.png" alt="social tourism"></img>
                     </div>
@@ -116,18 +116,18 @@ const Index = () => {
                     <div className="aboutBlock"> 
                         <img src="/images/thirdAbout.png" alt="social tourism"></img>                
                         <div className="aboutText">
-                            <h3>Групповые туры</h3>
+                            <h3>Group tours</h3>
                             <br></br>
-                            <p>Мы помогаем самостоятельным путешественникам найти единомышленников для совместных поездок в рамках наших туров в небольших группах. Это не только помогает разделить расходы, но и дает возможность завести новые знакомства по всему миру и создать множество новых воспоминаний.</p>
+                            <p>We help independent travelers find like-minded travelers to share their adventures on our small group tours. This not only helps split the cost but also provides the opportunity to make new connections around the world and create countless new memories.</p>
                         </div>
                     </div>
 
                     <div className="aboutBlock">
                         <div className="aboutTextLeft" >
                             
-                            <h3>100% кастомизации</h3>
+                            <h3>100% customization</h3>
                             <br></br>
-                            <p>Расскажите нам о ваших интересах, потребностях и расписании, и мы вместе разработаем индивидуальный маршрут для вас или вашей частной группы. Вы можете комбинировать мероприятия из разных туров, добавлять что-то новое или изменять расписание. Мы учтем все ваши пожелания и создадим маршрут, персонализированный именно для вас.</p>
+                            <p>Tell us about your interests, needs, and schedule, and we'll work with you to create a custom itinerary for you or your private group. You can combine activities from different tours, add new ones, or customize your schedule. We'll take your preferences into account and create a personalized itinerary just for you.</p>
                         </div>
                         <img src="/images/fourthAbout.png" alt="social tourism"></img>
                     </div>

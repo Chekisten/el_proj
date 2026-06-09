@@ -25,11 +25,11 @@ const TourSlider = ({state}) =>{
         {state == "main" && (
             <div className={styles.choseState}>
                     <div className={styles.list}>
-                        <button onClick={() => setCountry('international')}>Многонациональный</button>
-                        <button onClick={() => setCountry('kyrgyzstan')}>Кыргызстан</button>
-                        <button onClick={() => setCountry('tadjikistan')}>Таджикистан</button>
-                        <button onClick={() => setCountry('uzbekistan')}>Узбекистан</button>
-                        <button onClick={() => setCountry('kazakhstan')}>Казахстан</button>
+                        <button onClick={() => setCountry('international')}>International</button>
+                        <button onClick={() => setCountry('kyrgyzstan')}>Kyrgyzstan</button>
+                        <button onClick={() => setCountry('tadjikistan')}>Tajikistan</button>
+                        <button onClick={() => setCountry('uzbekistan')}>Uzbekistan</button>
+                        <button onClick={() => setCountry('kazakhstan')}>Kazakhstan</button>
                     </div>
                     
 
