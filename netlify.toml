@@ -2,8 +2,3 @@
   command = "npm run build"
   publish = "out"
 
-# Этот блок принудительно запрещает Netlify создавать Next.js функции
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    disableRuntime = true
