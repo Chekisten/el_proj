@@ -29,6 +29,7 @@ const MainContainer = ({children, keywords, pageType}) =>{
 
 
             <Feedback feedType={pageType}></Feedback>
+            
             <div className={styles.footer}>
             
                 <div>
