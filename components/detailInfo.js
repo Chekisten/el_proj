@@ -51,7 +51,7 @@ const DetailInfo = ({uniqName}) => {
             <div className="base">
                 <div className="gradient">
                     <div class="gradient-line-left"></div>
-                    <h2>Подробная информация</h2>
+                    <h2>Detailed information</h2>
                     <div class="gradient-line-right"></div>
                 </div>
 
@@ -94,7 +94,7 @@ const DetailInfo = ({uniqName}) => {
                                                     <p>Day {step.day}</p>
                                                 </div>
                                                 <div className={styles.stepHeader}>
-                                                    <p>{step.header}</p>
+                                                    <h2>{step.header}</h2>
                                                 </div>
                                                 <div className={styles.stepText}>
                                                     <p>{step.text}</p>
@@ -128,7 +128,7 @@ const DetailInfo = ({uniqName}) => {
                                                     <p>Day {step.day}</p>
                                                 </div>
                                                 <div className={styles.stepHeader}>
-                                                    <p>{step.header}</p>
+                                                    <h2>{step.header}</h2>
                                                 </div>
                                                 <div className={styles.stepText}>
                                                     <p>{step.text}</p>
@@ -166,7 +166,7 @@ const DetailInfo = ({uniqName}) => {
                                                     <p>Day {step.day}</p>
                                                 </div>
                                                 <div className={styles.stepHeader}>
-                                                    <p>{step.header}</p>
+                                                    <h2>{step.header}</h2>
                                                 </div>
                                                 <div className={styles.stepText}>
                                                     <p>{step.text}</p>
@@ -267,7 +267,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <p><FuncIcon iconName={"place2"}></FuncIcon></p> 
                                             </div>
                                             <div className={styles.detailInfoElText}>
-                                                <h4>Место назначение</h4>
+                                                <h4>Destination</h4>
                                                 <p>{tour.destination}</p>
                                             </div>
                                         </div>
@@ -277,7 +277,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <p><FuncIcon iconName={"home"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
-                                                <h4>Проживание</h4>
+                                                <h4>Accommodation</h4>
                                                 <p>{tour.hotel}</p>
                                             </div>
                                         </div>
@@ -287,7 +287,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <p><FuncIcon iconName={"walking"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
-                                                <h4>{tour.typeOfRoute}</h4>
+                                                <h4>Trekking distance</h4>
                                                 <p>{tour.distance}</p>
                                             </div>
                                         </div>
@@ -297,7 +297,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <p><FuncIcon iconName={"mountains2"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
-                                                <h4>Максимальная/минимальная высота</h4>
+                                                <h4>Maximum/minimum height</h4>
                                                 <p>{tour.tourHeight}</p>
                                             </div>
                                         </div>
@@ -307,7 +307,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <p><FuncIcon iconName={"calendar"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
-                                                <h4>Возможные месяцы для похода</h4>
+                                                <h4>Possible months for the hike</h4>
                                                 <p>{tour.probablyMonths}</p>
                                             </div>
                                         </div>
@@ -317,7 +317,7 @@ const DetailInfo = ({uniqName}) => {
                                                 <p><FuncIcon iconName={"compass2"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
-                                                <h4>Начальная/конечная точка</h4>
+                                                <h4>End point</h4>
                                                 <p>{tour.startPoint} {tour.endPoint}</p>
                                             </div>
                                         </div>
@@ -335,7 +335,7 @@ const DetailInfo = ({uniqName}) => {
                         detailButton == "price" &&
                         <>  
                         <div className={styles.tourDetailBlock}>
-                            <h3>Что включает в тур</h3>
+                            <h3>What does the tour include?</h3>
                             <div className={styles.tourDetail}>  
                                 {tourDetails.map(tourDetail => {
                                 if (tourDetail.isInclude == "include"){
@@ -358,7 +358,7 @@ const DetailInfo = ({uniqName}) => {
                                 })      
                                 }
                             </div>
-                            <h3>Что НЕ включает в тур</h3>
+                            <h3>What is NOT included in the tour</h3>
                             <div className={styles.tourDetail}>
                                     
                                     {tourDetails.map(tourDetail => {

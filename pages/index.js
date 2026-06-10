@@ -27,35 +27,50 @@ const Index = () => {
              </div>
 
             <div className="tourByStates">
+               
+                    <div className="tourByStatesRow1">
+                        <Link href={"/states/internationalTours"}>
+                            <img src="/images/interTours.png" alt="international travel"></img>
+                            <h3>International</h3>
+                            <Link href={"/states/internationalTours"}><button>❯</button></Link>
+                        </Link> 
+                   </div>
+                
                 <div className="tourByStatesRow1">
-                    <img src="/images/interTours.png" alt="international travel"></img>
-                    <h3>International</h3>
-                    <Link href={"/states/internationalTours"}><button>❯</button></Link>
+                    <Link href={"/states/kyrgyzstanTours"}>
+                            <img src="/images/kyrgyzTours.png" alt="Kyrgyzstan travel"></img>
+                            <h3>Kyrgyzstan</h3>
+                            <Link href={"/states/kyrgyzstanTours"}><button>❯</button></Link>
+                    </Link>
                 </div>
 
-                <div className="tourByStatesRow1">
-                    <img src="/images/kyrgyzTours.png" alt="Kyrgyzstan travel"></img>
-                    <h3>Kyrgyzstan</h3>
-                    <Link href={"/states/kyrgyzstanTours"}><button>❯</button></Link>
-                </div>
-
-                <div className="tourByStatesRow2">
-                    <img src="/images/kazahTours.png" alt="Kazakhstan travel"></img>
-                    <h3>Kazakhstan</h3>
-                    <Link href={"/states/kazakhstanTours"}><button>❯</button></Link>
-                </div>
-
-                <div className="tourByStatesRow2">
-                    <img src="/images/tajikTours.png" alt="Tadjikistan travel"></img>
-                    <h3>Tajikistan</h3>
-                    <Link href={"/states/tajikistanTours"}><button>❯</button></Link>
-                </div>
-
-                <div className="tourByStatesRow2">
-                    <img src="/images/uzbekTours.png" alt="Uzbekistan travel"></img>
-                    <h3>Uzbekistan</h3>
-                    <Link href={"/states/uzbekistanTours"}><button>❯</button></Link>
-                </div>
+                
+                    <div className="tourByStatesRow2">
+                        <Link href={"/states/kazakhstanTours"}>
+                            <img src="/images/kazahTours.png" alt="Kazakhstan travel"></img>
+                            <h3>Kazakhstan</h3>
+                            <Link href={"/states/kazakhstanTours"}><button>❯</button></Link>
+                        </Link>
+                    </div>
+                
+                
+                    <div className="tourByStatesRow2">
+                        <Link href={"/states/tajikistanTours"}>
+                            <img src="/images/tajikTours.png" alt="Tadjikistan travel"></img>
+                            <h3>Tajikistan</h3>
+                            <Link href={"/states/tajikistanTours"}><button>❯</button></Link>
+                        </Link>
+                    </div>
+                
+               
+                    <div className="tourByStatesRow2"> 
+                        <Link href={"/states/uzbekistanTours"}>
+                            <img src="/images/uzbekTours.png" alt="Uzbekistan travel"></img>
+                            <h3>Uzbekistan</h3>
+                            <Link href={"/states/uzbekistanTours"}><button>❯</button></Link>
+                        </Link>
+                    </div>
+                
             </div>
         </div>
 

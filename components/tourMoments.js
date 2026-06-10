@@ -12,7 +12,7 @@ const TourMoments = ({tourUniqName}) => {
                 <div className={styles.moments}>
                     <div className="gradient">
                         <div class="gradient-line-left"></div>
-                        <h2>Основные моменты</h2>
+                        <h2>Highlights</h2>
                         <div class="gradient-line-right"></div>
                     </div>
 

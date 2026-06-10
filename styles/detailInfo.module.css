@@ -165,6 +165,12 @@
     font-family: Montserrat;
     margin-bottom: 1rem;
 }
+.stepHeader h2{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Montserrat;
+    margin-bottom: 1rem;
+}
 .stepText{
     font-size: 18px;
     font-weight: 400;

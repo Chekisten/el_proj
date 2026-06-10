@@ -44,7 +44,7 @@ const Reviews = () =>{
             
                 <div className={styles.reviewSlider}>
                     <div className={styles.slider} ref={scrollRef}>
-
+ 
 
                         {reviews.map(review =>{
 

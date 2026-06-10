@@ -54,7 +54,7 @@ export default function () {
                 <div className={styles.baseIntroInfo}>
                     <div className={styles.introLeft}>
                         <p> <FuncIcon iconName={"flag"}></FuncIcon> <b>Tour type:</b> {currentTourTypeDescription}</p>
-                        <p><FuncIcon iconName={"pair"}></FuncIcon> <b>Размер группы:</b> {currentGroupSize}</p>
+                        <p><FuncIcon iconName={"pair"}></FuncIcon> <b>Group size:</b> {currentGroupSize}</p>
                         <p><FuncIcon iconName={"place1"}></FuncIcon> <b>Destination</b> {currentDestination}</p>
                     </div>
                     <div className={styles.introRight}> 
@@ -71,7 +71,7 @@ export default function () {
 
                 </div>
                <div className={styles.introButton}>
-                <button>Изучить подробнее</button>
+                <button>More information</button>
             </div> 
             </div>
             
@@ -103,7 +103,7 @@ export default function () {
         <div className="base">
             <div className="gradient">
                 <div class="gradient-line-left"></div>
-                <h2>Атмосфера тура</h2>
+                <h2>The atmosphere of the tour</h2>
                 
                 <div class="gradient-line-right"></div>
              </div>

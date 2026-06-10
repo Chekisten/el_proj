@@ -160,6 +160,8 @@ h1{
     color:#ffffff;
      background-color: rgba(0, 0, 0, 0.1);
      font-family: "Open Sans";
+     font-size: 22px;
+     font-weight: 600;
 
     
 }
@@ -195,10 +197,12 @@ h1{
 .tourByStatesRow2 h3 {
     position: absolute;
     bottom: 20%;
-    left: 12%;
+    left: 15%;
     color:#ffffff;
      background-color: rgba(0, 0, 0, 0.1);
      font-family: "Open Sans";
+     font-size: 22px;
+     font-weight: 600;
 
     
 }
@@ -336,8 +340,6 @@ h1{
     transform: rotate(90deg);
 }
 
-
-
 .FAQBlock p{
     font-size: 20px;
     font-weight: 400;
@@ -465,7 +467,7 @@ h1{
 
 .tourByStatesRow1 h3 {
     position: absolute;
-    top: 15%;
+    bottom: 19%;
     left: 10%;
     color:#ffffff;
      background-color: rgba(255, 255, 255, 0);
@@ -478,14 +480,12 @@ h1{
     bottom: 15%;
     right: 10%;
     background-color: #F0D8BC;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     border-radius: 12px;
     
 }
-
-
-
 
 .tourByStatesRow2{
     flex: 0 0 100%;
@@ -501,7 +501,7 @@ h1{
 }
 .tourByStatesRow2 h3 {
     position: absolute;
-    top: 15%;
+    bottom: 19%;
     left: 10%;
     color:#ffffff;
      background-color: rgba(255, 255, 255, 0);
@@ -514,8 +514,9 @@ h1{
     bottom: 15%;
     right: 10%;
      background-color: #F0D8BC;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     border-radius: 12px;
     
 }
@@ -533,34 +534,53 @@ h1{
 }
 .aboutBlock{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex: 0 0 50%;
     position: relative;
-    flex-direction: row;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 2%;
     background-color: #FFF3E4;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 3px 5px 15px #483f3159;
-  
-    
+    font-family: var(--font-montserrat), sans-serif;
+}
+.aboutBlock p{
+    font-weight: 400;
+    font-size: 16px;
+}
+.aboutBlock h3{
+    font-weight: 700;
+    font-size: 19px;
 }
 
 .aboutBlock img {
     width: 100%;
     height: auto;
     border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 3px 5px 15px #483f3159;
     
 }
 
-.aboutBlock p{
-    font-weight: 500;
-    font-size: 11px;
+.aboutText{
+    text-align: start;
+    align-items: flex-end;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    line-height: 100%;
 }
-.aboutBlock h3{
-    font-weight: 700;
-    font-size: 13px;
+.aboutTextLeft{
+    text-align: start;
+    align-items: flex-end;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    line-height: 100%;
+    order: 2;
 }
 /* Блок About конец*/
 
