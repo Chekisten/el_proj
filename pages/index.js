@@ -32,7 +32,7 @@ const Index = () => {
                         <Link href={"/states/internationalTours"}>
                             <img src="/images/interTours.png" alt="international travel"></img>
                             <h3>International</h3>
-                            <Link href={"/states/internationalTours"}><button>❯</button></Link>
+                            <button>❯</button>
                         </Link> 
                    </div>
                 
@@ -40,7 +40,7 @@ const Index = () => {
                     <Link href={"/states/kyrgyzstanTours"}>
                             <img src="/images/kyrgyzTours.png" alt="Kyrgyzstan travel"></img>
                             <h3>Kyrgyzstan</h3>
-                            <Link href={"/states/kyrgyzstanTours"}><button>❯</button></Link>
+                            <button>❯</button>
                     </Link>
                 </div>
 
@@ -49,7 +49,7 @@ const Index = () => {
                         <Link href={"/states/kazakhstanTours"}>
                             <img src="/images/kazahTours.png" alt="Kazakhstan travel"></img>
                             <h3>Kazakhstan</h3>
-                            <Link href={"/states/kazakhstanTours"}><button>❯</button></Link>
+                            <button>❯</button>
                         </Link>
                     </div>
                 
@@ -58,7 +58,7 @@ const Index = () => {
                         <Link href={"/states/tajikistanTours"}>
                             <img src="/images/tajikTours.png" alt="Tadjikistan travel"></img>
                             <h3>Tajikistan</h3>
-                            <Link href={"/states/tajikistanTours"}><button>❯</button></Link>
+                            <button>❯</button>
                         </Link>
                     </div>
                 
@@ -67,7 +67,7 @@ const Index = () => {
                         <Link href={"/states/uzbekistanTours"}>
                             <img src="/images/uzbekTours.png" alt="Uzbekistan travel"></img>
                             <h3>Uzbekistan</h3>
-                            <Link href={"/states/uzbekistanTours"}><button>❯</button></Link>
+                            <button>❯</button> 
                         </Link>
                     </div>
                 

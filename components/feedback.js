@@ -31,7 +31,9 @@ const Feedback = ({feedType}) => {
                                     <label htmlFor="message">Your message</label>
                                     <textarea id="message" type="text" name="message"></textarea>
 
-                                    <input type="submit" value="Submit a request"></input>
+                                   
+                                        <input type="submit" value="Submit a request"></input>
+                                    
                                 </form>
                 
                         </div>
@@ -53,18 +55,23 @@ const Feedback = ({feedType}) => {
                             
                                 <form action="" method="post" className={styles.feedbackForm}>
                                     <label htmlFor="name">Your name</label>
-                                    <input id="name" type="text" name="name"></input>
+                                    <input id="name" type="text" name="name" placeholder="Your name"></input>
                                     
                                     <label htmlFor="email">Your e-mail</label>
-                                    <input id="email" type="email" name="email"></input>
+                                    <input id="email" type="email" name="email" placeholder="Your e-mail"></input>
 
                                     <label htmlFor="tourName">Tour Name</label>
-                                    <input id="tourName" type="text" name="tourName"></input>
+                                    <input id="tourName" type="text" name="tourName" placeholder="Tour Name"></input>
 
                                     <label htmlFor="message">Your message</label>
-                                    <textarea id="message" type="text" name="message"></textarea>
-
+                                    <textarea id="message" type="text" name="message" placeholder="Your message"></textarea>
+                                    <div className={styles.privacy}>
+                                        <input type="checkbox" id="checkLaw"></input>
+                                        <label htmlFor="checkLaw">I accept the terms of the [Privacy Policy]</label>
+                                    </div>
+                                    
                                     <input type="submit" value="Submit a request"></input>
+                                    
                                 </form>
                 
                         </div>
@@ -77,7 +84,7 @@ const Feedback = ({feedType}) => {
         )}
 
        
-
+ 
         </>
     )
 }

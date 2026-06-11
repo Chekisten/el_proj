@@ -110,10 +110,51 @@
         z-index: 1;
 }
 
+.choseStateLittle{
+    display: none;
+}
 
 /*Мобильная версия*/
 
 @media (max-width: 768px){
+
+.choseState{
+    display: none;
+    flex-direction: column;
+    
+} 
+.choseStateLittle{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.choseStateLittle summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 500;
+    padding: 1%;
+    margin-left: 5%;
+    cursor: pointer;
+    list-style: none;
+}
+
+.choseStateLittle summary::after {
+    content: '▶'; 
+    font-size: 0.8em;
+    color: #5B3F2B;
+    transition: transform 0.3s; 
+    margin-left: 2%; 
+}
+
+
+.choseStateLittle details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+
     .list {
     display: flex;
     align-items: start;

@@ -6,21 +6,37 @@ import Feedback from "./feedback"
 const MainContainer = ({children, keywords, pageType}) =>{
     return (
         <>
-
+ 
         <Head>
             <meta keywords={"Prototype, tours" + keywords}></meta>
             <title>Prototype of tour's site</title>
         </Head>
 
             <div className={styles.navbar}>
-            
-                
                 <div className={styles.menu}>
                     <A href={'/'} text={"Main"}/>
                     <A href={'/about'} text={"About"}/>
                     <A href={'/tourTypes'} text={"Tour Types"}/>
                     <A href={'/sight'} text={"Sigth"}/>
                 </div>
+            </div>
+
+            <div className={styles.phoneNavBar}>
+                <div className={styles.dropBar}>
+                    <div className={styles.dropLogo}>Asia Explore</div>
+                    <div className={styles.drops}>
+                        <input type="checkbox" id="drop-toggle" className={styles.dropToggle}></input>
+                        <label htmlFor="drop-toggle" className={styles.dropButton}>☰</label>
+                        
+                        <div className={styles.dropList}>
+                            <A href={'/'} text={"Main"}/>
+                            <A href={'/about'} text={"About"}/>
+                            <A href={'/tourTypes'} text={"Tour Types"}/>
+                            <A href={'/sight'} text={"Sigth"}/>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             {children}
 

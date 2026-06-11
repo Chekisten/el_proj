@@ -3,6 +3,7 @@ import styles from "../styles/toursSlider.module.css";
 import Images from "next/image";
 import { useState, useEffect } from "react";
 import data from "../database/db.json"
+import TourSliderScroll from "./tourSliderScroll";
 
 
  
@@ -23,6 +24,7 @@ const TourSlider = ({state}) =>{
     return (
         <>
         {state == "main" && (
+            <>
             <div className={styles.choseState}>
                     <div className={styles.list}>
                         <button onClick={() => setCountry('international')}>International</button>
@@ -32,7 +34,7 @@ const TourSlider = ({state}) =>{
                         <button onClick={() => setCountry('kazakhstan')}>Kazakhstan</button>
                     </div>
                     
-
+ 
                     <div className={styles.topTours}>
 
                         {tours.map( tour => {
@@ -59,6 +61,39 @@ const TourSlider = ({state}) =>{
                     </div>
 
                 </div>
+
+                <div className={styles.choseStateLittle}>
+                    
+                    <details>
+                        <summary>International</summary>
+                        <TourSliderScroll country={'international'}></TourSliderScroll>
+                    </details>
+                    <details>
+                        <summary>Kyrgyzstan</summary>
+                        <TourSliderScroll country={'kyrgyzstan'}></TourSliderScroll>
+                    </details>
+                    <details>
+                        <summary>Tadjikistan</summary>
+                        <TourSliderScroll country={'tadjikistan'}></TourSliderScroll>
+                    </details>
+                    <details>
+                        <summary>Uzbekistan</summary>
+                        <TourSliderScroll country={'uzbekistan'}></TourSliderScroll>
+                    </details>
+                    <details>
+                        <summary>Kazakhstan</summary>
+                        <TourSliderScroll country={'kazakhstan'}></TourSliderScroll>
+                    </details>
+                    
+                    
+
+                    
+
+                </div>
+                </>
+
+
+
         ) || ( 
             
         <div className={styles.choseState}>
