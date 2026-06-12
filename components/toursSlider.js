@@ -95,35 +95,50 @@ const TourSlider = ({state}) =>{
 
 
         ) || ( 
-            
-        <div className={styles.choseState}>
+            <>
+            <div className={styles.choseState}>
 
-            <div className={styles.topTours}>
+                <div className={styles.topTours}>
 
-                {tours.map( tour => {
-                           
-                    if (tour.countryName == country  && tour.isHide == "false"){
-                        return (
-                            <Link href={`/tours/${tour.uniqName}`}>
-                            <div className={styles.tour}>
-                            <p> {tour.name}</p>
-                            <div className={styles.tourButtons}>
-                                <button>From {tour.currency}{tour.price}</button>
-                                <button> {tour.duration} {tour.time}</button>
-                            </div>
-                            <Images src={tour.img} width={400} height={350}className={styles.tourImages}></Images>
-                            </div>
-                            </Link>)       
-                        }
+                    {tours.map( tour => {
+                            
+                        if (tour.countryName == country  && tour.isHide == "false"){
+                            return (
+                                <>
+                                <Link href={`/tours/${tour.uniqName}`}>
+                                <div className={styles.tour}>
+                                <p> {tour.name}</p>
+                                <div className={styles.tourButtons}>
+                                    <button>From {tour.currency}{tour.price}</button>
+                                    <button> {tour.duration} {tour.time}</button>
+                                </div>
+                                <Images src={tour.img} width={400} height={350}className={styles.tourImages}></Images>
+                                </div>
+                                </Link>
+                                
+                                </>
+                                
+                                )
+                                
+                                
+                            }
 
-                }
+                    }
 
-                )}
+                    )}
 
 
+                </div>
             </div>
+            <div className={styles.choseStateLittle}>
+                    
+                   
+                        <TourSliderScroll country={country}></TourSliderScroll>
+                 
 
-        </div>
+                </div>
+
+        </>
         )
         
         }

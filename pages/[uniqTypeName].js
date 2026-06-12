@@ -24,9 +24,10 @@ export default function (){
                                     return (
                                         <>
                                             <div className="MainMotto" style={ {backgroundImage:   `url(${info.imageMain})`}}>
-                                                <h1>{info.head}</h1>
-                                                <p>{info.motto}</p>
-                                                <button>Подобрать путешествие</button>
+                                                <h1 className="mainMotto1st">{info.head}</h1>
+                                                <p className="mainMotto2nd">{info.motto}</p>
+                                                
+                                                <button>Explore a tour</button>
             
                                             </div>
             

@@ -17,7 +17,7 @@ const TourSliderScroll = ({country}) =>{
 
             })
         }
-    }
+    } 
     return (
         <>
             <div className={styles.toursBlock}>
