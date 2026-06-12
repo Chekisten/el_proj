@@ -12,11 +12,12 @@ const UzbekistanTours = () => {
         <MainContainer>
             
         <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainUzbekTours.png)"}}>
-                <h1>Туры по Узбекистану</h1>
-                <p>Откройте для себя великую историю Центральной Азии</p>
-                <button>Подобрать путешествие</button>
+                
+            <h1 className="mainMotto1st">Туры по Узбекистану</h1>
+            <p className="mainMotto2nd">Откройте для себя великую историю Центральной Азии</p>
+            <button>Explore a tour</button>
 
-            </div>
+        </div>
 
 
 

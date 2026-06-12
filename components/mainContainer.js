@@ -24,9 +24,11 @@ const MainContainer = ({children, keywords, pageType}) =>{
             <div className={styles.phoneNavBar}>
                 <div className={styles.dropBar}>
                     <div className={styles.dropLogo}>Asia Explore</div>
+                    
                     <div className={styles.drops}>
                         <input type="checkbox" id="drop-toggle" className={styles.dropToggle}></input>
                         <label htmlFor="drop-toggle" className={styles.dropButton}>☰</label>
+                        <label htmlFor="drop-toggle" className={styles.dropButtonActive}>✕</label>
                         
                         <div className={styles.dropList}>
                             <A href={'/'} text={"Main"}/>

@@ -12,11 +12,12 @@ const TajikistanTours = () =>{
         <MainContainer>
             
         <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainTajikTours.png)"}}>
-                <h1>Туры по Таджикистану</h1>
-                <p>Исследуйте Памирское шоссе и потрясающие горы Таджикистана.</p>
-                <button>Подобрать путешествие</button>
+            
+            <h1 className="mainMotto1st">Туры по Таджикистану</h1>
+            <p className="mainMotto2nd">Исследуйте Памирское шоссе и потрясающие горы Таджикистана</p>
+            <button>Explore a tour</button>
 
-            </div>
+        </div>
 
 
 

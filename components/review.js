@@ -37,7 +37,7 @@ const Reviews = () =>{
             
                     <div className="gradient">
                         <div class="gradient-line-left"></div>
-                        <h2>Отзывы</h2>
+                        <h2>Reviews</h2>
                         <div class="gradient-line-right"></div>
                     </div>
 

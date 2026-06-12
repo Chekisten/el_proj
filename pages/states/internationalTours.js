@@ -13,11 +13,12 @@ const InternationalTours = () =>{
         <MainContainer>
             
         <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainInterTours.png)"}}>
-                <h1>Многонациональный тур</h1>
-                <p>От степей Кыргызстана до древних городов Узбекистана — вся Центральная Азия в одном туре</p>
-                <button>Подобрать путешествие</button>
+               
+            <h1 className="mainMotto1st">Многонациональный тур</h1>
+            <p className="mainMotto2nd">От степей Кыргызстана до древних городов Узбекистана — вся Центральная Азия в одном туре</p>
+            <button>Explore a tour</button>
 
-            </div>
+        </div>
 
 
 

@@ -76,7 +76,7 @@ h1{
 }
 
 .MainMotto button{
-    background-color:#F0D8BC;
+    background: linear-gradient(to bottom, #FFF3E5, #F0D8BC);
     border-radius: 30px;
     margin-top: 5%;
     padding-top: 1%;
@@ -159,7 +159,7 @@ h1{
     left: 10%;
     color:#ffffff;
      background-color: rgba(0, 0, 0, 0.1);
-     font-family: "Open Sans";
+     font-family: var(--font-opensans), sans-serif;
      font-size: 22px;
      font-weight: 600;
 
@@ -200,7 +200,7 @@ h1{
     left: 15%;
     color:#ffffff;
      background-color: rgba(0, 0, 0, 0.1);
-     font-family: "Open Sans";
+     font-family: var(--font-montserrat), sans-serif;
      font-size: 22px;
      font-weight: 600;
 
@@ -364,12 +364,13 @@ h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
    
     background-size: auto;
     background-repeat: no-repeat;
     padding-left: 10%;
     padding-right: 10%;
-   
+   height: 100vh;
     /* background-image: url('../public/images/centAsia.jpg');  */
 
     color: #ffffff;
@@ -385,10 +386,7 @@ h1{
    font-weight: 400;
    font-family: 'Playfair Display'; 
 }
-.MainMotto p{
-    font-size: 15px;
-    font-family: var(--font-montserrat), sans-serif;
-}
+
     .MainMotto button{
         background-color:#F0D8BC;
         border-radius: 30px;
@@ -398,12 +396,28 @@ h1{
         padding-left: 4%;
         padding-right: 4%;
         color: #504020;
-        font-family: var(--font-montserrat), sans-serif;
+        font-family: var(--font-opensans), sans-serif;
         border: 0;
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 19px;
+        font-weight: 600;
     }
 
+.mainMotto1st{
+    font-size: 45px;
+   font-weight: 600;
+   font-family: var(--font-playfair), serif;     
+   letter-spacing: 5%;
+}
+
+.mainMotto2nd {
+    font-size: 19px;
+    font-family: var(--font-opensans), sans-serif;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 5%;
+    padding-top: 5%;
+
+}
 
 
 .mainInfo{
@@ -473,7 +487,7 @@ h1{
     left: 10%;
     color:#ffffff;
      background-color: rgba(255, 255, 255, 0);
-     font-family: "Open Sans";
+     font-family: var(--font-opensans), sans-serif;
 
     
 }
@@ -507,7 +521,7 @@ h1{
     left: 10%;
     color:#ffffff;
      background-color: rgba(255, 255, 255, 0);
-     font-family: "Open Sans";
+     font-family: var(--font-opensans), sans-serif;
 
     
 }
