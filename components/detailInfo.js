@@ -67,6 +67,7 @@ const DetailInfo = ({uniqName}) => {
                 </div>
 
 
+                    
                     {
                         detailButton == "summary" && 
                         steps.map(step => {
@@ -75,113 +76,119 @@ const DetailInfo = ({uniqName}) => {
                                     z++
                                     return (
                                         <>
-                                        <div className={styles.step}>
-                                            <div className={styles.stepLeft}>
-                                                <Image src={step.img} width={440} height={330}></Image>
-                                            </div>
-                                            <div className={styles.stepMidFirst}>
-                                                <div className={styles.stringTransparent}></div>
-                                                <div className={styles.circle}>
-                                                    <FuncIcon iconName={step.icon}></FuncIcon>
+                                        <div className={styles.summary}>
+                                            <div className={styles.step}>
+                                                <div className={styles.stepLeft}>
+                                                    <Image src={step.img} width={440} height={330}></Image>
+                                                </div>
+                                                <div className={styles.stepMidFirst}>
+                                                    <div className={styles.stringTransparent}></div>
+                                                    <div className={styles.circle}>
+                                                        <FuncIcon iconName={step.icon}></FuncIcon>
+                                                        
+                                                    </div>
+                                                    <div className={styles.connectDown}></div>
+                                                    <div className={styles.stringDown}></div>
                                                     
                                                 </div>
-                                                <div className={styles.connectDown}></div>
-                                                <div className={styles.stringDown}></div>
-                                                
-                                            </div>
-                                            <div className={styles.stepRight}>
-                                                <div className={styles.stepDay}>
-                                                    <p>Day {step.day}</p>
-                                                </div>
-                                                <div className={styles.stepHeader}>
-                                                    <h2>{step.header}</h2>
-                                                </div>
-                                                <div className={styles.stepText}>
-                                                    <p>{step.text}</p>
-                                                </div>
-                                                <div className={styles.stepSmiles}>
-                                                    <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                <div className={styles.stepRight}>
+                                                    <div className={styles.stepDay}>
+                                                        <p>Day {step.day}</p>
+                                                    </div>
+                                                    <div className={styles.stepHeader}>
+                                                        <h2>{step.header}</h2>
+                                                    </div>
+                                                    <div className={styles.stepText}>
+                                                        <p>{step.text}</p>
+                                                    </div>
+                                                    <div className={styles.stepSmiles}>
+                                                        <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
+                                        <div className={styles.summaryMob}></div>
                                         </>
                                     )
                                 }console.log(last)
                                 if ( z == last ) {
                                     return (
                                         <>
-                                        <div className={styles.step}>
-                                            <div className={styles.stepLeft}>
-                                                <Image src={step.img} width={440} height={330}></Image>
-                                            </div>
-                                            <div className={styles.stepMidLast}>
-                                                <div className={styles.stringUp}></div>
-                                                <div className={styles.connectUp}></div>
-                                                <div className={styles.circle}>
-                                                     <FuncIcon iconName={step.icon}></FuncIcon>
+                                        <div className={styles.summary}>
+                                            <div className={styles.step}>
+                                                <div className={styles.stepLeft}>
+                                                    <Image src={step.img} width={440} height={330}></Image>
                                                 </div>
-                                                <div className={styles.stringTransparent}></div>
-                                            </div>
-                                            <div className={styles.stepRight}>
-                                                <div className={styles.stepDay}>
-                                                    <p>Day {step.day}</p>
+                                                <div className={styles.stepMidLast}>
+                                                    <div className={styles.stringUp}></div>
+                                                    <div className={styles.connectUp}></div>
+                                                    <div className={styles.circle}>
+                                                        <FuncIcon iconName={step.icon}></FuncIcon>
+                                                    </div>
+                                                    <div className={styles.stringTransparent}></div>
                                                 </div>
-                                                <div className={styles.stepHeader}>
-                                                    <h2>{step.header}</h2>
-                                                </div>
-                                                <div className={styles.stepText}>
-                                                    <p>{step.text}</p>
-                                                </div>
-                                                <div className={styles.stepSmiles}>
-                                                    <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                <div className={styles.stepRight}>
+                                                    <div className={styles.stepDay}>
+                                                        <p>Day {step.day}</p>
+                                                    </div>
+                                                    <div className={styles.stepHeader}>
+                                                        <h2>{step.header}</h2>
+                                                    </div>
+                                                    <div className={styles.stepText}>
+                                                        <p>{step.text}</p>
+                                                    </div>
+                                                    <div className={styles.stepSmiles}>
+                                                        <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                         </>
                                     )
                                 }
                                 z++
                                 return (
                                     <>
-                                    <div className={styles.step}>
-                                        <div className={styles.stepLeft}>
-                                            <Image src={step.img} width={440} height={330}></Image>
-                                        </div>
-                                        <div className={styles.stepMid}>
-                                                
-                                                <div className={styles.stringUp}></div>
-                                                <div className={styles.connectUp}></div>
-                                                
-                                                <div className={styles.circle}>
-                                                     <FuncIcon iconName={step.icon}></FuncIcon>
-                                                </div>
-
-                                                <div className={styles.connectDown}></div>
-                                                <div className={styles.stringDown}></div>
-                                        </div>
-                                        <div className={styles.stepRight}>
-                                                <div className={styles.stepDay}>
-                                                    <p>Day {step.day}</p>
-                                                </div>
-                                                <div className={styles.stepHeader}>
-                                                    <h2>{step.header}</h2>
-                                                </div>
-                                                <div className={styles.stepText}>
-                                                    <p>{step.text}</p>
-                                                </div>
-                                                <div className={styles.stepSmiles}>
-                                                    <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
-                                                </div>
+                                    <div className={styles.summary}>
+                                        <div className={styles.step}>
+                                            <div className={styles.stepLeft}>
+                                                <Image src={step.img} width={440} height={330}></Image>
                                             </div>
+                                            <div className={styles.stepMid}>
+                                                    
+                                                    <div className={styles.stringUp}></div>
+                                                    <div className={styles.connectUp}></div>
+                                                    
+                                                    <div className={styles.circle}>
+                                                        <FuncIcon iconName={step.icon}></FuncIcon>
+                                                    </div>
+
+                                                    <div className={styles.connectDown}></div>
+                                                    <div className={styles.stringDown}></div>
+                                            </div>
+                                            <div className={styles.stepRight}>
+                                                    <div className={styles.stepDay}>
+                                                        <p>Day {step.day}</p>
+                                                    </div>
+                                                    <div className={styles.stepHeader}>
+                                                        <h2>{step.header}</h2>
+                                                    </div>
+                                                    <div className={styles.stepText}>
+                                                        <p>{step.text}</p>
+                                                    </div>
+                                                    <div className={styles.stepSmiles}>
+                                                        <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                    </div>
+                                                </div>
+                                        </div>
                                     </div>
-                                    
                                     </>
                                 )
                             }
                         })
                     }
+                    
 
                     {   
                         detailButton == "way" &&

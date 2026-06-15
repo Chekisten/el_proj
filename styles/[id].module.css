@@ -26,7 +26,7 @@
     
 }
 .introButton button{
-   background-color: #5B3F2B;
+    background: linear-gradient(to bottom, #614633, #321E0F);
    color: #FFF3E4;
     font-family: Montserrat;
     font-size: 20px;
@@ -123,13 +123,119 @@
     align-items: center;
     justify-content: center;
 }
-
+.introInfoMob{
+    display: none;
+}
 
 
 
 @media (max-width: 768px){
+    .introInfoMob{
+    background-color: #FFF3E4;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    padding-bottom: 4%;
+    flex-direction: column;
+    box-shadow: 2px 15px 20px 5px rgb(0, 0, 0, 0.2);
+    }
+    .introInfo{
+        display: none;
+    }
+
+    .baseIntroInfoMob{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+        
+    .introButton button{
+    background: linear-gradient(to bottom, #614633, #321E0F);
+    color: #FFF3E4;
+        font-family: Montserrat;
+        font-size: 19px;
+        font-weight: 600;
+        border-radius: 30px;
+        padding: 1rem;
+        position: absolute;
+        width: 50%;
+        top: 90%;
+        left: 25%;
+    box-shadow: 2px 15px 20px 5px rgb(0, 0, 0, 0.2);
+    }
+    .introLeftMob{
+        flex: 0 0 60%;
+        padding: 4%;
+        margin-left: 6%;
+        margin-bottom: 6%;
+        font-size: 16px;
+        color: #5B3F2B;
+        font-family: Montserrat;
+        line-height: 1,5;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+    }
+    .introLeftMob b{
+        font-weight: 700;
+    }
+    .introLeftMob p{
+        font-weight: 500;
+    }
+
+    .introRightMob{
+        
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 190px;
+        height: 100%;
+    }
+    .triangleMob{
+        display: flex;;
+        flex-direction: row;
+        
+        
+    }
+    .upTriangleMob{
+        border: 3rem solid transparent;
+        border-top: 3rem solid #5B3F2B;
+        border-left: 3rem solid #5B3F2B;
+        
+    }
+    .downTriangleMob{
+        border: 3rem solid transparent;
+        border-top: 3rem solid #5B3F2B;
+        border-right: 3rem solid #5B3F2B;
+
+    }
+    .introRightBlockMob {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #5B3F2B;
+        color:#FFF3E4;
+        width: 100%;
+        font-size: 37px; /*42px*/
+        font-family: Montserrat;
+        font-weight: 600;
+        
+    }
+
     .mainInfo{
     display: flex;
+    margin-top: 80%;
     padding: 5%;
     justify-content: space-between;
     flex-direction: column;
@@ -147,6 +253,7 @@
     object-fit: cover;
     border-radius: 30px;
     overflow: hidden;
+    width: 100%;
 }
 
 }

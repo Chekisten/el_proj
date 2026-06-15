@@ -145,7 +145,7 @@
     align-items: center;
 }
 
-
+ 
 .stepRight {
     display: flex;
     flex-direction: column;
@@ -409,4 +409,24 @@
     margin:3%;
     font-size: 20px;
 }
+.summaryMob{
+    display: none;
+}
 /* Detail info blocks end---------------------------------------------------------------------*/
+
+@media (max-width: 768px){
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .navbar button{
+        margin-top: 3%
+    }
+    .summary {
+        display: none;
+    }
+    .summaryMob{
+        display: flex;
+    }
+}

@@ -11,6 +11,8 @@
     background-repeat: no-repeat;
     padding: 20%;
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
    
     
 
@@ -48,4 +50,24 @@
     border: 0;
     font-size: 24px;
     font-weight: 500;
+}
+
+@media (max-width: 768px){
+ 
+    .mainMotto1st{
+    font-size: 36px;
+   font-weight: 600;
+   font-family: "Playfair Display";     
+   
+   text-align: center;
+}
+
+.mainMotto2nd {
+    font-size: 16px;
+     font-family: Montserrat;
+    text-align: center;
+    font-weight: 600;
+    
+
+}
 }

@@ -46,7 +46,7 @@ export default function () {
     
     return (
         
-        <>
+        <> 
         <MainContainer>
 
         <div className={styles.intro}>
@@ -71,6 +71,34 @@ export default function () {
 
                 </div>
                <div className={styles.introButton}>
+                <button>More information</button>
+            </div> 
+            </div>
+
+
+            <div className={styles.introInfoMob}>
+                <div className={styles.baseIntroInfoMob}>
+                   
+                    <div className={styles.introRightMob}> 
+                        
+                        <div className={styles.introRightBlockMob}>
+                            <p>{currentDuration} {currentTime}</p>
+                            <p>{currentCurrency} {currentPrice}</p>
+                        </div>
+                        <div className={styles.triangleMob}>
+                            <div className={styles.upTriangleMob}></div>
+                            <div className={styles.downTriangleMob}></div>
+                        </div> 
+                        
+                    </div> 
+                    <div className={styles.introLeftMob}>
+                        <p> <FuncIcon iconName={"flag"}></FuncIcon> <b>Tour type:</b> {currentTourTypeDescription}</p>
+                        <p><FuncIcon iconName={"pair"}></FuncIcon> <b>Group size:</b> {currentGroupSize}</p>
+                        <p><FuncIcon iconName={"place1"}></FuncIcon> <b>Destination</b> {currentDestination}</p>
+                    </div>
+
+                </div>
+                <div className={styles.introButton}>
                 <button>More information</button>
             </div> 
             </div>
