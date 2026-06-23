@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "../styles/detailInfo.module.css"
 import data from "../database/db.json"
 import Image from "next/image"
 import FuncIcon from "./funcIcon";
 import FuncLittleIcon from "./funcLittleIcon";
+import { Grid } from "grommet-icons";
 
 
 
@@ -16,7 +17,9 @@ const DetailInfo = ({uniqName}) => {
     const [tours, setTours] = useState(data.tours)
     const [tourDetails, setTourDetails] = useState(data.tourDetail)
     let z = 1;
+    let y = 0;
     let last = 0;
+    
     for (let k = 0; k < steps.length - 1; k++){
         if (steps[k].uniqName == uniqName){
             last++;
@@ -44,6 +47,20 @@ const DetailInfo = ({uniqName}) => {
         }
     }
     sortByDay()
+
+    const scrollRef = useRef(null);
+    const scroll = (direction) => {
+        if (scrollRef.current) {
+            const {scrollLeft, clientWidth} = scrollRef.current;
+            const scrollToValue = direction === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
+            
+            scrollRef.current.scrollTo({
+                left: scrollToValue,
+                behavior: 'smooth'
+
+            })
+        }
+    } 
 
    
     return (
@@ -107,11 +124,9 @@ const DetailInfo = ({uniqName}) => {
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div className={styles.summaryMob}></div>
                                         </>
                                     )
-                                }console.log(last)
+                                }
                                 if ( z == last ) {
                                     return (
                                         <>
@@ -144,6 +159,8 @@ const DetailInfo = ({uniqName}) => {
                                                 </div>
                                             </div>
                                         </div>
+
+                                        
                                         </>
                                     )
                                 }
@@ -183,15 +200,100 @@ const DetailInfo = ({uniqName}) => {
                                                 </div>
                                         </div>
                                     </div>
+
+                                   
                                     </>
                                 )
                             }
                         })
+                        
                     }
+                    <div className={styles.slider} ref={scrollRef}>
+                        {
+                            detailButton == "summary" && 
+                            steps.map(step => {
+                               
+                                return (
+                                <>
+                                    {step.uniqName == uniqName &&(
+                                        
+                                        <><div className={styles.hidden}>{y++}</div>
+                                        <div className={styles.slide}>
+                                        <div className={styles.summaryMob}>
+
+                                                <div className={styles.step}>
+
+                                                    <div className={styles.mobGrid}>
+                                                        
+                                                        <div className={styles.rowDay}>
+                                                            <p>Day {step.day}</p>
+                                                        </div>
+                                                        <div className={styles.rowHeader}>
+                                                            <h2>{step.header}</h2>
+                                                        </div>
+                                                        <div className={styles.rowSmile}>
+                                                            <div className={styles.circle}>
+                                                                <FuncIcon iconName={step.icon}></FuncIcon>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div className={styles.mobImg}>
+                                                        <Image src={step.img} width={440} height={330}></Image>
+                                                    </div>
+                                                    <div className={styles.mobText}>
+                                                        
+                                                                <p>{step.text}</p>
+                                                        
+                                                        <div className={styles.stepSmiles}>
+                                                                <FuncLittleIcon iconsString={step.smiles}></FuncLittleIcon>
+                                                            </div>
+                                                    </div>
+
+
+                                                    <div className={styles.mobButton}> 
+                                                            {
+                                                                y > 1 && (
+                                                                    <> 
+                                                                        <button onClick={() => scroll('left')}><p>Day {Number(step.day) - 1}</p> <FuncIcon iconName={"arrow-filled-left"}></FuncIcon> </button>
+                                                                    </>
+                                                                )
+                                                            }
+                                                            {
+                                                                y < last && (
+                                                                    <> 
+                                                                        <button onClick={() => scroll('right')}><p>Day {Number(step.day) + 1}</p> <FuncIcon iconName={"arrow-filled-right"}></FuncIcon> </button>
+                                                                    </>
+                                                                )
+                                                            }
+                                                            
+                                                            
+
+                                                        
+                                                    </div>
+
+
+                                                    
+                                    
+                                                    
+                                                </div>
+
+                                        </div>
+                                        </div>
+                                    </>    
+                                    )}
+                                </>
+                        
+                            )   
+                            })
+                            
+                        }
+                    </div>
                     
 
                     {   
                         detailButton == "way" &&
+                        <>
                         <div className={styles.wayBlock}>
                             <div className={styles.wayInfo}>
                                 {
@@ -257,8 +359,37 @@ const DetailInfo = ({uniqName}) => {
 
                             </div>
                         </div>
-                        
-                        
+                        <div className={styles.wayBlockMob}>
+                           <div className={styles.wayInfo}>
+                                {
+                                    steps.map(step => {
+                                        if (step.uniqName == uniqName){
+                                            return (
+                                                <>
+                                                    <div className={styles.wayInfoEl}>
+                                                        <div className={styles.dayIcon}>
+                                                            <div className={styles.wayDay}>
+                                                                <p>Day {step.day}</p>
+                                                            </div>
+                                                            <div className={styles.wayIcon}>
+                                                                <FuncIcon iconName={step.icon}></FuncIcon>
+                                                            </div>
+                                                            
+                                                        </div>
+
+                                                        <div className={styles.wayCity}>
+                                                            <p>{step.city}</p>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </>
+                                            )
+                                        }
+                                    })
+                                }
+                            </div> 
+                        </div>
+                        </>
                         
                         
                     }            
@@ -271,7 +402,7 @@ const DetailInfo = ({uniqName}) => {
                                     <div className={styles.detailInfo}>
                                         <div className={styles.detailInfoEl}>
                                             <div className={styles.detailInfoElIcon}>
-                                                <p><FuncIcon iconName={"place2"}></FuncIcon></p> 
+                                               <p> <FuncIcon iconName={"place2"}></FuncIcon></p>
                                             </div>
                                             <div className={styles.detailInfoElText}>
                                                 <h4>Destination</h4>

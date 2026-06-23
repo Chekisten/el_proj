@@ -58,6 +58,26 @@ const TourMoments = ({tourUniqName}) => {
                         })}
 
                     </div>
+                    <div className={styles.aboutBlocksMob}>
+                        {
+                            moments.map(moment =>{
+                                if (moment.uniqName == tourUniqName) {
+                                    return (
+                                        <>
+                                        <div className={styles.aboutBlock}>
+                                            <Image src={moment.img} width={620} height={440} alt={moment.header}></Image>
+                                            <div className={styles.aboutText}>
+                                                <h3>{moment.header}</h3>
+                                                <br></br>
+                                                <p>{moment.text}</p>
+                                            </div>
+                                        </div>
+                                        </>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         </>

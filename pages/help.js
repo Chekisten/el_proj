@@ -50,6 +50,10 @@ const Help = () =>{
             <p><FuncIcon iconName={"bed"}></FuncIcon>bed</p>
             <p><FuncIcon iconName={"tower"}></FuncIcon>tower</p>
             <p><FuncIcon iconName={"flag"}></FuncIcon>flag</p>
+            <p><FuncIcon iconName={"arrow-filled-right"}></FuncIcon>arrow-filled-right</p>
+            <p><FuncIcon iconName={"arrow-filled-left"}></FuncIcon>arrow-filled-left</p>
+            <p><FuncIcon iconName={"arrow-filled-down"}></FuncIcon>arrow-filled-down</p>
+            <p><FuncIcon iconName={"arrow-filled-up"}></FuncIcon>arrow-filled-up</p>
             </div>
         </MainContainer>
     )
