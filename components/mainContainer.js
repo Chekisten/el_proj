@@ -12,6 +12,21 @@ const MainContainer = ({children, keywords, pageType}) =>{
             <title>Prototype of tour's site</title>
         </Head>
 
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+                <Script
+                src="https://www.googletagmanager.com/gtag/js?id=G-WK20QPG7EP"
+                strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-WK20QPG7EP');
+                `}
+                </Script>
+
             <div className={styles.navbar}>
                 <div className={styles.menu}>
                     <A href={'/'} text={"Main"}/>

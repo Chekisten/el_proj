@@ -10,6 +10,8 @@ import Link from "next/link";
 const Index = () => {
     const currentCountry = "main"
     return (
+        <>
+        
         <MainContainer>
         <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainBackground.png)", height: "100vh"}}>
             <p className="mainMotto1st">Go beyond sightseeing</p>
@@ -159,7 +161,7 @@ const Index = () => {
         
 
         </MainContainer>
-
+</>
     );
 };
 
