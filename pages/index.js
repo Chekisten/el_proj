@@ -11,7 +11,7 @@ const Index = () => {
     const currentCountry = "main"
     return (
         <MainContainer>
-        <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainBackground.png)"}}>
+        <div className="MainMotto" style={ {backgroundImage:   "url(/images/mainBackground.png)", height: "100vh"}}>
             <p className="mainMotto1st">Go beyond sightseeing</p>
             <p className="mainMotto2nd">Feel the world</p>
             <button>Explore a tour</button>

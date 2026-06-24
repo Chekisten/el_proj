@@ -1,105 +1,6 @@
 
-.intro {
-   position: relative;
-}
-
-.introInfo {
-    background-color: #FFF3E4;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 75%;
-    left: 25%;
-    right: 25%;
-    width: 50%;
-   
-    padding-top: 2%;
-    padding-bottom: 4%;
-    flex-direction: column;
-    box-shadow: 2px 15px 20px 5px rgb(0, 0, 0, 0.2);
-}
-.baseIntroInfo{
-    display: flex;
-    flex-direction: row;
-    
-}
-.introButton button{
-   background-color: #5B3F2B;
-   color: #FFF3E4;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 30px;
-    padding: 1rem;
-    position: absolute;
-    width: 50%;
-    top: 90%;
-    left: 25%;
-   box-shadow: 2px 15px 20px 5px rgb(0, 0, 0, 0.2);
-}
-.introLeft{
-    flex: 0 0 60%;
-    padding: 4%;
-    font-size: 20px;
-    color: #5B3F2B;
-    font-family: Montserrat;
-    line-height: 1,5;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-.introLeft b{
-    font-weight: 700;
-}
-.introLeft p{
-    font-weight: 500;
-}
-
-.introRight{
-    flex: 0 0 40%;
-    display: flex;
-    flex-direction: row;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-.triangle{
-    display: flex;;
-    flex-direction: column;
-}
-.upTriangle{
-    border: 3rem solid transparent;
-    border-top: 3rem solid #5B3F2B;
-    border-right: 3rem solid #5B3F2B;
-    
-}
-.downTriangle{
-    border: 3rem solid transparent;
-    border-bottom: 3rem solid #5B3F2B;
-    border-right: 3rem solid #5B3F2B;
-
-}
-.introRightBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #5B3F2B;
-    color:#FFF3E4;
-    width: 100%;
-    font-size: 42px; /*42px*/
-    font-family: Montserrat;
-    font-weight: 600;
-}
-
-
-
 .mainInfo{
     display: flex;
-    
     justify-content: space-between;
     text-align: left;
     margin-top: 10%;
@@ -119,32 +20,183 @@
     overflow: hidden;
     height: 550px;
     width: 400px;
+}
+.notJustCom{
+    display: flex;
+    flex-wrap: wrap;
+}
+.notJustComHalf{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    flex: 0 0 48%;
+    margin:1%;
+    text-align: left;
+    max-height: 250px;
     
-
+}
+.notJustComHalf h3{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin:4%;
+}
+.notJustComHalf p{
+    font-size:18px;
+    font-weight: 600;
+    font-family: Montserrat;
+    margin:4%;
+}
+.notJustComHalf img{
+    display:block;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+}
+.notJustComFull{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    flex: 0 0 98%;
+    margin: 1%;
+    text-align: right;
+    max-height: 250px;
+    
+}
+.notJustComFull h3{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin:4%;
+}
+.notJustComFull p{
+    font-size:18px;
+    font-weight: 600;
+    font-family: Montserrat;
+    margin:4%;
+}
+.notJustComFull img{
+    display:block;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+}
+.notJustText{
+    position:absolute;
+    object-fit: cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    width: 100%;
+    height: 100%;
+    
+    color: #FFEDDA;
+    border-radius: 20px;
+    
 }
 
+.ourTeam{
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.teamCard{
+    background-color: #FFF3E4;
+    box-shadow: 5 20 43 #5D513C1A;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+.teamImg{
+    flex: 0 0 30%;
+    
+}
+.teamImg img {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+}
+.teamText{
+    text-align: left;
+    font-family: Montserrat;
+}
+.teamText h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+.teamText p{
+    font-size:20px;
+    font-weight: 500;
+}
 
 
 @media (max-width: 768px){
     .mainInfo{
-    display: flex;
-    padding: 5%;
-    justify-content: space-between;
-    flex-direction: column;
-}
-.mainInfoText {
-    flex: 0 0 60%;
-    font-size: 15px;
-    font-family: Montserrat;
-    font-weight: 500;
-    padding: 5%;
-    color: #504020;
+        display: flex;
+        padding: 5%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .mainInfoText {
+        flex: 0 0 60%;
+        font-size: 15px;
+        font-family: Montserrat;
+        font-weight: 500;
+        padding: 5%;
+        color: #504020;
 
+    }
+    .mainInfoImg {
+        object-fit: cover;
+        border-radius: 30px;
+        overflow: hidden;
+        width: 100%;
+        height: 400px;
+    }
+    .notJustCom{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .teamCard{
+    background-color: #FFF3E4;
+    box-shadow: 5 20 43 #5D513C1A;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
 }
-.mainInfoImg {
-    object-fit: cover;
-    border-radius: 30px;
+.teamImg{
+    flex: 0 0 30%;
+    
+}
+.teamImg img {
     overflow: hidden;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+}
+.teamText{
+    text-align: left;
+    font-family: Montserrat;
+}
+.teamText h3{
+    font-size: 19px;
+    font-weight: 700;
+}
+.teamText p{
+    font-size:16px;
+    font-weight: 400;
 }
 
 }

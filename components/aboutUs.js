@@ -14,8 +14,8 @@ const AboutUs = () => {
                              <UserExpert color="#FFF3E4"></UserExpert>
                         </svg>
                     </div>
-                    <h5>Опыт работы с местными специалистами</h5>
-                    <p>Мы имеем более 15 лет опыта организации туров по Кыргызстану. Наша команда состоит из местных кыргызских гидов, обладающих глубокими знаниями культуры, истории и горного ландшафта.</p>
+                    <h5>Experience working with local specialists</h5>
+                    <p>We have over 15 years of experience organizing tours in Kyrgyzstan. Our team consists of local Kyrgyz guides with in-depth knowledge of the culture, history, and mountain landscape.</p>
                 </div>
                 <div className={style.aboutEl}>
                     <div className={style.svgBack}>
@@ -27,8 +27,8 @@ const AboutUs = () => {
                             <line className={style.st0} x1="18" y1="2" x2="18" y2="17"/>
                         </svg>
                     </div>
-                    <h5>Практики устойчивого и общинного туризма</h5>
-                    <p>Мы сотрудничаем с сетью семейных и малых предприятий, чтобы поддерживать местные сообщества и людей по всему Кыргызстану. Благодаря этому мы помогаем сохранить нашу окружающую среду.</p>
+                    <h5>Sustainable and community-based tourism practices</h5>
+                    <p>We partner with a network of family-owned and small businesses to support local communities and people across Kyrgyzstan. In doing so, we help preserve our environment.</p>
                 </div>
                 <div className={style.aboutEl}>
                     <div className={style.svgBack}>
@@ -36,8 +36,8 @@ const AboutUs = () => {
                             <Compass color="#FFF3E4"></Compass>
                         </svg>
                     </div>
-                    <h5>Индивидуальные маршруты</h5>
-                    <p>Спланируйте свою поездку в соответствии с вашими интересами, уровнем физической подготовки, целями путешествия и расписанием. Мы будем сопровождать вас на каждом шаге и поможем в любом вопросе!</p>
+                    <h5>Individual routes</h5>
+                    <p>Plan your trip according to your interests, fitness level, travel goals, and schedule. We'll be with you every step of the way and will help you with any questions you may have!</p>
                 </div>
             </div>
         </>
