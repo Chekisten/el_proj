@@ -3,13 +3,13 @@ import Head from "next/head"
 import styles from "../styles/mainContainer.module.css"
 import Feedback from "./feedback"
 
-const MainContainer = ({children, keywords, pageType}) =>{
+const MainContainer = ({children, keywords, pageType, title}) =>{
     return (
         <>
  
         <Head>
             <meta keywords={"Prototype, tours" + keywords}></meta>
-            <title>Prototype of tour's site</title>
+            <title>title={title}</title>
         </Head>
 
 

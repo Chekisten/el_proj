@@ -1233,6 +1233,17 @@ const AddingForms = () => {
           </div>
 
           <div className={styles.formEl}>
+            <label htmlFor="uniqTypeName">Уникальное имя типа</label>
+            <input 
+              id="uniqTypeName" 
+              name="uniqTypeName" 
+              type="text" 
+              placeholder="uniq-type-name" 
+              required 
+            />
+          </div>
+
+          <div className={styles.formEl}>
             <label>Enter country of tours (Uzbekistan, Kazakhstan, Kyrgyzstan, Tadjikistan, International )</label>
             <div className={styles.radioForm}>
               <label>

@@ -24,6 +24,7 @@ export default function () {
    // const currentTour = tours.find(tour => tour.id == query.id)
  //  console.log(currentTour?.id)
     const currentUniqName = currentTour ? currentTour.uniqName : "";
+    const currentKeywords = currentTour ? currentTour.metaTags : "";
     const currentTourId = currentTour ? currentTour.id : "";
     const currentIntroImg = currentTour ? currentTour.introImg : "";
     const currentPhoto = currentTour ? currentTour.img : "";
@@ -47,7 +48,7 @@ export default function () {
     return (
         
         <> 
-        <MainContainer>
+        <MainContainer keywords={currentKeywords} title={currentName}>
 
         <div className={styles.intro}>
             <div className={styles.introInfo}>

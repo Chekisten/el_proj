@@ -6,6 +6,7 @@
     scroll-behavior: smooth;
     border-radius: 12px;
     scrollbar-width: none;
+    
 }
 
 .slider::-webkit-scrollbar{
@@ -16,7 +17,7 @@
 .slide {
     flex: 0 0 100%;
     scroll-snap-align: center;
-
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,9 +27,8 @@
     flex-direction: column;
     border-radius: 20px;
     padding: 2%;
-    
-    
 }
+
 
 
 .tour {
@@ -36,7 +36,7 @@
     overflow: hidden;
     width: 100%;
     border-radius: 20px;
-    
+    height: 450px;
     scroll-snap-align: center;
 }
 .tourImages{
@@ -52,9 +52,9 @@
 }
 .upperText{
     position: absolute;
-    margin-top: 35%;
-    margin-left: 2%;
-    margin-right: 2%;
+    bottom: 10%;
+    left: 4%;
+    right: 2%;
      z-index: 1;
 }
 .upperText p {
@@ -82,8 +82,8 @@
 .tourButtons {
    
     display: flex;
-    width: 90%;
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .tourButtons button{
